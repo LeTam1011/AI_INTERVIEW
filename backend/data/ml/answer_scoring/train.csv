@@ -1,0 +1,11 @@
+question_text,expected_points,answer_text,score,feedback,career_level
+"REST API là gì?","Giao tiếp client server; Sử dụng HTTP; Trao đổi dữ liệu","REST API là cách client giao tiếp với server thông qua HTTP để trao đổi dữ liệu JSON.",90,"Nêu được khái niệm và cách giao tiếp cơ bản.",intern
+"REST API là gì?","Giao tiếp client server; Sử dụng HTTP; Trao đổi dữ liệu","REST API là một API.",25,"Câu trả lời quá ngắn và thiếu cách hoạt động.",intern
+"REST API là gì?","Giao tiếp client server; Sử dụng HTTP; Trao đổi dữ liệu","REST API cho phép client gửi request đến server qua HTTP và nhận response.",75,"Giải thích được cơ chế request và response.",junior
+"Python xử lý ngoại lệ thế nào?","Sử dụng try except; Xử lý lỗi phù hợp; Có thể dùng finally","Dùng try để thực hiện lệnh và except để bắt lỗi, finally để chạy phần dọn dẹp nếu cần.",95,"Trình bày được các thành phần chính.",intern
+"Python xử lý ngoại lệ thế nào?","Sử dụng try except; Xử lý lỗi phù hợp; Có thể dùng finally","Python rất dễ học và có nhiều thư viện.",10,"Không trả lời đúng trọng tâm câu hỏi.",intern
+"SQL JOIN dùng để làm gì?","Kết hợp dữ liệu từ nhiều bảng; Dựa trên điều kiện liên kết; Có thể dùng INNER JOIN hoặc LEFT JOIN","JOIN kết hợp dữ liệu từ hai bảng theo điều kiện liên kết, ví dụ INNER JOIN chỉ lấy các bản ghi khớp.",90,"Nêu được mục đích và ví dụ về JOIN.",junior
+"SQL JOIN dùng để làm gì?","Kết hợp dữ liệu từ nhiều bảng; Dựa trên điều kiện liên kết; Có thể dùng INNER JOIN hoặc LEFT JOIN","JOIN dùng để truy vấn cơ sở dữ liệu.",30,"Mới nêu ý chung, chưa giải thích cách kết hợp bảng.",intern
+"Bạn xử lý lỗi kỹ thuật như thế nào?","Tái hiện lỗi; Kiểm tra log; Xác định nguyên nhân; Kiểm thử cách sửa","Tôi tái hiện lỗi, đọc log, xác định nguyên nhân, sửa lỗi rồi chạy kiểm thử hồi quy.",95,"Quy trình xử lý lỗi rõ ràng và có kiểm thử.",junior
+"Bạn xử lý lỗi kỹ thuật như thế nào?","Tái hiện lỗi; Kiểm tra log; Xác định nguyên nhân; Kiểm thử cách sửa","Tôi sẽ tìm cách sửa lỗi.",20,"Thiếu quy trình và ví dụ cụ thể.",intern
+"JavaScript Promise là gì?","Đại diện kết quả bất đồng bộ; Có trạng thái pending fulfilled rejected; Hỗ trợ then catch","Promise đại diện cho kết quả của tác vụ bất đồng bộ và có các trạng thái pending, fulfilled, rejected; có thể xử lý bằng then và catch.",95,"Nêu được bản chất và các trạng thái của Promise.",junior

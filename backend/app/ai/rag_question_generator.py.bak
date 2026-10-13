@@ -1,0 +1,168 @@
+
+from typing import Any
+
+from app.ai.question_generator import generate_questions
+from app.ai.question_retrieval import search_questions
+
+
+MIN_SIMILARITY = 0.45
+
+
+def generate_rag_questions(
+    context_snapshot: dict[str, Any],
+    count: int = 10,
+) -> list[dict[str, Any]]:
+    """Combine existing CV-based questions with RAG technical questions."""
+
+    if count <= 0:
+        return []
+
+    context = context_snapshot or {}
+    job = context.get("job") or {}
+    cv_score = context.get("cv_score") or {}
+
+    level = str(context.get("career_level", "intern")).lower()
+
+    missing = cv_score.get("missing_required_skills") or []
+    matched = cv_score.get("matched_required_skills") or []
+
+    # Reserve part of the interview for questions grounded in the CV.
+    base_count = max(1, (count + 1) // 2)
+    base_questions = generate_questions(
+        context_snapshot=context,
+        count=base_count,
+    )
+
+    questions = list(base_questions)
+    seen = {
+        item["question_text"].strip().casefold()
+        for item in questions
+        if item.get("question_text")
+    }
+
+    # Search for the skills and technologies relevant to this interview.
+    queries: list[str] = []
+
+    title = str(job.get("title") or "").strip()
+    if title:
+        queries.append(title)
+
+    for skill in missing + matched:
+        skill = str(skill).strip()
+        if skill:
+            queries.append(f"{skill} programming technical interview")
+
+    description = str(job.get("description") or "").strip()
+    if description:
+        queries.append(description[:500])
+
+    # Empty context still returns the original question set.
+    if not queries:
+        return generate_questions(
+            context_snapshot=context,
+            count=count,
+        )[:count]
+
+    candidates: dict[str, dict[str, Any]] = {}
+
+    # Retrieve candidates independently so one broad query cannot
+    # consume the entire retrieval budget.
+    for query in queries[:8]:
+        try:
+            results = search_questions(query, top_k=5)
+        except (RuntimeError, ValueError):
+            # Keep the existing generator usable if the RAG store
+            # is unavailable or a query cannot be processed.
+            continue
+
+        for item in results:
+            text = str(item.get("question") or "").strip()
+            similarity = float(item.get("similarity") or 0)
+
+            if not text or similarity < MIN_SIMILARITY:
+                continue
+
+            normalized = text.casefold()
+
+            if normalized in seen:
+                continue
+
+            previous = candidates.get(normalized)
+            if previous is None or similarity > previous["similarity"]:
+                candidates[normalized] = {
+                    **item,
+                    "question": text,
+                    "similarity": similarity,
+                }
+
+    # Prefer the most relevant retrieved questions.
+    ranked = sorted(
+        candidates.values(),
+        key=lambda item: item["similarity"],
+        reverse=True,
+    )
+
+    for item in ranked:
+        if len(questions) >= count:
+            break
+
+        text = item["question"]
+        normalized = text.casefold()
+
+        if normalized in seen:
+            continue
+
+        answer = str(item.get("answer") or "").strip()
+        topic = str(item.get("category") or "technical")[:120]
+
+        questions.append({
+            "position": len(questions) + 1,
+            "question_text": text,
+            "question_type": "technical",
+            "topic": topic,
+            "expected_points": [answer] if answer else [
+                "Trình bày khái niệm và nguyên lý hoạt động",
+                "Đưa ra ví dụ thực tế phù hợp",
+                "Giải thích cách áp dụng và các giới hạn",
+            ],
+            "source_context": {
+                "reason": "Retrieved from the local interview question database",
+                "source": "rag",
+                "source_id": item.get("id"),
+                "category": item.get("category"),
+                "difficulty": item.get("difficulty"),
+                "similarity": item["similarity"],
+                "career_level": level,
+                "job_title": title,
+                "language": "en",
+            },
+        })
+
+        seen.add(normalized)
+
+    # If RAG does not provide enough suitable questions, fill the
+    # remaining slots using the original generator.
+    if len(questions) < count:
+        fallback = generate_questions(
+            context_snapshot=context,
+            count=count,
+        )
+
+        for item in fallback:
+            if len(questions) >= count:
+                break
+
+            normalized = item["question_text"].strip().casefold()
+            if normalized in seen:
+                continue
+
+            questions.append({
+                **item,
+                "position": len(questions) + 1,
+            })
+            seen.add(normalized)
+
+    for position, item in enumerate(questions[:count], start=1):
+        item["position"] = position
+
+    return questions[:count]

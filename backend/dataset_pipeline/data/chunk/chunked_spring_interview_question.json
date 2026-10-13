@@ -1,0 +1,990 @@
+[
+  {
+    "id": "spring_interview_question-0001",
+    "content": "Question: What is the Spring Framework?\n\nAnswer: Spring is an open-source Java framework that simplifies enterprise application development. It provides tools for dependency injection, aspect-oriented programming, and integration with other frameworks.",
+    "question": "What is the Spring Framework?",
+    "answer": "Spring is an open-source Java framework that simplifies enterprise application development. It provides tools for dependency injection, aspect-oriented programming, and integration with other frameworks.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0002",
+    "content": "Question: What are the core modules of Spring?\n\nAnswer: Core modules include – Spring Core, Spring Context, Spring AOP, Spring Data, Spring Web, Spring Security, and Spring Boot.",
+    "question": "What are the core modules of Spring?",
+    "answer": "Core modules include – Spring Core, Spring Context, Spring AOP, Spring Data, Spring Web, Spring Security, and Spring Boot.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0003",
+    "content": "Question: What is Dependency Injection in Spring?\n\nAnswer: Dependency Injection (DI) is a design pattern where Spring manages object dependencies – allowing loose coupling between components.",
+    "question": "What is Dependency Injection in Spring?",
+    "answer": "Dependency Injection (DI) is a design pattern where Spring manages object dependencies – allowing loose coupling between components.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0004",
+    "content": "Question: What is the Spring Bean Lifecycle?\n\nAnswer: The lifecycle includes bean instantiation, property setting, initialization (via @PostConstruct or init-method), and destruction (via @PreDestroy or destroy-method).",
+    "question": "What is the Spring Bean Lifecycle?",
+    "answer": "The lifecycle includes bean instantiation, property setting, initialization (via @PostConstruct or init-method), and destruction (via @PreDestroy or destroy-method).",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0005",
+    "content": "Question: What is the role of the ApplicationContext in Spring?\n\nAnswer: ApplicationContext is a container providing configuration, lifecycle management, and dependency injection for Spring beans.\n    Spring Interview Questions for Freshers\n    Here are some common Spring Framework interview questions and answers for freshers.",
+    "question": "What is the role of the ApplicationContext in Spring?",
+    "answer": "ApplicationContext is a container providing configuration, lifecycle management, and dependency injection for Spring beans.\n    Spring Interview Questions for Freshers\n    Here are some common Spring Framework interview questions and answers for freshers.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0006",
+    "content": "Question: What is the difference between BeanFactory and ApplicationContext?\n\nAnswer: BeanFactory is a basic container for bean management – while ApplicationContext offers advanced features like internationalization, event handling, and AOP support.",
+    "question": "What is the difference between BeanFactory and ApplicationContext?",
+    "answer": "BeanFactory is a basic container for bean management – while ApplicationContext offers advanced features like internationalization, event handling, and AOP support.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0007",
+    "content": "Question: How does Spring support transaction management?\n\nAnswer: Spring supports both programmatic and declarative transaction management using @Transactional or the TransactionTemplate class.",
+    "question": "How does Spring support transaction management?",
+    "answer": "Spring supports both programmatic and declarative transaction management using @Transactional or the TransactionTemplate class.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0008",
+    "content": "Question: What is Spring IoC?\n\nAnswer: This is one of the most important Spring IoC interview questions. Here is how you should answer it.\n    Spring IoC (Inversion of Control) is a container that manages object creation and their dependencies – promoting loose coupling through Dependency Injection.",
+    "question": "What is Spring IoC?",
+    "answer": "This is one of the most important Spring IoC interview questions. Here is how you should answer it.\n    Spring IoC (Inversion of Control) is a container that manages object creation and their dependencies – promoting loose coupling through Dependency Injection.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0009",
+    "content": "Question: How does Spring achieve loose coupling?\n\nAnswer: Spring achieves loose coupling through Dependency Injection and the use of interfaces – making modules independent and easily interchangeable.",
+    "question": "How does Spring achieve loose coupling?",
+    "answer": "Spring achieves loose coupling through Dependency Injection and the use of interfaces – making modules independent and easily interchangeable.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0010",
+    "content": "Question: What is the DispatcherServlet in Spring?\n\nAnswer: The DispatcherServlet is the front controller in Spring MVC that handles incoming HTTP requests and delegates them to appropriate handlers.\n    Spring Framework Interview Questions for Experienced\n    These are some important interview questions on Spring for experienced and their answers.",
+    "question": "What is the DispatcherServlet in Spring?",
+    "answer": "The DispatcherServlet is the front controller in Spring MVC that handles incoming HTTP requests and delegates them to appropriate handlers.\n    Spring Framework Interview Questions for Experienced\n    These are some important interview questions on Spring for experienced and their answers.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0011",
+    "content": "Question: What is Spring AOP, and why is it used?\n\nAnswer: Spring AOP (Aspect-Oriented Programming) allows you to define cross-cutting concerns like logging, security, and transactions, separately from the application logic.",
+    "question": "What is Spring AOP, and why is it used?",
+    "answer": "Spring AOP (Aspect-Oriented Programming) allows you to define cross-cutting concerns like logging, security, and transactions, separately from the application logic.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0012",
+    "content": "Question: How do you handle exceptions in Spring?\n\nAnswer: Spring handles exceptions using @ExceptionHandler in controllers, @ControllerAdvice for global handling, and custom exceptions with proper HTTP status codes.",
+    "question": "How do you handle exceptions in Spring?",
+    "answer": "Spring handles exceptions using @ExceptionHandler in controllers, @ControllerAdvice for global handling, and custom exceptions with proper HTTP status codes.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0013",
+    "content": "Question: What is the difference between @Transactional and programmatic transactions?\n\nAnswer: @Transactional simplifies transaction management declaratively, while programmatic transactions use code (e.g., TransactionTemplate) for finer control.",
+    "question": "What is the difference between @Transactional and programmatic transactions?",
+    "answer": "@Transactional simplifies transaction management declaratively, while programmatic transactions use code (e.g., TransactionTemplate) for finer control.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0014",
+    "content": "Question: How does Spring Boot differ from the traditional Spring Framework?\n\nAnswer: Spring Boot simplifies development by providing embedded servers. It also offers auto-configuration and starter dependencies. This reduces the need for manual setup.\n    Unlike the traditional Spring Framework – Spring Boot minimizes XML configurations. It focuses on convention over configuration – allowing developers to build production-ready applications quickly.\n    Spring Interview Questions for 2 Years Experienced Candidates\n    Here are some common Spring interview questions for experienced professionals.",
+    "question": "How does Spring Boot differ from the traditional Spring Framework?",
+    "answer": "Spring Boot simplifies development by providing embedded servers. It also offers auto-configuration and starter dependencies. This reduces the need for manual setup.\n    Unlike the traditional Spring Framework – Spring Boot minimizes XML configurations. It focuses on convention over configuration – allowing developers to build production-ready applications quickly.\n    Spring Interview Questions for 2 Years Experienced Candidates\n    Here are some common Spring interview questions for experienced professionals.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0015",
+    "content": "Question: What is a Spring Boot Starter?\n\nAnswer: Spring Boot Starters are predefined dependencies. They help set up Spring applications quickly. They require minimal configuration. Examples include spring-boot-starter-web and spring-boot-starter-data-jpa.",
+    "question": "What is a Spring Boot Starter?",
+    "answer": "Spring Boot Starters are predefined dependencies. They help set up Spring applications quickly. They require minimal configuration. Examples include spring-boot-starter-web and spring-boot-starter-data-jpa.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0016",
+    "content": "Question: What is the use of @Qualifier annotation?\n\nAnswer: @Qualifier is used when multiple beans of the same type exist. It helps specify which bean to inject. This resolves ambiguity in bean selection.",
+    "question": "What is the use of @Qualifier annotation?",
+    "answer": "@Qualifier is used when multiple beans of the same type exist. It helps specify which bean to inject. This resolves ambiguity in bean selection.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0017",
+    "content": "Question: What is Spring JDBC?\n\nAnswer: You might also come across Spring JDBC interview questions like this one.\n    Spring JDBC simplifies database operations. It provides helper classes and templates. These classes reduce repetitive code. They also handle common tasks like connection management.\n    Spring Interview Questions for 3 Years Experienced Candidates\n    Let’s take a look at some Spring experienced interview questions and answers.",
+    "question": "What is Spring JDBC?",
+    "answer": "You might also come across Spring JDBC interview questions like this one.\n    Spring JDBC simplifies database operations. It provides helper classes and templates. These classes reduce repetitive code. They also handle common tasks like connection management.\n    Spring Interview Questions for 3 Years Experienced Candidates\n    Let’s take a look at some Spring experienced interview questions and answers.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0018",
+    "content": "Question: What is the role of @Bean in Spring?\n\nAnswer: @Bean is used to define a bean within a Java configuration class, – allowing Spring to manage its lifecycle and dependencies.",
+    "question": "What is the role of @Bean in Spring?",
+    "answer": "@Bean is used to define a bean within a Java configuration class, – allowing Spring to manage its lifecycle and dependencies.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0019",
+    "content": "Question: What is the difference between @RequestMapping and @GetMapping?\n\nAnswer: @RequestMapping is a generic annotation for handling HTTP requests, while @GetMapping is a shortcut for HTTP GET requests.",
+    "question": "What is the difference between @RequestMapping and @GetMapping?",
+    "answer": "@RequestMapping is a generic annotation for handling HTTP requests, while @GetMapping is a shortcut for HTTP GET requests.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0020",
+    "content": "Question: What is Spring Boot Actuator?\n\nAnswer: Spring Boot Actuator provides production-ready features like metrics, health checks, and application insights to monitor and manage Spring Boot applications.",
+    "question": "What is Spring Boot Actuator?",
+    "answer": "Spring Boot Actuator provides production-ready features like metrics, health checks, and application insights to monitor and manage Spring Boot applications.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0021",
+    "content": "Question: What is the use of Spring Profiles?\n\nAnswer: Spring Profiles allow you to define different configurations for different environments (e.g., dev, prod) in a Spring application.\n    Spring Interview Questions for 5 Years Experienced Candidates\n    Here are some Spring Framework interview questions and answers for candidates with 5 years of experience.",
+    "question": "What is the use of Spring Profiles?",
+    "answer": "Spring Profiles allow you to define different configurations for different environments (e.g., dev, prod) in a Spring application.\n    Spring Interview Questions for 5 Years Experienced Candidates\n    Here are some Spring Framework interview questions and answers for candidates with 5 years of experience.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0022",
+    "content": "Question: What is the difference between Spring MVC and Spring WebFlux?\n\nAnswer: Spring MVC is synchronous – while Spring WebFlux is asynchronous, built for handling non-blocking, reactive programming in web applications.",
+    "question": "What is the difference between Spring MVC and Spring WebFlux?",
+    "answer": "Spring MVC is synchronous – while Spring WebFlux is asynchronous, built for handling non-blocking, reactive programming in web applications.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0023",
+    "content": "Question: What is the use of @PreAuthorize in Spring Security?\n\nAnswer: @PreAuthorize is used to secure methods with specific roles or permissions before method execution, based on expression-based access control.",
+    "question": "What is the use of @PreAuthorize in Spring Security?",
+    "answer": "@PreAuthorize is used to secure methods with specific roles or permissions before method execution, based on expression-based access control.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0024",
+    "content": "Question: How does Spring manage transactions?\n\nAnswer: Spring uses @Transactional for declarative transaction management, allowing automatic transaction handling at the method level with rollback features.",
+    "question": "How does Spring manage transactions?",
+    "answer": "Spring uses @Transactional for declarative transaction management, allowing automatic transaction handling at the method level with rollback features.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0025",
+    "content": "Question: What is the difference between @Scope and @Singleton?\n\nAnswer: @Scope defines the lifecycle of a Spring bean (e.g., singleton, prototype) – while @Singleton (in non-Spring contexts) restricts a class to one instance globally.\n    Spring Interview Questions for 7 Years Experienced Candidates\n    Here are some Spring Framework interview questions and answers for candidates with 7 years of experience.",
+    "question": "What is the difference between @Scope and @Singleton?",
+    "answer": "@Scope defines the lifecycle of a Spring bean (e.g., singleton, prototype) – while @Singleton (in non-Spring contexts) restricts a class to one instance globally.\n    Spring Interview Questions for 7 Years Experienced Candidates\n    Here are some Spring Framework interview questions and answers for candidates with 7 years of experience.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0026",
+    "content": "Question: How does Spring support Aspect-Oriented Programming (AOP)?\n\nAnswer: Spring AOP allows the separation of cross-cutting concerns like logging, security, and transactions from the main business logic using aspects.",
+    "question": "How does Spring support Aspect-Oriented Programming (AOP)?",
+    "answer": "Spring AOP allows the separation of cross-cutting concerns like logging, security, and transactions from the main business logic using aspects.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0027",
+    "content": "Question: What is Spring Data JPA?\n\nAnswer: Spring Data JPA simplifies database interaction by creating repositories for entities and providing built-in methods for CRUD operations.",
+    "question": "What is Spring Data JPA?",
+    "answer": "Spring Data JPA simplifies database interaction by creating repositories for entities and providing built-in methods for CRUD operations.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0028",
+    "content": "Question: What are the advantages of using Spring Boot over Spring MVC?\n\nAnswer: Spring Boot simplifies configuration, provides embedded servers, and includes auto-configuration, reducing the need for boilerplate code compared to Spring MVC.",
+    "question": "What are the advantages of using Spring Boot over Spring MVC?",
+    "answer": "Spring Boot simplifies configuration, provides embedded servers, and includes auto-configuration, reducing the need for boilerplate code compared to Spring MVC.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0029",
+    "content": "Question: How can you enable Caching in Spring?\n\nAnswer: You can enable caching by using the @EnableCaching annotation in a configuration class and @Cacheable on methods that require caching.\n    Spring Interview Questions for 10 Years Experienced Candidates\n    Here are some Spring Framework interview questions and answers for candidates with 10 years of experience.",
+    "question": "How can you enable Caching in Spring?",
+    "answer": "You can enable caching by using the @EnableCaching annotation in a configuration class and @Cacheable on methods that require caching.\n    Spring Interview Questions for 10 Years Experienced Candidates\n    Here are some Spring Framework interview questions and answers for candidates with 10 years of experience.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0030",
+    "content": "Question: How do you implement microservices in Spring?\n\nAnswer: Spring Boot, Spring Cloud, and Spring Data are used to build microservices, with tools like Eureka for service discovery and Ribbon for load balancing.",
+    "question": "How do you implement microservices in Spring?",
+    "answer": "Spring Boot, Spring Cloud, and Spring Data are used to build microservices, with tools like Eureka for service discovery and Ribbon for load balancing.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0031",
+    "content": "Question: What are the common design patterns used in Spring?\n\nAnswer: Common patterns in Spring include Singleton, Factory, Proxy, and Observer patterns, which help manage beans and improve modularity.",
+    "question": "What are the common design patterns used in Spring?",
+    "answer": "Common patterns in Spring include Singleton, Factory, Proxy, and Observer patterns, which help manage beans and improve modularity.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0032",
+    "content": "Question: What is Spring Batch?\n\nAnswer: Spring Batch is used for processing large volumes of data in batch jobs. It supports features like transaction management, job scheduling, and error handling.\n    Spring Scenario Based Interview Questions for Experienced Professionals\n    These are some common scenario-based Spring Framework interview questions and answers.",
+    "question": "What is Spring Batch?",
+    "answer": "Spring Batch is used for processing large volumes of data in batch jobs. It supports features like transaction management, job scheduling, and error handling.\n    Spring Scenario Based Interview Questions for Experienced Professionals\n    These are some common scenario-based Spring Framework interview questions and answers.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0033",
+    "content": "Question: How would you handle a situation where two beans of the same type are present in the Spring context?\n\nAnswer: “I would use the @Qualifier annotation to specify which bean to inject. This helps me avoid ambiguity when multiple beans of the same type are present in the context.”",
+    "question": "How would you handle a situation where two beans of the same type are present in the Spring context?",
+    "answer": "“I would use the @Qualifier annotation to specify which bean to inject. This helps me avoid ambiguity when multiple beans of the same type are present in the context.”",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0034",
+    "content": "Question: How do you manage a database transaction that requires rolling back only under certain conditions?\n\nAnswer: “I would use the @Transactional annotation with the rollbackFor attribute. This allows me to specify which exceptions should trigger a rollback, giving me more control over transaction management.”",
+    "question": "How do you manage a database transaction that requires rolling back only under certain conditions?",
+    "answer": "“I would use the @Transactional annotation with the rollbackFor attribute. This allows me to specify which exceptions should trigger a rollback, giving me more control over transaction management.”",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0035",
+    "content": "Question: How would you handle a situation where the Spring Boot application starts very slowly?\n\nAnswer: “I would first profile the application to identify bottlenecks. I’d review the autoconfiguration, lazy loading, and database connections. I might optimize startup performance by using @Lazy or adjusting application configurations.”",
+    "question": "How would you handle a situation where the Spring Boot application starts very slowly?",
+    "answer": "“I would first profile the application to identify bottlenecks. I’d review the autoconfiguration, lazy loading, and database connections. I might optimize startup performance by using @Lazy or adjusting application configurations.”",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0036",
+    "content": "Question: What would you do if a Spring MVC controller method is not handling the request as expected?\n\nAnswer: “I would check if the request URL matches the method mapping and ensure the correct HTTP method (GET, POST) is used. I’d also validate the controller and method annotations like @RequestMapping or @GetMapping.”\n    Spring Programming Interview Questions\n    Here are some important Spring programming questions and their answers.",
+    "question": "What would you do if a Spring MVC controller method is not handling the request as expected?",
+    "answer": "“I would check if the request URL matches the method mapping and ensure the correct HTTP method (GET, POST) is used. I’d also validate the controller and method annotations like @RequestMapping or @GetMapping.”\n    Spring Programming Interview Questions\n    Here are some important Spring programming questions and their answers.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0037",
+    "content": "Question: How do you inject a dependency into a Spring bean using constructor injection?\n\nAnswer: @Component\n    public class MyService {\n    private final MyRepository myRepository;\n    @Autowired\n    public MyService(MyRepository myRepository) {\n    this.myRepository = myRepository;\n    }\n    }",
+    "question": "How do you inject a dependency into a Spring bean using constructor injection?",
+    "answer": "@Component\n    public class MyService {\n    private final MyRepository myRepository;\n    @Autowired\n    public MyService(MyRepository myRepository) {\n    this.myRepository = myRepository;\n    }\n    }",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0038",
+    "content": "Question: How do you handle a NullPointerException in a Spring application?\n\nAnswer: @ExceptionHandler(NullPointerException.class)\n    public ResponseEntity<String> handleNullPointerException(NullPointerException e) {\n    return new ResponseEntity<>(“NullPointerException occurred: ” + e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);\n    }",
+    "question": "How do you handle a NullPointerException in a Spring application?",
+    "answer": "@ExceptionHandler(NullPointerException.class)\n    public ResponseEntity<String> handleNullPointerException(NullPointerException e) {\n    return new ResponseEntity<>(“NullPointerException occurred: ” + e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);\n    }",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0039",
+    "content": "Question: How would you implement a simple Spring Boot REST controller?\n\nAnswer: @RestController\n    @RequestMapping(“/api”)\n    public class MyController {\n    @GetMapping(“/hello”)\n    public String sayHello() {\n    return “Hello, World!”;\n    }\n    }",
+    "question": "How would you implement a simple Spring Boot REST controller?",
+    "answer": "@RestController\n    @RequestMapping(“/api”)\n    public class MyController {\n    @GetMapping(“/hello”)\n    public String sayHello() {\n    return “Hello, World!”;\n    }\n    }",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0040",
+    "content": "Question: How do you configure Spring Security with HTTP Basic Authentication?\n\nAnswer: @Configuration\n    @EnableWebSecurity\n    public class SecurityConfig extends WebSecurityConfigurerAdapter {\n    @Override\n    protected void configure(HttpSecurity http) throws Exception {\n    http\n    .httpBasic()\n    .and()\n    .authorizeRequests()\n    .anyRequest().authenticated();\n    }\n    @Override\n    protected void configure(AuthenticationManagerBuilder auth) throws Exception {\n    auth.inMemoryAuthentication()\n    .withUser(“user”).password(“{noop}password”).roles(“USER”);\n    }\n    }\n    Spring MVC Interview Questions\n    Let’s take a look at Spring MVC Framework interview questions and their answers.",
+    "question": "How do you configure Spring Security with HTTP Basic Authentication?",
+    "answer": "@Configuration\n    @EnableWebSecurity\n    public class SecurityConfig extends WebSecurityConfigurerAdapter {\n    @Override\n    protected void configure(HttpSecurity http) throws Exception {\n    http\n    .httpBasic()\n    .and()\n    .authorizeRequests()\n    .anyRequest().authenticated();\n    }\n    @Override\n    protected void configure(AuthenticationManagerBuilder auth) throws Exception {\n    auth.inMemoryAuthentication()\n    .withUser(“user”).password(“{noop}password”).roles(“USER”);\n    }\n    }\n    Spring MVC Interview Questions\n    Let’s take a look at Spring MVC Framework interview questions and their answers.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0041",
+    "content": "Question: What is the role of @RequestMapping in Spring MVC?\n\nAnswer: @RequestMapping maps HTTP requests to specific handler methods in controllers. It can be used with different HTTP methods like GET, POST, etc.",
+    "question": "What is the role of @RequestMapping in Spring MVC?",
+    "answer": "@RequestMapping maps HTTP requests to specific handler methods in controllers. It can be used with different HTTP methods like GET, POST, etc.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0042",
+    "content": "Question: How do you handle form data in Spring MVC?\n\nAnswer: Form data can be handled using @ModelAttribute for binding form fields to a model object. You can also use @RequestParam for individual form fields.",
+    "question": "How do you handle form data in Spring MVC?",
+    "answer": "Form data can be handled using @ModelAttribute for binding form fields to a model object. You can also use @RequestParam for individual form fields.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0043",
+    "content": "Question: What is the purpose of the @PathVariable annotation in Spring MVC?\n\nAnswer: @PathVariable is used to bind a URI template variable to a method parameter. It allows dynamic values to be extracted from the URL.",
+    "question": "What is the purpose of the @PathVariable annotation in Spring MVC?",
+    "answer": "@PathVariable is used to bind a URI template variable to a method parameter. It allows dynamic values to be extracted from the URL.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0044",
+    "content": "Question: What is the role of the ModelAndView object in Spring MVC?\n\nAnswer: ModelAndView holds both the model data and the view name. It is used to return a response from controller methods.\n    Spring Security Interview Questions\n    These are some important interview Spring questions about security and their answers.",
+    "question": "What is the role of the ModelAndView object in Spring MVC?",
+    "answer": "ModelAndView holds both the model data and the view name. It is used to return a response from controller methods.\n    Spring Security Interview Questions\n    These are some important interview Spring questions about security and their answers.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0045",
+    "content": "Question: What is Spring Security?\n\nAnswer: Spring Security is a framework for authentication and authorization. It secures web applications. It offers customizable solutions for login and role-based access control.",
+    "question": "What is Spring Security?",
+    "answer": "Spring Security is a framework for authentication and authorization. It secures web applications. It offers customizable solutions for login and role-based access control.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0046",
+    "content": "Question: What is the role of AuthenticationManager in Spring Security?\n\nAnswer: AuthenticationManager is responsible for authenticating users. It validates credentials and grants authentication tokens if successful.",
+    "question": "What is the role of AuthenticationManager in Spring Security?",
+    "answer": "AuthenticationManager is responsible for authenticating users. It validates credentials and grants authentication tokens if successful.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0047",
+    "content": "Question: How can you implement form-based authentication in Spring Security?\n\nAnswer: To implement form-based authentication, use http.formLogin(). Configure the login page and success URL, allowing users to log in with a username and password.",
+    "question": "How can you implement form-based authentication in Spring Security?",
+    "answer": "To implement form-based authentication, use http.formLogin(). Configure the login page and success URL, allowing users to log in with a username and password.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0048",
+    "content": "Question: What is the purpose of @Secured annotation in Spring Security?\n\nAnswer: @Secured is used to specify roles that are allowed to access a particular method. It restricts access based on roles like ROLE_USER or ROLE_ADMIN.\n    Core Spring Interview Questions\n    Here are some core questions on Spring Framework and their answers.",
+    "question": "What is the purpose of @Secured annotation in Spring Security?",
+    "answer": "@Secured is used to specify roles that are allowed to access a particular method. It restricts access based on roles like ROLE_USER or ROLE_ADMIN.\n    Core Spring Interview Questions\n    Here are some core questions on Spring Framework and their answers.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0049",
+    "content": "Question: What is the difference between @Component, @Service, and @Repository?\n\nAnswer: @Component is a general-purpose annotation. @Service is for service layer beans. @Repository is for data access components and provides additional persistence-related features.",
+    "question": "What is the difference between @Component, @Service, and @Repository?",
+    "answer": "@Component is a general-purpose annotation. @Service is for service layer beans. @Repository is for data access components and provides additional persistence-related features.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0050",
+    "content": "Question: What is the purpose of @Configuration annotation?\n\nAnswer: @Configuration indicates that a class contains Spring bean definitions. It is used for Java-based configuration and can be combined with @Bean to define beans.",
+    "question": "What is the purpose of @Configuration annotation?",
+    "answer": "@Configuration indicates that a class contains Spring bean definitions. It is used for Java-based configuration and can be combined with @Bean to define beans.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0051",
+    "content": "Question: What is the use of the @Value annotation in Spring?\n\nAnswer: @Value is used to inject values into fields, methods, or constructor parameters from property files, system properties, or expression results.\n    Spring Data JPA Interview Questions\n    Now, let’s take a look at some Spring JPA interview questions and their answers.",
+    "question": "What is the use of the @Value annotation in Spring?",
+    "answer": "@Value is used to inject values into fields, methods, or constructor parameters from property files, system properties, or expression results.\n    Spring Data JPA Interview Questions\n    Now, let’s take a look at some Spring JPA interview questions and their answers.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0052",
+    "content": "Question: What is the purpose of @Entity annotation in Spring Data JPA?\n\nAnswer: @Entity marks a class as a JPA entity. It tells Spring Data JPA to map the class to a database table.",
+    "question": "What is the purpose of @Entity annotation in Spring Data JPA?",
+    "answer": "@Entity marks a class as a JPA entity. It tells Spring Data JPA to map the class to a database table.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0053",
+    "content": "Question: What is the difference between @OneToMany and @ManyToOne?\n\nAnswer: @OneToMany represents a one-to-many relationship, while @ManyToOne represents a many-to-one relationship. Both are used to define associations between entities.",
+    "question": "What is the difference between @OneToMany and @ManyToOne?",
+    "answer": "@OneToMany represents a one-to-many relationship, while @ManyToOne represents a many-to-one relationship. Both are used to define associations between entities.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0054",
+    "content": "Question: What is the function of @Query annotation in Spring Data JPA?\n\nAnswer: @Query allows defining custom JPQL or SQL queries in repository methods. It helps to write complex queries beyond the method name conventions.",
+    "question": "What is the function of @Query annotation in Spring Data JPA?",
+    "answer": "@Query allows defining custom JPQL or SQL queries in repository methods. It helps to write complex queries beyond the method name conventions.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0055",
+    "content": "Question: How does Spring Data JPA handle pagination and sorting?\n\nAnswer: Spring Data JPA provides built-in support for pagination and sorting through Pageable and Sort objects, which can be passed to repository methods for efficient data retrieval.\n    Interview Questions on Spring Batch\n    Here are some important Java Spring questions and their answers.",
+    "question": "How does Spring Data JPA handle pagination and sorting?",
+    "answer": "Spring Data JPA provides built-in support for pagination and sorting through Pageable and Sort objects, which can be passed to repository methods for efficient data retrieval.\n    Interview Questions on Spring Batch\n    Here are some important Java Spring questions and their answers.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0056",
+    "content": "Question: What are the main components of Spring Batch?\n\nAnswer: Spring Batch has three main components – Job, Step, and ItemProcessor. A Job contains multiple Steps, each processing data in chunks.",
+    "question": "What are the main components of Spring Batch?",
+    "answer": "Spring Batch has three main components – Job, Step, and ItemProcessor. A Job contains multiple Steps, each processing data in chunks.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0057",
+    "content": "Question: How does Spring Batch handle transaction management?\n\nAnswer: Spring Batch provides built-in transaction management. It commits data in chunks and ensures that transactions are either fully completed or fully rolled back in case of errors.",
+    "question": "How does Spring Batch handle transaction management?",
+    "answer": "Spring Batch provides built-in transaction management. It commits data in chunks and ensures that transactions are either fully completed or fully rolled back in case of errors.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0058",
+    "content": "Question: What is the difference between ItemReader and ItemWriter in Spring Batch?\n\nAnswer: ItemReader is used to read data from a source (e.g., database, file). ItemWriter writes processed data to a destination, such as a database or a file.\n    Spring Microservices Interview Questions\n    These are some Spring Framework interview questions and answers on Microservices.",
+    "question": "What is the difference between ItemReader and ItemWriter in Spring Batch?",
+    "answer": "ItemReader is used to read data from a source (e.g., database, file). ItemWriter writes processed data to a destination, such as a database or a file.\n    Spring Microservices Interview Questions\n    These are some Spring Framework interview questions and answers on Microservices.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0059",
+    "content": "Question: What is API Gateway in microservices architecture?\n\nAnswer: API Gateway acts as a reverse proxy. It routes requests from clients to the appropriate microservices. It also handles tasks like load balancing, security, and rate limiting.",
+    "question": "What is API Gateway in microservices architecture?",
+    "answer": "API Gateway acts as a reverse proxy. It routes requests from clients to the appropriate microservices. It also handles tasks like load balancing, security, and rate limiting.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0060",
+    "content": "Question: What is the role of Spring Cloud Sleuth in microservices?\n\nAnswer: Spring Cloud Sleuth provides distributed tracing. It tracks the flow of requests across microservices, helping to troubleshoot performance issues and errors.",
+    "question": "What is the role of Spring Cloud Sleuth in microservices?",
+    "answer": "Spring Cloud Sleuth provides distributed tracing. It tracks the flow of requests across microservices, helping to troubleshoot performance issues and errors.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0061",
+    "content": "Question: What is the purpose of Spring Boot in microservices architecture?\n\nAnswer: Spring Boot simplifies the creation of microservices. It provides embedded servers and auto-configuration, reducing the complexity of setting up and deploying services.\n    Spring Annotation Interview Questions\n    Here are some important Spring interview questions with answers on annotation.",
+    "question": "What is the purpose of Spring Boot in microservices architecture?",
+    "answer": "Spring Boot simplifies the creation of microservices. It provides embedded servers and auto-configuration, reducing the complexity of setting up and deploying services.\n    Spring Annotation Interview Questions\n    Here are some important Spring interview questions with answers on annotation.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0062",
+    "content": "Question: What is the @Autowired annotation used for in Spring?\n\nAnswer: @Autowired automatically injects dependencies into Spring beans. It can be used on fields, constructors, or setter methods to resolve bean dependencies.",
+    "question": "What is the @Autowired annotation used for in Spring?",
+    "answer": "@Autowired automatically injects dependencies into Spring beans. It can be used on fields, constructors, or setter methods to resolve bean dependencies.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0063",
+    "content": "Question: What is the @PostConstruct annotation used for?\n\nAnswer: @PostConstruct is used to define a method that should be executed after a bean’s initialization. It is typically used for custom initialization logic.",
+    "question": "What is the @PostConstruct annotation used for?",
+    "answer": "@PostConstruct is used to define a method that should be executed after a bean’s initialization. It is typically used for custom initialization logic.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0064",
+    "content": "Question: What is the purpose of the @Scope annotation in Spring?\n\nAnswer: @Scope defines the lifecycle and visibility of a Spring bean. It determines if a bean is singleton, prototype, request, session, etc.\n    Spring REST API Interview Questions\n    Here are some common Spring REST interview questions and their answers.",
+    "question": "What is the purpose of the @Scope annotation in Spring?",
+    "answer": "@Scope defines the lifecycle and visibility of a Spring bean. It determines if a bean is singleton, prototype, request, session, etc.\n    Spring REST API Interview Questions\n    Here are some common Spring REST interview questions and their answers.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0065",
+    "content": "Question: What is @ResponseBody used for in Spring REST?\n\nAnswer: @ResponseBody tells Spring to convert the return value of a method into an HTTP response body. It’s used to return data in formats like JSON or XML.",
+    "question": "What is @ResponseBody used for in Spring REST?",
+    "answer": "@ResponseBody tells Spring to convert the return value of a method into an HTTP response body. It’s used to return data in formats like JSON or XML.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0066",
+    "content": "Question: How does Spring handle HTTP status codes in REST APIs?\n\nAnswer: Spring uses @ResponseStatus to specify HTTP status codes for methods or exceptions. Alternatively, you can manually set status codes using ResponseEntity.",
+    "question": "How does Spring handle HTTP status codes in REST APIs?",
+    "answer": "Spring uses @ResponseStatus to specify HTTP status codes for methods or exceptions. Alternatively, you can manually set status codes using ResponseEntity.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0067",
+    "content": "Question: What is @RequestParam used for in Spring REST?\n\nAnswer: @RequestParam is used to extract query parameters from the URL in a GET request. It maps URL parameters to method arguments.\n    Spring AOP Interview Questions\n    These are some important Spring interview questions on AOP and their answers.",
+    "question": "What is @RequestParam used for in Spring REST?",
+    "answer": "@RequestParam is used to extract query parameters from the URL in a GET request. It maps URL parameters to method arguments.\n    Spring AOP Interview Questions\n    These are some important Spring interview questions on AOP and their answers.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0068",
+    "content": "Question: What is AOP in Spring?\n\nAnswer: AOP (Aspect-Oriented Programming) allows separation of concerns. It enables adding functionality like logging, security, and transactions without modifying the core logic.",
+    "question": "What is AOP in Spring?",
+    "answer": "AOP (Aspect-Oriented Programming) allows separation of concerns. It enables adding functionality like logging, security, and transactions without modifying the core logic.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0069",
+    "content": "Question: What are the main components of AOP in Spring?\n\nAnswer: The main components are Aspect, JoinPoint, Advice, Pointcut, and Weaving. These components work together to provide cross-cutting functionality.",
+    "question": "What are the main components of AOP in Spring?",
+    "answer": "The main components are Aspect, JoinPoint, Advice, Pointcut, and Weaving. These components work together to provide cross-cutting functionality.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0070",
+    "content": "Question: What is the difference between @Before and @After in Spring AOP?\n\nAnswer: @Before runs before the method execution, while @After runs after the method execution, regardless of the method’s outcome.\n    Spring Cloud Interview Questions\n    Here are some Spring Framework Java interview questions on cloud and their answers.",
+    "question": "What is the difference between @Before and @After in Spring AOP?",
+    "answer": "@Before runs before the method execution, while @After runs after the method execution, regardless of the method’s outcome.\n    Spring Cloud Interview Questions\n    Here are some Spring Framework Java interview questions on cloud and their answers.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0071",
+    "content": "Question: What is Spring Cloud?\n\nAnswer: Spring Cloud is a set of tools for building microservices. It provides solutions for service discovery, configuration management, and fault tolerance.",
+    "question": "What is Spring Cloud?",
+    "answer": "Spring Cloud is a set of tools for building microservices. It provides solutions for service discovery, configuration management, and fault tolerance.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0072",
+    "content": "Question: How does Spring Cloud enable service discovery?\n\nAnswer: Spring Cloud uses Netflix Eureka for service discovery. It allows microservices to register themselves and discover other services dynamically.",
+    "question": "How does Spring Cloud enable service discovery?",
+    "answer": "Spring Cloud uses Netflix Eureka for service discovery. It allows microservices to register themselves and discover other services dynamically.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0073",
+    "content": "Question: What is the role of Spring Cloud Config?\n\nAnswer: Spring Cloud Config provides centralized configuration management for microservices. It allows externalized configuration and helps manage different environments (e.g., development, production).\n    Spring WebFlux Interview Questions\n    Let’s cover some Java Spring interview questions on WebFlux and their answers.",
+    "question": "What is the role of Spring Cloud Config?",
+    "answer": "Spring Cloud Config provides centralized configuration management for microservices. It allows externalized configuration and helps manage different environments (e.g., development, production).\n    Spring WebFlux Interview Questions\n    Let’s cover some Java Spring interview questions on WebFlux and their answers.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0074",
+    "content": "Question: What is Spring WebFlux?\n\nAnswer: Spring WebFlux is a reactive programming framework for building non-blocking web applications. It uses Reactor for handling asynchronous and event-driven applications.",
+    "question": "What is Spring WebFlux?",
+    "answer": "Spring WebFlux is a reactive programming framework for building non-blocking web applications. It uses Reactor for handling asynchronous and event-driven applications.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0075",
+    "content": "Question: What is Mono and Flux in Spring WebFlux?\n\nAnswer: Mono represents a single asynchronous value or an empty value. Flux represents a sequence of asynchronous values. Both are part of the Reactor library.",
+    "question": "What is Mono and Flux in Spring WebFlux?",
+    "answer": "Mono represents a single asynchronous value or an empty value. Flux represents a sequence of asynchronous values. Both are part of the Reactor library.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "spring_interview_question-0076",
+    "content": "Question: How does Spring WebFlux handle concurrency?\n\nAnswer: Spring WebFlux handles concurrency using non-blocking I/O. It processes requests asynchronously and scales efficiently by using the event-loop model and reactive streams.",
+    "question": "How does Spring WebFlux handle concurrency?",
+    "answer": "Spring WebFlux handles concurrency using non-blocking I/O. It processes requests asynchronously and scales efficiently by using the event-loop model and reactive streams.",
+    "metadata": {
+      "topic": "Spring",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "spring_interview_question.md",
+      "answer_status": "available"
+    }
+  }
+]

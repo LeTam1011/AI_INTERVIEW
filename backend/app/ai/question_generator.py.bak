@@ -1,0 +1,205 @@
+
+from typing import Any
+
+
+def build_expected_points(
+    skill: str,
+    topic: str,
+) -> list[str]:
+    """Tạo các tiêu chí chấm điểm cụ thể cho câu hỏi."""
+    topic_lower = topic.casefold()
+
+    if any(k in topic_lower for k in ("project", "dự án")):
+        return [
+            "Mô tả mục tiêu, bối cảnh và yêu cầu của dự án.",
+            "Giải thích vai trò cá nhân và cách áp dụng công nghệ.",
+            "Nêu khó khăn kỹ thuật, cách xử lý và kết quả đạt được.",
+        ]
+
+    if any(
+        k in topic_lower
+        for k in ("problem_solving", "debug", "debugging")
+    ):
+        return [
+            "Phân tích vấn đề và xác định nguyên nhân có thể xảy ra.",
+            "Trình bày các bước xử lý và giải thích lý do lựa chọn.",
+            "Nêu cách kiểm thử, xác minh kết quả và phòng tránh lỗi tái diễn.",
+        ]
+
+    if any(
+        k in topic_lower
+        for k in ("job_fit", "behavioral", "motivation")
+    ):
+        return [
+            "Liên hệ kinh nghiệm hoặc kỹ năng cá nhân với yêu cầu công việc.",
+            "Đưa ra ví dụ cụ thể chứng minh điểm mạnh hoặc kinh nghiệm.",
+            "Nêu kỹ năng cần cải thiện và kế hoạch thực hiện.",
+        ]
+
+    return [
+        f"Giải thích khái niệm và mục đích sử dụng của {skill}.",
+        f"Mô tả tình huống thực tế áp dụng {skill} và cách thực hiện.",
+        f"Giải thích cách kiểm tra kết quả và xử lý lỗi khi sử dụng {skill}.",
+    ]
+
+
+def generate_questions(
+    context_snapshot: dict[str, Any],
+    count: int = 10,
+) -> list[dict[str, Any]]:
+    """Generate interview questions from the saved CV/JD context."""
+
+    context = context_snapshot or {}
+    cv_score = context.get("cv_score") or {}
+    job = context.get("job") or {}
+    profile = context.get("candidate_profile") or {}
+
+    level = context.get("career_level", "intern")
+    language = context.get("language", "vi")
+
+    matched = cv_score.get("matched_required_skills") or []
+    missing = cv_score.get("missing_required_skills") or []
+    preferred = cv_score.get("matched_preferred_skills") or []
+
+    questions: list[dict[str, Any]] = []
+    seen: set[str] = set()
+
+    def add(
+        question_text: str,
+        topic: str,
+        expected_points: list[str],
+        reason: str,
+        difficulty: str = "medium",
+        question_type: str = "technical",
+    ) -> None:
+        if len(questions) >= count:
+            return
+
+        normalized = question_text.strip().casefold()
+        if not normalized or normalized in seen:
+            return
+
+        seen.add(normalized)
+
+        questions.append({
+            "position": len(questions) + 1,
+            "question_text": question_text,
+            "question_type": question_type,
+            "topic": topic[:120],
+            "expected_points": expected_points,
+            "source_context": {
+                "reason": reason,
+                "difficulty": difficulty,
+                "career_level": level,
+                "job_title": job.get("title", ""),
+                "cv_score": cv_score.get("overall_score"),
+            },
+        })
+
+    # 1. Kiểm tra kỹ năng bắt buộc CV chưa thể hiện rõ.
+    for skill in missing:
+        add(
+            f"Bạn sẽ sử dụng {skill} như thế nào để giải quyết "
+            "một vấn đề thực tế trong công việc?",
+            str(skill),
+            build_expected_points(str(skill), str(skill)),
+            f"CV chưa thể hiện rõ kỹ năng bắt buộc: {skill}",
+            question_type="technical",
+        )
+
+    # 2. Xác minh chiều sâu của kỹ năng đã có trong CV.
+    for skill in matched:
+        add(
+            f"Hãy mô tả một tình huống cụ thể bạn đã sử dụng "
+            f"{skill}, lý do lựa chọn và kết quả đạt được.",
+            str(skill),
+            build_expected_points(str(skill), "project"),
+            f"Kiểm tra chiều sâu của kỹ năng {skill} được đề cập trong CV",
+            question_type="technical",
+        )
+
+    # 3. Khám phá các kỹ năng ưu tiên trong JD.
+    for skill in preferred:
+        add(
+            f"Bạn biết gì về {skill}, và trong trường hợp nào "
+            "bạn sẽ chọn công nghệ này?",
+            str(skill),
+            build_expected_points(str(skill), str(skill)),
+            f"Đánh giá kỹ năng ưu tiên trong JD: {skill}",
+            question_type="technical",
+        )
+
+    # 4. Hỏi về các dự án được trích xuất từ CV.
+    projects = profile.get("projects") or []
+
+    if isinstance(projects, list):
+        for project in projects[:3]:
+            if isinstance(project, dict):
+                name = (
+                    project.get("name")
+                    or project.get("title")
+                    or "một dự án trong CV"
+                )
+            else:
+                name = str(project)
+
+            add(
+                f"Hãy trình bày vai trò của bạn trong {name}, "
+                "thách thức lớn nhất và cách bạn giải quyết.",
+                "project",
+                build_expected_points(str(name), "project"),
+                "Đào sâu kinh nghiệm dự án trong hồ sơ ứng viên",
+                question_type="cv_based",
+            )
+
+    # 5. Điều chỉnh câu hỏi giải quyết vấn đề theo cấp độ.
+    if level in ("intern", "fresher"):
+        difficulty = "easy"
+        problem = (
+            "Hãy trình bày cách bạn tiếp cận một lỗi kỹ thuật "
+            "mà bạn chưa từng gặp trước đây."
+        )
+    elif level == "junior":
+        difficulty = "medium"
+        problem = (
+            "Khi một chức năng hoạt động không đúng như mong đợi, "
+            "bạn sẽ tìm nguyên nhân và sửa lỗi theo những bước nào?"
+        )
+    else:
+        difficulty = "hard"
+        problem = (
+            "Bạn sẽ thiết kế và đánh giá một giải pháp kỹ thuật "
+            "để đáp ứng yêu cầu về khả năng mở rộng, độ tin cậy "
+            "và khả năng bảo trì như thế nào?"
+        )
+
+    add(
+        problem,
+        "problem_solving",
+        build_expected_points("problem solving", "problem_solving"),
+        f"Đánh giá năng lực giải quyết vấn đề ở cấp độ {level}",
+        difficulty,
+        question_type="situational",
+    )
+
+    # 6. Đánh giá mức độ phù hợp với công việc.
+    job_title = job.get("title") or "vị trí đang ứng tuyển"
+
+    add(
+        f"Bạn có thể đóng góp những gì cho vị trí {job_title}, "
+        "và bạn cần cải thiện kỹ năng nào để đáp ứng công việc?",
+        "job_fit",
+        build_expected_points(str(job_title), "job_fit"),
+        "Đánh giá mức độ phù hợp giữa ứng viên và vị trí tuyển dụng",
+        "easy",
+        question_type="behavioral",
+    )
+
+    # Giữ số lượng câu hỏi được yêu cầu.
+    result = questions[:max(0, count)]
+
+    # Đánh lại số thứ tự sau khi giới hạn số lượng.
+    for index, question in enumerate(result, start=1):
+        question["position"] = index
+
+    return result

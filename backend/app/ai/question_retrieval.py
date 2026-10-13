@@ -1,0 +1,202 @@
+from functools import lru_cache
+from pathlib import Path
+from typing import Any
+
+import chromadb
+from sentence_transformers import SentenceTransformer
+
+
+BACKEND_DIR = Path(__file__).resolve().parents[2]
+CHROMA_DIR = BACKEND_DIR / "data" / "chroma_db"
+
+COLLECTION_NAME = "software_interview_questions"
+PYTHON_TEST_COLLECTION_NAME = "python_questions_test_v1"
+EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
+
+VALID_DIFFICULTIES = {
+    "Easy",
+    "Medium",
+    "Hard",
+    "Unknown",
+}
+
+
+@lru_cache(maxsize=1)
+def get_embedding_model() -> SentenceTransformer:
+    """Load the local embedding model once per process."""
+    return SentenceTransformer(EMBEDDING_MODEL)
+
+
+@lru_cache(maxsize=4)
+def get_collection(
+    collection_name: str = COLLECTION_NAME,
+):
+    """Open a persistent ChromaDB collection by name."""
+    if collection_name not in {
+        COLLECTION_NAME,
+        PYTHON_TEST_COLLECTION_NAME,
+    }:
+        raise ValueError(
+            f"Collection không được phép truy cập: {collection_name}"
+        )
+
+    if not CHROMA_DIR.exists():
+        raise RuntimeError(
+            f"Không tìm thấy ChromaDB tại: {CHROMA_DIR}"
+        )
+
+    client = chromadb.PersistentClient(
+        path=str(CHROMA_DIR)
+    )
+
+    try:
+        collection = client.get_collection(
+            name=collection_name
+        )
+    except Exception as exc:
+        raise RuntimeError(
+            f"Không tìm thấy collection: {collection_name}"
+        ) from exc
+
+    if collection.count() == 0:
+        raise RuntimeError(
+            "Collection hiện không có dữ liệu."
+        )
+
+    return collection
+
+
+def search_questions(
+    query: str,
+    top_k: int = 5,
+    category: str | None = None,
+    difficulty: str | None = None,
+    topic: str | None = None,
+    answer_status: str | None = None,
+    collection_name: str = COLLECTION_NAME,
+) -> list[dict[str, Any]]:
+    """
+    Tìm câu hỏi phỏng vấn bằng semantic search.
+
+    Args:
+        query: Nội dung cần tìm.
+        top_k: Số kết quả, từ 1 đến 20.
+        category: Tham số tương thích với code cũ.
+                   Nếu truyền category, sẽ dùng nó như topic.
+        difficulty: Easy, Medium, Hard hoặc Unknown.
+        topic: Chủ đề, ví dụ Python, Java, React, SQL.
+        answer_status: available hoặc pending.
+
+    Returns:
+        Danh sách câu hỏi, đáp án, metadata và similarity.
+    """
+    query = query.strip()
+
+    if not query:
+        raise ValueError(
+            "Nội dung tìm kiếm không được để trống."
+        )
+
+    if not isinstance(top_k, int) or not 1 <= top_k <= 20:
+        raise ValueError(
+            "top_k phải nằm trong khoảng 1 đến 20."
+        )
+
+    # Hỗ trợ code cũ dùng category.
+    if category and category.strip():
+        if topic and topic.strip():
+            if category.strip().casefold() != topic.strip().casefold():
+                raise ValueError(
+                    "Không nên truyền category và topic khác nhau."
+                )
+        else:
+            topic = category
+
+    if topic is not None:
+        topic = topic.strip()
+
+        if not topic:
+            topic = None
+
+    if difficulty:
+        difficulty = difficulty.strip().title()
+
+        if difficulty not in VALID_DIFFICULTIES:
+            raise ValueError(
+                "difficulty chỉ nhận Easy, Medium, Hard "
+                "hoặc Unknown."
+            )
+
+    if answer_status:
+        answer_status = answer_status.strip().lower()
+
+        if answer_status not in {"available", "pending"}:
+            raise ValueError(
+                "answer_status chỉ nhận available hoặc pending."
+            )
+
+    filters = []
+
+    if topic:
+        filters.append({"topic": topic})
+
+    if difficulty:
+        filters.append({"difficulty": difficulty})
+
+    if answer_status:
+        filters.append({"answer_status": answer_status})
+
+    where = None
+
+    if len(filters) == 1:
+        where = filters[0]
+    elif len(filters) > 1:
+        where = {"$and": filters}
+
+    model = get_embedding_model()
+    collection = get_collection(collection_name)
+
+    # Tránh truy vấn vượt quá số lượng dữ liệu phù hợp với bộ lọc.
+    query_embedding = model.encode(
+        [query],
+        normalize_embeddings=True,
+    ).tolist()
+
+    result = collection.query(
+        query_embeddings=query_embedding,
+        n_results=top_k,
+        where=where,
+        include=["metadatas", "distances"],
+    )
+
+    items = []
+
+    ids = result["ids"][0]
+    metadatas = result["metadatas"][0]
+    distances = result["distances"][0]
+
+    for item_id, metadata, distance in zip(
+        ids, metadatas, distances
+    ):
+        answer = metadata.get("answer") or ""
+
+        items.append({
+            "id": item_id,
+            "question": metadata.get("question", ""),
+            "answer": answer,
+            "topic": metadata.get("topic", ""),
+            # Giữ category để tương thích với code cũ.
+            "category": metadata.get("topic", ""),
+            "difficulty": metadata.get("difficulty", "Unknown"),
+            "type": metadata.get("type", "technical"),
+            "source": metadata.get("source", ""),
+            "answer_status": metadata.get(
+                "answer_status",
+                "available" if answer else "pending",
+            ),
+            "similarity": round(
+                1 - float(distance), 4
+            ),
+        })
+
+    return items

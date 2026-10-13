@@ -1,0 +1,990 @@
+[
+  {
+    "id": "da_interview_question-0001",
+    "content": "Question: Mention the differences between Data Mining and Data Profiling?\n\nAnswer: Data Profiling focuses on analyzing individual datasets for quality, patterns, and statistics. Data Mining focuses on discovering hidden patterns and relationships across large datasets to predict future trends.",
+    "question": "Mention the differences between Data Mining and Data Profiling?",
+    "answer": "Data Profiling focuses on analyzing individual datasets for quality, patterns, and statistics. Data Mining focuses on discovering hidden patterns and relationships across large datasets to predict future trends.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0002",
+    "content": "Question: Define the term 'Data Wrangling in Data Analytics.\n\nAnswer: Data Wrangling (or Data Munging) is the process of cleaning, transforming, and mapping raw data into a more usable format for analysis.",
+    "question": "Define the term 'Data Wrangling in Data Analytics.",
+    "answer": "Data Wrangling (or Data Munging) is the process of cleaning, transforming, and mapping raw data into a more usable format for analysis.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0003",
+    "content": "Question: What are the various steps involved in any analytics project?\n\nAnswer: Typical steps include: 1. Understanding the problem; 2. Data collection; 3. Data cleaning; 4. Exploratory Data Analysis (EDA); 5. Statistical modeling/Data Mining; 6. Communication of results.",
+    "question": "What are the various steps involved in any analytics project?",
+    "answer": "Typical steps include: 1. Understanding the problem; 2. Data collection; 3. Data cleaning; 4. Exploratory Data Analysis (EDA); 5. Statistical modeling/Data Mining; 6. Communication of results.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0004",
+    "content": "Question: What are the common problems that data analysts encounter during analysis?\n\nAnswer: Common problems include missing data, inconsistent data formats, outliers, duplicate records, and data from non-integrated sources.",
+    "question": "What are the common problems that data analysts encounter during analysis?",
+    "answer": "Common problems include missing data, inconsistent data formats, outliers, duplicate records, and data from non-integrated sources.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0005",
+    "content": "Question: Which are the technical tools that you have used for analysis and presentation purposes?\n\nAnswer: [Personalized] Examples include Excel, SQL, Python (Pandas/Matplotlib), R, Tableau, Power BI, and Google Data Studio.",
+    "question": "Which are the technical tools that you have used for analysis and presentation purposes?",
+    "answer": "[Personalized] Examples include Excel, SQL, Python (Pandas/Matplotlib), R, Tableau, Power BI, and Google Data Studio.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0006",
+    "content": "Question: What are the best methods for data cleaning?\n\nAnswer: Methods include removing duplicates, handling missing values (imputation or deletion), standardizing data formats, and detecting/removing outliers.",
+    "question": "What are the best methods for data cleaning?",
+    "answer": "Methods include removing duplicates, handling missing values (imputation or deletion), standardizing data formats, and detecting/removing outliers.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0007",
+    "content": "Question: What is the significance of Exploratory Data Analysis (EDA)?\n\nAnswer: EDA helps understand the data's underlying structure, detect outliers, check assumptions, and identify initial patterns or relationships before formal modeling.",
+    "question": "What is the significance of Exploratory Data Analysis (EDA)?",
+    "answer": "EDA helps understand the data's underlying structure, detect outliers, check assumptions, and identify initial patterns or relationships before formal modeling.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0008",
+    "content": "Question: Explain descriptive, predictive, and prescriptive analytics.\n\nAnswer: Descriptive: Tells you what happened in the past. Predictive: Tells you what might happen in the future. Prescriptive: Suggests actions to take based on the predictions.",
+    "question": "Explain descriptive, predictive, and prescriptive analytics.",
+    "answer": "Descriptive: Tells you what happened in the past. Predictive: Tells you what might happen in the future. Prescriptive: Suggests actions to take based on the predictions.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0009",
+    "content": "Question: What are the different types of sampling techniques used by data analysts?\n\nAnswer: Techniques include Simple Random Sampling, Stratified Sampling, Cluster Sampling, and Systematic Sampling.",
+    "question": "What are the different types of sampling techniques used by data analysts?",
+    "answer": "Techniques include Simple Random Sampling, Stratified Sampling, Cluster Sampling, and Systematic Sampling.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0010",
+    "content": "Question: Describe univariate, bivariate, and multivariate analysis.\n\nAnswer: Univariate: Analyzing one variable. Bivariate: Analyzing the relationship between two variables. Multivariate: Analyzing the relationship between three or more variables.",
+    "question": "Describe univariate, bivariate, and multivariate analysis.",
+    "answer": "Univariate: Analyzing one variable. Bivariate: Analyzing the relationship between two variables. Multivariate: Analyzing the relationship between three or more variables.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0011",
+    "content": "Question: What are your strengths and weaknesses as a data analyst?\n\nAnswer: [Personalized] Strengths: Attention to detail, logical thinking, tool proficiency. Weaknesses: Over-analyzing, or learning to better present data to non-technical audiences.",
+    "question": "What are your strengths and weaknesses as a data analyst?",
+    "answer": "[Personalized] Strengths: Attention to detail, logical thinking, tool proficiency. Weaknesses: Over-analyzing, or learning to better present data to non-technical audiences.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0012",
+    "content": "Question: What are the ethical considerations of data analysis?\n\nAnswer: Key considerations include data privacy (protecting personal info), ensuring data security, avoiding algorithmic bias, maintaining transparency in methods, and obtaining proper informed consent.",
+    "question": "What are the ethical considerations of data analysis?",
+    "answer": "Key considerations include data privacy (protecting personal info), ensuring data security, avoiding algorithmic bias, maintaining transparency in methods, and obtaining proper informed consent.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0013",
+    "content": "Question: What are some common data visualization tools you have used?\n\nAnswer: [Personalized] Common tools include Tableau, Power BI, QlikView, and Python libraries like Matplotlib, Seaborn, and Plotly for more customized charts.",
+    "question": "What are some common data visualization tools you have used?",
+    "answer": "[Personalized] Common tools include Tableau, Power BI, QlikView, and Python libraries like Matplotlib, Seaborn, and Plotly for more customized charts.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0014",
+    "content": "Question: How can you handle missing values in a dataset?\n\nAnswer: Techniques include: 1. Deletion (listwise or pairwise); 2. Imputation (filling with mean, median, or mode); 3. Prediction models to estimate values; 4. Using algorithms that support missing values.",
+    "question": "How can you handle missing values in a dataset?",
+    "answer": "Techniques include: 1. Deletion (listwise or pairwise); 2. Imputation (filling with mean, median, or mode); 3. Prediction models to estimate values; 4. Using algorithms that support missing values.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0015",
+    "content": "Question: Explain the term Normal Distribution.\n\nAnswer: A probability distribution that is symmetric about the mean, showing that data near the mean are more frequent in occurrence than data far from the mean (forming a bell curve).",
+    "question": "Explain the term Normal Distribution.",
+    "answer": "A probability distribution that is symmetric about the mean, showing that data near the mean are more frequent in occurrence than data far from the mean (forming a bell curve).",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0016",
+    "content": "Question: What is Time Series analysis?\n\nAnswer: A statistical technique that deals with time series data, or trend analysis. It is used to extract meaningful statistics and characteristics to forecast future values based on previously observed values.",
+    "question": "What is Time Series analysis?",
+    "answer": "A statistical technique that deals with time series data, or trend analysis. It is used to extract meaningful statistics and characteristics to forecast future values based on previously observed values.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0017",
+    "content": "Question: How is Overfitting different from Underfitting?\n\nAnswer: Overfitting occurs when a model is too complex and learns noise in the training data. Underfitting occurs when a model is too simple to capture the underlying trend of the data.",
+    "question": "How is Overfitting different from Underfitting?",
+    "answer": "Overfitting occurs when a model is too complex and learns noise in the training data. Underfitting occurs when a model is too simple to capture the underlying trend of the data.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0018",
+    "content": "Question: How do you treat outliers in a dataset?\n\nAnswer: Methods include: 1. Trimming/Removal; 2. Capping (Winsorization); 3. Data transformation (e.g., log transform); 4. Using robust statistical methods that are less sensitive to outliers.",
+    "question": "How do you treat outliers in a dataset?",
+    "answer": "Methods include: 1. Trimming/Removal; 2. Capping (Winsorization); 3. Data transformation (e.g., log transform); 4. Using robust statistical methods that are less sensitive to outliers.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0019",
+    "content": "Question: What are the different types of Hypothesis testing?\n\nAnswer: Common types include Z-test, T-test (paired/unpaired), ANOVA, Chi-square test, and F-test, depending on the data distribution and sample size.",
+    "question": "What are the different types of Hypothesis testing?",
+    "answer": "Common types include Z-test, T-test (paired/unpaired), ANOVA, Chi-square test, and F-test, depending on the data distribution and sample size.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0020",
+    "content": "Question: Explain the Type I and Type II errors in Statistics?\n\nAnswer: Type I error (False Positive) occurs when we reject a true null hypothesis. Type II error (False Negative) occurs when we fail to reject a false null hypothesis.",
+    "question": "Explain the Type I and Type II errors in Statistics?",
+    "answer": "Type I error (False Positive) occurs when we reject a true null hypothesis. Type II error (False Negative) occurs when we fail to reject a false null hypothesis.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0021",
+    "content": "Question: How would you handle missing data in a dataset?\n\nAnswer: (Duplicate entry - See methods: Imputation, Deletion, and Predictive modeling mentioned above).",
+    "question": "How would you handle missing data in a dataset?",
+    "answer": "(Duplicate entry - See methods: Imputation, Deletion, and Predictive modeling mentioned above).",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0022",
+    "content": "Question: Explain the concept of outlier detection and how you would identify outliers in a dataset.\n\nAnswer: Outlier detection finds data points that differ significantly from others. Identification methods include Z-score, IQR (Interquartile Range) method, and visual tools like Box plots and Scatter plots.",
+    "question": "Explain the concept of outlier detection and how you would identify outliers in a dataset.",
+    "answer": "Outlier detection finds data points that differ significantly from others. Identification methods include Z-score, IQR (Interquartile Range) method, and visual tools like Box plots and Scatter plots.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0023",
+    "content": "Question: In Microsoft Excel, a numeric value can be treated as a text value if it precedes with what?\n\nAnswer: A numeric value is treated as text if it is preceded by a single apostrophe (').",
+    "question": "In Microsoft Excel, a numeric value can be treated as a text value if it precedes with what?",
+    "answer": "A numeric value is treated as text if it is preceded by a single apostrophe (').",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0024",
+    "content": "Question: What is the difference between COUNT, COUNTA, COUNTBLANK, and COUNTIF in Excel?\n\nAnswer: COUNT: counts cells with numbers. COUNTA: counts non-empty cells. COUNTBLANK: counts empty cells. COUNTIF: counts cells that meet a specific criterion.",
+    "question": "What is the difference between COUNT, COUNTA, COUNTBLANK, and COUNTIF in Excel?",
+    "answer": "COUNT: counts cells with numbers. COUNTA: counts non-empty cells. COUNTBLANK: counts empty cells. COUNTIF: counts cells that meet a specific criterion.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0025",
+    "content": "Question: How do you make a dropdown list in MS Excel?\n\nAnswer: Select the cell(s) -> Go to 'Data' tab -> 'Data Validation' -> Choose 'List' under 'Allow' -> Enter the source range or values separated by commas.",
+    "question": "How do you make a dropdown list in MS Excel?",
+    "answer": "Select the cell(s) -> Go to 'Data' tab -> 'Data Validation' -> Choose 'List' under 'Allow' -> Enter the source range or values separated by commas.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0026",
+    "content": "Question: Can you provide a dynamic range in â€œData Sourceâ€ for a Pivot table?\n\nAnswer: Yes, by creating a 'Table' (Ctrl+T) or using the OFFSET() and COUNTA() functions within a Named Range to automatically adjust as data is added.",
+    "question": "Can you provide a dynamic range in â€œData Sourceâ€ for a Pivot table?",
+    "answer": "Yes, by creating a 'Table' (Ctrl+T) or using the OFFSET() and COUNTA() functions within a Named Range to automatically adjust as data is added.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0027",
+    "content": "Question: What is the function to find the day of the week for a particular date value?\n\nAnswer: The WEEKDAY() function. It returns a number (1-7) representing the day of the week for a given date.",
+    "question": "What is the function to find the day of the week for a particular date value?",
+    "answer": "The WEEKDAY() function. It returns a number (1-7) representing the day of the week for a given date.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0028",
+    "content": "Question: How does the AND() function work in Excel?\n\nAnswer: It returns TRUE if all its arguments evaluate to TRUE, and FALSE if one or more arguments evaluate to FALSE.",
+    "question": "How does the AND() function work in Excel?",
+    "answer": "It returns TRUE if all its arguments evaluate to TRUE, and FALSE if one or more arguments evaluate to FALSE.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0029",
+    "content": "Question: Explain how VLOOKUP works in Excel?\n\nAnswer: VLOOKUP (Vertical Lookup) searches for a value in the first column of a table array and returns a value in the same row from a specified column number.",
+    "question": "Explain how VLOOKUP works in Excel?",
+    "answer": "VLOOKUP (Vertical Lookup) searches for a value in the first column of a table array and returns a value in the same row from a specified column number.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0030",
+    "content": "Question: What function would you use to get the current date and time in Excel?\n\nAnswer: The NOW() function returns the current date and time. Use TODAY() if only the current date is needed.",
+    "question": "What function would you use to get the current date and time in Excel?",
+    "answer": "The NOW() function returns the current date and time. Use TODAY() if only the current date is needed.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0031",
+    "content": "Question: How is joining different from blending in Tableau?\n\nAnswer: Joining combines data from the same source at the row level. Blending combines data from different sources (databases/files) by aggregating data first and then linking on a common field.",
+    "question": "How is joining different from blending in Tableau?",
+    "answer": "Joining combines data from the same source at the row level. Blending combines data from different sources (databases/files) by aggregating data first and then linking on a common field.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0032",
+    "content": "Question: What do you understand by LOD in Tableau?\n\nAnswer: Level of Detail (LOD) expressions allow you to perform calculations at a specific dimension level (FIXED, INCLUDE, EXCLUDE) regardless of the visualization's granularity.",
+    "question": "What do you understand by LOD in Tableau?",
+    "answer": "Level of Detail (LOD) expressions allow you to perform calculations at a specific dimension level (FIXED, INCLUDE, EXCLUDE) regardless of the visualization's granularity.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0033",
+    "content": "Question: Can you discuss the process of feature selection and its importance in data analysis?\n\nAnswer: Feature selection involves choosing a subset of relevant variables for use in model construction. It is important to reduce overfitting, improve model accuracy, and decrease computational time.",
+    "question": "Can you discuss the process of feature selection and its importance in data analysis?",
+    "answer": "Feature selection involves choosing a subset of relevant variables for use in model construction. It is important to reduce overfitting, improve model accuracy, and decrease computational time.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0034",
+    "content": "Question: What are the different connection types in Tableau Software?\n\nAnswer: There are two main types: Live (real-time connection to the database) and Extract (a snapshot of the data stored locally for better performance).",
+    "question": "What are the different connection types in Tableau Software?",
+    "answer": "There are two main types: Live (real-time connection to the database) and Extract (a snapshot of the data stored locally for better performance).",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0035",
+    "content": "Question: What are the different joins that Tableau provides?\n\nAnswer: Tableau provides Inner Join, Left Join, Right Join, and Full Outer Join.",
+    "question": "What are the different joins that Tableau provides?",
+    "answer": "Tableau provides Inner Join, Left Join, Right Join, and Full Outer Join.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0036",
+    "content": "Question: What is a Gantt Chart in Tableau?\n\nAnswer: A visualization used to show project schedules or time-based events. It displays the duration of tasks against a timeline using bars.",
+    "question": "What is a Gantt Chart in Tableau?",
+    "answer": "A visualization used to show project schedules or time-based events. It displays the duration of tasks against a timeline using bars.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0037",
+    "content": "Question: What is the correct syntax for reshape() function in NumPy?\n\nAnswer: The syntax is numpy.reshape(a, newshape, order='C'). 'a' is the array to be reshaped, and 'newshape' is the new dimensions (tuple or int).",
+    "question": "What is the correct syntax for reshape() function in NumPy?",
+    "answer": "The syntax is numpy.reshape(a, newshape, order='C'). 'a' is the array to be reshaped, and 'newshape' is the new dimensions (tuple or int).",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0038",
+    "content": "Question: What are the different ways to create a data frame in Pandas?\n\nAnswer: 1. From a Dictionary of lists; 2. From a List of dictionaries; 3. From an external file (CSV, Excel, SQL); 4. From a NumPy array.\n\n39. ### There are two arrays, â€˜aâ€™ and â€˜bâ€™. Stack the arrays a and b horizontally using the NumPy library in Python.\n\n    Use numpy.hstack((a, b)) or numpy.concatenate((a, b), axis=1) to stack arrays horizontally.",
+    "question": "What are the different ways to create a data frame in Pandas?",
+    "answer": "1. From a Dictionary of lists; 2. From a List of dictionaries; 3. From an external file (CSV, Excel, SQL); 4. From a NumPy array.\n\n39. ### There are two arrays, â€˜aâ€™ and â€˜bâ€™. Stack the arrays a and b horizontally using the NumPy library in Python.\n\n    Use numpy.hstack((a, b)) or numpy.concatenate((a, b), axis=1) to stack arrays horizontally.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0039",
+    "content": "Question: How can you add a column to a Pandas Data Frame?\n\nAnswer: 1. By assignment: df['new_col'] = values; 2. Using df.assign(new_col=values); 3. Using df.insert(location, 'column_name', values).",
+    "question": "How can you add a column to a Pandas Data Frame?",
+    "answer": "1. By assignment: df['new_col'] = values; 2. Using df.assign(new_col=values); 3. Using df.insert(location, 'column_name', values).",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0040",
+    "content": "Question: How will you print four random integers between 1 and 15 using NumPy?\n\nAnswer: Use the command: numpy.random.randint(1, 16, size=4). Note that the high value (16) is exclusive.\n\n42. ### Plot a sine graph using NumPy and Matplotlib library in Python.\n\n    Generate x values with np.linspace, calculate y = np.sin(x), and then use plt.plot(x, y) followed by plt.show().",
+    "question": "How will you print four random integers between 1 and 15 using NumPy?",
+    "answer": "Use the command: numpy.random.randint(1, 16, size=4). Note that the high value (16) is exclusive.\n\n42. ### Plot a sine graph using NumPy and Matplotlib library in Python.\n\n    Generate x values with np.linspace, calculate y = np.sin(x), and then use plt.plot(x, y) followed by plt.show().",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0041",
+    "content": "Question: What do you believe are the fundamental soft and hard skills needed as a data analytics professional?\n\nAnswer: Hard skills: SQL, Python/R, Statistics, Data Visualization. Soft skills: Critical thinking, problem-solving, communication, and domain knowledge.",
+    "question": "What do you believe are the fundamental soft and hard skills needed as a data analytics professional?",
+    "answer": "Hard skills: SQL, Python/R, Statistics, Data Visualization. Soft skills: Critical thinking, problem-solving, communication, and domain knowledge.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0042",
+    "content": "Question: How would your current/previous supervisor or colleagues describe you?\n\nAnswer: [Personalized] Focus on attributes like being analytical, detail-oriented, reliable, and a proactive communicator who simplifies complex data.",
+    "question": "How would your current/previous supervisor or colleagues describe you?",
+    "answer": "[Personalized] Focus on attributes like being analytical, detail-oriented, reliable, and a proactive communicator who simplifies complex data.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0043",
+    "content": "Question: What do you enjoy most about data analytics? Is there anything you like least?\n\nAnswer: [Personalized] Most: Uncovering hidden insights that drive decisions. Least: Data cleaning/wrangling, although I recognize its necessity for accuracy.",
+    "question": "What do you enjoy most about data analytics? Is there anything you like least?",
+    "answer": "[Personalized] Most: Uncovering hidden insights that drive decisions. Least: Data cleaning/wrangling, although I recognize its necessity for accuracy.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0044",
+    "content": "Question: Why do you want to work for our organization as a data analytics professional?\n\nAnswer: [Personalized] Align your skills with the company's mission and mention how their data-driven culture appeals to your professional growth.",
+    "question": "Why do you want to work for our organization as a data analytics professional?",
+    "answer": "[Personalized] Align your skills with the company's mission and mention how their data-driven culture appeals to your professional growth.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0045",
+    "content": "Question: What data analytics tasks or responsibilities do you think are most important to our organization?\n\nAnswer: [Personalized] Usually involves turning raw data into actionable insights, ensuring data integrity, and automating reporting for stakeholders.",
+    "question": "What data analytics tasks or responsibilities do you think are most important to our organization?",
+    "answer": "[Personalized] Usually involves turning raw data into actionable insights, ensuring data integrity, and automating reporting for stakeholders.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0046",
+    "content": "Question: What do you do to keep up with data trends?\n\nAnswer: Reading tech blogs (Towards Data Science), participating in Kaggle competitions, listening to data podcasts, and taking advanced certifications.",
+    "question": "What do you do to keep up with data trends?",
+    "answer": "Reading tech blogs (Towards Data Science), participating in Kaggle competitions, listening to data podcasts, and taking advanced certifications.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0047",
+    "content": "Question: Tell me about your professional background or experience in data analytics.\n\nAnswer: [Personalized] Summarize your education, key projects, and the specific impact you've had in previous roles or internships.",
+    "question": "Tell me about your professional background or experience in data analytics.",
+    "answer": "[Personalized] Summarize your education, key projects, and the specific impact you've had in previous roles or internships.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0048",
+    "content": "Question: What data analytics certifications or training have you received?\n\nAnswer: [Personalized] List relevant certifications such as Google Data Analytics, Microsoft Certified: Power BI, or specialized Python/SQL courses.",
+    "question": "What data analytics certifications or training have you received?",
+    "answer": "[Personalized] List relevant certifications such as Google Data Analytics, Microsoft Certified: Power BI, or specialized Python/SQL courses.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0049",
+    "content": "Question: What is the largest set of data you have ever worked with?\n\nAnswer: [Personalized] Describe the number of rows/columns or the file size (e.g., 'A 5-million row dataset in SQL') and the tools used to handle it.",
+    "question": "What is the largest set of data you have ever worked with?",
+    "answer": "[Personalized] Describe the number of rows/columns or the file size (e.g., 'A 5-million row dataset in SQL') and the tools used to handle it.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0050",
+    "content": "Question: Tell me about a time when you disagreed with a supervisor or teammate and how you managed it.\n\nAnswer: Focus on professional conflict resolution: presenting data-backed evidence, listening to their perspective, and finding a compromise for the project's benefit.",
+    "question": "Tell me about a time when you disagreed with a supervisor or teammate and how you managed it.",
+    "answer": "Focus on professional conflict resolution: presenting data-backed evidence, listening to their perspective, and finding a compromise for the project's benefit.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0051",
+    "content": "Question: Do you have experience making data analytics presentations to stakeholders?\n\nAnswer: [Personalized] Describe your experience using Tableau/PowerPoint to translate technical findings into business-friendly recommendations.",
+    "question": "Do you have experience making data analytics presentations to stakeholders?",
+    "answer": "[Personalized] Describe your experience using Tableau/PowerPoint to translate technical findings into business-friendly recommendations.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0052",
+    "content": "Question: What experience do you have with databases and data engineering?\n\nAnswer: Focus on your ability to write SQL queries, understanding of ETL processes, and experience with relational (PostgreSQL) or NoSQL (MongoDB) databases.",
+    "question": "What experience do you have with databases and data engineering?",
+    "answer": "Focus on your ability to write SQL queries, understanding of ETL processes, and experience with relational (PostgreSQL) or NoSQL (MongoDB) databases.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0053",
+    "content": "Question: What data analysis tools do you have experience using?\n\nAnswer: List your proficiency in Excel, SQL, Python (Pandas/Scikit-learn), and BI tools like Tableau or Power BI.",
+    "question": "What data analysis tools do you have experience using?",
+    "answer": "List your proficiency in Excel, SQL, Python (Pandas/Scikit-learn), and BI tools like Tableau or Power BI.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0054",
+    "content": "Question: What scripting languages do you have experience using? Is there one you enjoy using most?\n\nAnswer: Commonly Python or R. Mention why you prefer one (e.g., 'Python for its versatility and extensive libraries for machine learning').",
+    "question": "What scripting languages do you have experience using? Is there one you enjoy using most?",
+    "answer": "Commonly Python or R. Mention why you prefer one (e.g., 'Python for its versatility and extensive libraries for machine learning').",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0055",
+    "content": "Question: What are your strengths as a data analytics professional?\n\nAnswer: Examples: Strong logical reasoning, ability to clean complex data, and translating data into clear business narratives.",
+    "question": "What are your strengths as a data analytics professional?",
+    "answer": "Examples: Strong logical reasoning, ability to clean complex data, and translating data into clear business narratives.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0056",
+    "content": "Question: What are your weaknesses as a data analytics professional? What have you done to overcome those weaknesses?\n\nAnswer: Mention a real but solvable weakness (e.g., 'I used to struggle with public speaking') and the steps you've taken to improve it.",
+    "question": "What are your weaknesses as a data analytics professional? What have you done to overcome those weaknesses?",
+    "answer": "Mention a real but solvable weakness (e.g., 'I used to struggle with public speaking') and the steps you've taken to improve it.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0057",
+    "content": "Question: How have you used statistical models to solve business problems?\n\nAnswer: Describe a specific instance, such as using linear regression to forecast sales or clustering to segment customers for a marketing campaign.",
+    "question": "How have you used statistical models to solve business problems?",
+    "answer": "Describe a specific instance, such as using linear regression to forecast sales or clustering to segment customers for a marketing campaign.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0058",
+    "content": "Question: Define clustering and explain what properties a clustering algorithm includes.\n\nAnswer: Clustering is an unsupervised learning task that groups similar data points. Properties include scalability, ability to handle different types of attributes, and discovery of clusters with arbitrary shapes.",
+    "question": "Define clustering and explain what properties a clustering algorithm includes.",
+    "answer": "Clustering is an unsupervised learning task that groups similar data points. Properties include scalability, ability to handle different types of attributes, and discovery of clusters with arbitrary shapes.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0059",
+    "content": "Question: What is imputation? Describe the different types of imputation techniques you have used.\n\nAnswer: Imputation is the process of replacing missing data with substituted values. Techniques include Mean/Median/Mode imputation, Hot-deck imputation, and KNN-based imputation.",
+    "question": "What is imputation? Describe the different types of imputation techniques you have used.",
+    "answer": "Imputation is the process of replacing missing data with substituted values. Techniques include Mean/Median/Mode imputation, Hot-deck imputation, and KNN-based imputation.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0060",
+    "content": "Question: What is a hash table collision? How do you prevent it from happening?\n\nAnswer: A collision occurs when two different keys hash to the same index. Prevention methods include Chaining (using linked lists) and Open Addressing (Linear Probing).",
+    "question": "What is a hash table collision? How do you prevent it from happening?",
+    "answer": "A collision occurs when two different keys hash to the same index. Prevention methods include Chaining (using linked lists) and Open Addressing (Linear Probing).",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0061",
+    "content": "Question: What are some of the common challenges you encounter as a data analytics professional?\n\nAnswer: Data quality issues, siloed data sources, changing requirements, and the difficulty of explaining technical results to non-technical leaders.",
+    "question": "What are some of the common challenges you encounter as a data analytics professional?",
+    "answer": "Data quality issues, siloed data sources, changing requirements, and the difficulty of explaining technical results to non-technical leaders.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0062",
+    "content": "Question: How would you handle a situation where you receive a data set that you believe has suspicious or missing data?\n\nAnswer: I would first perform data profiling, document the inconsistencies, consult with the data owner to understand the source, and then apply appropriate cleaning or imputation.",
+    "question": "How would you handle a situation where you receive a data set that you believe has suspicious or missing data?",
+    "answer": "I would first perform data profiling, document the inconsistencies, consult with the data owner to understand the source, and then apply appropriate cleaning or imputation.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0063",
+    "content": "Question: Tell me about a significant data analytics project you worked on and how the insights you gained from it benefited your team or organization.\n\nAnswer: [Personalized] Use the STAR method: explain the data you analyzed, the insights found, and the measurable business impact (e.g., 'reduced churn by 10%').",
+    "question": "Tell me about a significant data analytics project you worked on and how the insights you gained from it benefited your team or organization.",
+    "answer": "[Personalized] Use the STAR method: explain the data you analyzed, the insights found, and the measurable business impact (e.g., 'reduced churn by 10%').",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0064",
+    "content": "Question: Describe the steps you take during the data exploration process.\n\nAnswer: 1. Check data types and summary statistics; 2. Identify missing values; 3. Detect outliers; 4. Visualize distributions and correlations between variables.",
+    "question": "Describe the steps you take during the data exploration process.",
+    "answer": "1. Check data types and summary statistics; 2. Identify missing values; 3. Detect outliers; 4. Visualize distributions and correlations between variables.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0065",
+    "content": "Question: Describe the steps you take during the data preparation process.\n\nAnswer: 1. Data cleaning (handling nulls/outliers); 2. Data transformation (scaling/normalization); 3. Feature engineering; 4. Splitting into train and test sets.",
+    "question": "Describe the steps you take during the data preparation process.",
+    "answer": "1. Data cleaning (handling nulls/outliers); 2. Data transformation (scaling/normalization); 3. Feature engineering; 4. Splitting into train and test sets.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0066",
+    "content": "Question: What is logistic regression? What methods do you use to assess logistic regression analysis results?\n\nAnswer: Logistic regression predicts the probability of a binary outcome. Assessment methods include the Confusion Matrix, Accuracy, Precision, Recall, F1-Score, and the AUC-ROC curve.",
+    "question": "What is logistic regression? What methods do you use to assess logistic regression analysis results?",
+    "answer": "Logistic regression predicts the probability of a binary outcome. Assessment methods include the Confusion Matrix, Accuracy, Precision, Recall, F1-Score, and the AUC-ROC curve.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0067",
+    "content": "Question: Tell me about the most recent data analytics project you worked on and the core steps you took to complete it.\n\nAnswer: [Personalized] Detail the lifecycle: Problem definition -> Data gathering -> Cleaning -> Analysis -> Visualization -> Reporting.",
+    "question": "Tell me about the most recent data analytics project you worked on and the core steps you took to complete it.",
+    "answer": "[Personalized] Detail the lifecycle: Problem definition -> Data gathering -> Cleaning -> Analysis -> Visualization -> Reporting.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0068",
+    "content": "Question: Which steps of a data analytics project do you enjoy working on most and why?\n\nAnswer: [Personalized] Common answers: EDA for the 'detective' work, or Visualization for the storytelling aspect.",
+    "question": "Which steps of a data analytics project do you enjoy working on most and why?",
+    "answer": "[Personalized] Common answers: EDA for the 'detective' work, or Visualization for the storytelling aspect.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0069",
+    "content": "Question: What data analytics tools did you use on your most recent project, and why did you choose them?\n\nAnswer: [Personalized] Example: 'I used Python for data manipulation because of its efficiency and Tableau for sharing an interactive dashboard with stakeholders.'",
+    "question": "What data analytics tools did you use on your most recent project, and why did you choose them?",
+    "answer": "[Personalized] Example: 'I used Python for data manipulation because of its efficiency and Tableau for sharing an interactive dashboard with stakeholders.'",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0070",
+    "content": "Question: Tell me about a challenging data analytics project you worked on and how you overcame those challenges or learned from them.\n\nAnswer: Focus on technical hurdles (e.g., 'messy data') or stakeholder hurdles and how your perseverance/problem-solving led to success.",
+    "question": "Tell me about a challenging data analytics project you worked on and how you overcame those challenges or learned from them.",
+    "answer": "Focus on technical hurdles (e.g., 'messy data') or stakeholder hurdles and how your perseverance/problem-solving led to success.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0071",
+    "content": "Question: At this job, you may often collaborate with colleagues or stakeholders who do not have a technical background in data analytics. What experience do you have explaining complicated or technical ideas in similar situations?\n\nAnswer: Emphasize the use of visualizations, analogies, and focusing on 'the bottom line' (the 'so what?') rather than just the technical methodology.",
+    "question": "At this job, you may often collaborate with colleagues or stakeholders who do not have a technical background in data analytics. What experience do you have explaining complicated or technical ideas in similar situations?",
+    "answer": "Emphasize the use of visualizations, analogies, and focusing on 'the bottom line' (the 'so what?') rather than just the technical methodology.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0072",
+    "content": "Question: How do you determine which statistical methods to use when analyzing data?\n\nAnswer: Based on the research question, the type of variables (categorical/continuous), the distribution of the data, and the number of groups being compared.",
+    "question": "How do you determine which statistical methods to use when analyzing data?",
+    "answer": "Based on the research question, the type of variables (categorical/continuous), the distribution of the data, and the number of groups being compared.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0073",
+    "content": "Question: Describe a time when you failed to meet a deadline. What did you learn from that experience?\n\nAnswer: Be honest, take responsibility, explain why it happened, and describe the systems you've put in place (like better time management tools) to prevent it from happening again.",
+    "question": "Describe a time when you failed to meet a deadline. What did you learn from that experience?",
+    "answer": "Be honest, take responsibility, explain why it happened, and describe the systems you've put in place (like better time management tools) to prevent it from happening again.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0074",
+    "content": "Question: Describe a time when you had to persuade others to follow your idea or recommendation. How did you gain buy-in?\n\nAnswer: Focus on using objective data evidence, building rapport, and aligning your idea with the team's or company's existing goals.",
+    "question": "Describe a time when you had to persuade others to follow your idea or recommendation. How did you gain buy-in?",
+    "answer": "Focus on using objective data evidence, building rapport, and aligning your idea with the team's or company's existing goals.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0075",
+    "content": "Question: What is your decision-making process when creating data visualizations for clients or stakeholders?\n\nAnswer: I identify the core message, choose the chart type that best represents that message (e.g., bar chart for comparisons), and remove clutter to focus on key insights.",
+    "question": "What is your decision-making process when creating data visualizations for clients or stakeholders?",
+    "answer": "I identify the core message, choose the chart type that best represents that message (e.g., bar chart for comparisons), and remove clutter to focus on key insights.",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "da_interview_question-0076",
+    "content": "Question: What steps have you taken to improve your analytics knowledge or skills in the past year?\n\nAnswer: Mention specific courses, side projects, or new tools you've learned (e.g., 'I recently completed a certification in advanced SQL and started learning PySpark').",
+    "question": "What steps have you taken to improve your analytics knowledge or skills in the past year?",
+    "answer": "Mention specific courses, side projects, or new tools you've learned (e.g., 'I recently completed a certification in advanced SQL and started learning PySpark').",
+    "metadata": {
+      "topic": "Data Analytics",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "da_interview_question.md",
+      "answer_status": "available"
+    }
+  }
+]
