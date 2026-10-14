@@ -1,0 +1,1289 @@
+[
+  {
+    "id": "sql_interview_question-0001",
+    "content": "Question: What is SQL?\n\nAnswer: It stands for Structured Query Language, and it's a programming language used for interaction with relational database management systems (RDBMS). This includes fetching, updating, inserting, and removing data from tables.",
+    "question": "What is SQL?",
+    "answer": "It stands for Structured Query Language, and it's a programming language used for interaction with relational database management systems (RDBMS). This includes fetching, updating, inserting, and removing data from tables.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0002",
+    "content": "Question: What are SQL dialects? Give some examples.\n\nAnswer: The various versions of SQL, both free and paid, are also called SQL dialects. All the dialects of SQL have a very similar syntax and vary insignificantly only in additional functionality. Some examples are Microsoft SQL Server, PostgreSQL, MySQL, SQLite, T-SQL, and Oracle.",
+    "question": "What are SQL dialects? Give some examples.",
+    "answer": "The various versions of SQL, both free and paid, are also called SQL dialects. All the dialects of SQL have a very similar syntax and vary insignificantly only in additional functionality. Some examples are Microsoft SQL Server, PostgreSQL, MySQL, SQLite, T-SQL, and Oracle.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0003",
+    "content": "Question: What are the main applications of SQL?\n\nAnswer: Using SQL, we can:\n\n    create, delete, and update tables in a database\n    access, manipulate, and modify data in a table\n    retrieve and summarize the necessary information from a table or several tables\n    add or remove certain rows or columns from a table",
+    "question": "What are the main applications of SQL?",
+    "answer": "Using SQL, we can:\n\n    create, delete, and update tables in a database\n    access, manipulate, and modify data in a table\n    retrieve and summarize the necessary information from a table or several tables\n    add or remove certain rows or columns from a table",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0004",
+    "content": "Question: What is an SQL statement?\n\nAnswer: Also known as an SQL command. It's a string of characters interpreted by the SQL engine as a legal command and executed accordingly. Some examples of SQL statements are SELECT, CREATE, DELETE, DROP, REVOKE, and so on.",
+    "question": "What is an SQL statement?",
+    "answer": "Also known as an SQL command. It's a string of characters interpreted by the SQL engine as a legal command and executed accordingly. Some examples of SQL statements are SELECT, CREATE, DELETE, DROP, REVOKE, and so on.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0005",
+    "content": "Question: What is an SQL query?\n\nAnswer: A query is a piece of code written in SQL to access or modify data from a database.\n\n    There are two types of SQL queries: queries for data retrieval and data modification. The first ones are used to retrieve the necessary data (this also includes limiting, grouping, ordering the data, extracting the data from multiple tables, etc.), while the second ones are used to create, add, delete, update, and rename the data.",
+    "question": "What is an SQL query?",
+    "answer": "A query is a piece of code written in SQL to access or modify data from a database.\n\n    There are two types of SQL queries: queries for data retrieval and data modification. The first ones are used to retrieve the necessary data (this also includes limiting, grouping, ordering the data, extracting the data from multiple tables, etc.), while the second ones are used to create, add, delete, update, and rename the data.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0006",
+    "content": "Question: What is an SQL subquery?\n\nAnswer: Also called an inner query, a query placed inside another query, or an outer query. A subquery may occur in the clauses such as SELECT, FROM, WHERE, UPDATE, etc. It's also possible to have a subquery inside another subquery. The innermost subquery is run first, and its result is passed to the containing query (or subquery).",
+    "question": "What is an SQL subquery?",
+    "answer": "Also called an inner query, a query placed inside another query, or an outer query. A subquery may occur in the clauses such as SELECT, FROM, WHERE, UPDATE, etc. It's also possible to have a subquery inside another subquery. The innermost subquery is run first, and its result is passed to the containing query (or subquery).",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0007",
+    "content": "Question: What is an SQL join?\n\nAnswer: A clause used to combine and retrieve records from two or multiple tables. SQL tables can be joined based on the relationship between the columns of those tables. Check out our SQL joins tutorial for more context, plus our dedicated guide to SQL joins interview questions.",
+    "question": "What is an SQL join?",
+    "answer": "A clause used to combine and retrieve records from two or multiple tables. SQL tables can be joined based on the relationship between the columns of those tables. Check out our SQL joins tutorial for more context, plus our dedicated guide to SQL joins interview questions.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0008",
+    "content": "Question: What is an SQL comment?\n\nAnswer: A human-readable clarification of what a particular piece of code does. SQL code comments can be single-line (preceded by a double dash --) or span over multiple lines (as follows: /*comment_text*/). When the SQL engine runs, it ignores code comments. The purpose of adding SQL code comments is to make the code more comprehensive for those people who will read it in the future.",
+    "question": "What is an SQL comment?",
+    "answer": "A human-readable clarification of what a particular piece of code does. SQL code comments can be single-line (preceded by a double dash --) or span over multiple lines (as follows: /*comment_text*/). When the SQL engine runs, it ignores code comments. The purpose of adding SQL code comments is to make the code more comprehensive for those people who will read it in the future.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0009",
+    "content": "Question: What is an SQL alias?\n\nAnswer: A temporary name given to a table (or a column in a table) while executing a certain SQL query. Aliases are used to improve the code readability and make the code more compact. An alias is introduced with the AS keyword:\n\n    SELECT col_1 AS column\n    FROM table_name;",
+    "question": "What is an SQL alias?",
+    "answer": "A temporary name given to a table (or a column in a table) while executing a certain SQL query. Aliases are used to improve the code readability and make the code more compact. An alias is introduced with the AS keyword:\n\n    SELECT col_1 AS column\n    FROM table_name;",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0010",
+    "content": "Question: What types of SQL commands do you know?\n\nAnswer: Data Definition Language (DDL) – to define and modify the structure of a database.\n    Data Manipulation Language (DML) – to access, manipulate, and modify data in a database.\n    Data Control Language (DCL) – to control user access to the data in the database and give or revoke privileges to a specific user or a group of users.\n    Transaction Control Language (TCL) – to control transactions in a database.\n    Data Query Language (DQL) – to perform queries on the data in a database to retrieve the necessary information from it.",
+    "question": "What types of SQL commands do you know?",
+    "answer": "Data Definition Language (DDL) – to define and modify the structure of a database.\n    Data Manipulation Language (DML) – to access, manipulate, and modify data in a database.\n    Data Control Language (DCL) – to control user access to the data in the database and give or revoke privileges to a specific user or a group of users.\n    Transaction Control Language (TCL) – to control transactions in a database.\n    Data Query Language (DQL) – to perform queries on the data in a database to retrieve the necessary information from it.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0011",
+    "content": "Question: Give some examples of common SQL commands.\n\nAnswer: DDL: CREATE, ALTER TABLE, DROP, TRUNCATE, and ADD COLUMN\n\n    DML: UPDATE, DELETE, and INSERT\n\n    DCL: GRANT and REVOKE\n\n    TCL: COMMIT, SET TRANSACTION, ROLLBACK, and SAVEPOINT\n\n    DQL: – SELECT",
+    "question": "Give some examples of common SQL commands.",
+    "answer": "DDL: CREATE, ALTER TABLE, DROP, TRUNCATE, and ADD COLUMN\n\n    DML: UPDATE, DELETE, and INSERT\n\n    DCL: GRANT and REVOKE\n\n    TCL: COMMIT, SET TRANSACTION, ROLLBACK, and SAVEPOINT\n\n    DQL: – SELECT",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0012",
+    "content": "Question: What is DBMS, and what types of DBMS do you know?\n\nAnswer: It stands for Database Management System, a software package used to perform various operations on the data stored in a database, such as accessing, updating, wrangling, inserting, and removing data. There are various types of DBMS, such as relational, hierarchical, network, graph, or object-oriented. These types are based on the way the data is organized, structured, and stored in the system.",
+    "question": "What is DBMS, and what types of DBMS do you know?",
+    "answer": "It stands for Database Management System, a software package used to perform various operations on the data stored in a database, such as accessing, updating, wrangling, inserting, and removing data. There are various types of DBMS, such as relational, hierarchical, network, graph, or object-oriented. These types are based on the way the data is organized, structured, and stored in the system.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0013",
+    "content": "Question: What is RDBMS? Give some examples of RDBMS.\n\nAnswer: It stands for Relational Database Management System. It's the most common type of DBMS used for working with data stored in multiple tables related to each other by means of shared keys. The SQL programming language is designed to interact with RDBMS. Some examples of RDBMS are MySQL, PostgreSQL, Oracle, MariaDB, etc.",
+    "question": "What is RDBMS? Give some examples of RDBMS.",
+    "answer": "It stands for Relational Database Management System. It's the most common type of DBMS used for working with data stored in multiple tables related to each other by means of shared keys. The SQL programming language is designed to interact with RDBMS. Some examples of RDBMS are MySQL, PostgreSQL, Oracle, MariaDB, etc.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0014",
+    "content": "Question: What are tables and fields in SQL?\n\nAnswer: A table is an organized set of related data stored in a tabular form, i.e., in rows and columns. A field is another term for a column of a table.",
+    "question": "What are tables and fields in SQL?",
+    "answer": "A table is an organized set of related data stored in a tabular form, i.e., in rows and columns. A field is another term for a column of a table.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0015",
+    "content": "Question: What types of SQL subqueries do you know?\n\nAnswer: Single-row – returns at most one row.\n    Multi-row – returns at least two rows.\n    Multi-column – returns at least two columns.\n    Correlated – a subquery related to the information from the outer query.\n    Nested – a subquery inside another subquery.",
+    "question": "What types of SQL subqueries do you know?",
+    "answer": "Single-row – returns at most one row.\n    Multi-row – returns at least two rows.\n    Multi-column – returns at least two columns.\n    Correlated – a subquery related to the information from the outer query.\n    Nested – a subquery inside another subquery.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0016",
+    "content": "Question: What is a constraint, and why use constraints?\n\nAnswer: A set of conditions defining the type of data that can be input into each column of a table. Constraints ensure data integrity in a table and block undesired actions.",
+    "question": "What is a constraint, and why use constraints?",
+    "answer": "A set of conditions defining the type of data that can be input into each column of a table. Constraints ensure data integrity in a table and block undesired actions.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0017",
+    "content": "Question: What SQL constraints do you know?\n\nAnswer: DEFAULT – provides a default value for a column.\n\n    UNIQUE – allows only unique values.\n\n    NOT NULL – allows only non-null values.\n\n    PRIMARY KEY – allows only unique and strictly non-null values (NOT NULL and UNIQUE).\n\n    FOREIGN KEY – provides shared keys between two or more tables.",
+    "question": "What SQL constraints do you know?",
+    "answer": "DEFAULT – provides a default value for a column.\n\n    UNIQUE – allows only unique values.\n\n    NOT NULL – allows only non-null values.\n\n    PRIMARY KEY – allows only unique and strictly non-null values (NOT NULL and UNIQUE).\n\n    FOREIGN KEY – provides shared keys between two or more tables.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0018",
+    "content": "Question: What types of joins do you know?\n\nAnswer: (INNER) JOIN – returns only those records that satisfy a defined join condition in both (or all) tables. It's a default SQL join.\n\n    LEFT (OUTER) JOIN – returns all records from the left table and those records from the right table that satisfy a defined join condition.\n\n    RIGHT (OUTER) JOIN – returns all records from the right table and those records from the left table that satisfy a defined join condition.\n\n    FULL (OUTER) JOIN – returns all records from both (or all) tables. It can be considered as a combination of left and right joins.\n\n    Note: FULL OUTER JOIN is supported by PostgreSQL, SQL Server, Oracle, and MySQL 8.0 and above, but MySQL only allows it through UNION patterns; meanwhile, SQLite does not support RIGHT JOIN, which can be emulated using LEFT JOIN in combination with UNION.",
+    "question": "What types of joins do you know?",
+    "answer": "(INNER) JOIN – returns only those records that satisfy a defined join condition in both (or all) tables. It's a default SQL join.\n\n    LEFT (OUTER) JOIN – returns all records from the left table and those records from the right table that satisfy a defined join condition.\n\n    RIGHT (OUTER) JOIN – returns all records from the right table and those records from the left table that satisfy a defined join condition.\n\n    FULL (OUTER) JOIN – returns all records from both (or all) tables. It can be considered as a combination of left and right joins.\n\n    Note: FULL OUTER JOIN is supported by PostgreSQL, SQL Server, Oracle, and MySQL 8.0 and above, but MySQL only allows it through UNION patterns; meanwhile, SQLite does not support RIGHT JOIN, which can be emulated using LEFT JOIN in combination with UNION.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0019",
+    "content": "Question: What is a primary key in SQL?\n\nAnswer: A column (or multiple columns) of a table to which the PRIMARY KEY constraint was imposed to ensure unique and non-null values in that column. In other words, a primary key is a combination of the NOT NULL and UNIQUE constraints.The primary key uniquely identifies each record of the table.\n\n    Related concept — Surrogate key: A surrogate key is an artificially generated identifier (typically a sequential integer or UUID) assigned to each record, independent of the actual data values. Unlike natural keys (e.g., an email address), surrogate keys remain stable when business data changes, making them a popular choice for primary keys in production databases.\n\n    Each table can define at most one PRIMARY KEY (which may be composite). A PRIMARY KEY  is strongly recommended but not strictly required by all engines.",
+    "question": "What is a primary key in SQL?",
+    "answer": "A column (or multiple columns) of a table to which the PRIMARY KEY constraint was imposed to ensure unique and non-null values in that column. In other words, a primary key is a combination of the NOT NULL and UNIQUE constraints.The primary key uniquely identifies each record of the table.\n\n    Related concept — Surrogate key: A surrogate key is an artificially generated identifier (typically a sequential integer or UUID) assigned to each record, independent of the actual data values. Unlike natural keys (e.g., an email address), surrogate keys remain stable when business data changes, making them a popular choice for primary keys in production databases.\n\n    Each table can define at most one PRIMARY KEY (which may be composite). A PRIMARY KEY  is strongly recommended but not strictly required by all engines.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0020",
+    "content": "Question: What is a unique key in SQL?\n\nAnswer: A column (or multiple columns) of a table to which the UNIQUE constraint was imposed to ensure unique values in that column, including a possible NULL value (the only one).\n\n    Note:\n\n    SQL Server: Only one NULL allowed unless you use a filtered index.\n    PostgreSQL / Oracle / MySQL: Multiple NULLs allowed because NULL <> NULL.",
+    "question": "What is a unique key in SQL?",
+    "answer": "A column (or multiple columns) of a table to which the UNIQUE constraint was imposed to ensure unique values in that column, including a possible NULL value (the only one).\n\n    Note:\n\n    SQL Server: Only one NULL allowed unless you use a filtered index.\n    PostgreSQL / Oracle / MySQL: Multiple NULLs allowed because NULL <> NULL.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0021",
+    "content": "Question: What is a foreign key in SQL?\n\nAnswer: A column (or multiple columns) of a table to which the FOREIGN KEY (or UNIQUE key) constraint was imposed to link this column to the primary key in another table (or several tables).The purpose of foreign keys is to keep connected various tables of a database.",
+    "question": "What is a foreign key in SQL?",
+    "answer": "A column (or multiple columns) of a table to which the FOREIGN KEY (or UNIQUE key) constraint was imposed to link this column to the primary key in another table (or several tables).The purpose of foreign keys is to keep connected various tables of a database.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0022",
+    "content": "Question: What is an SQL index?\n\nAnswer: A special data structure related to a database table and used for storing its important parts and enabling faster data search and retrieval. Indexes are especially efficient for large databases, where they significantly enhance query performance.",
+    "question": "What is an SQL index?",
+    "answer": "A special data structure related to a database table and used for storing its important parts and enabling faster data search and retrieval. Indexes are especially efficient for large databases, where they significantly enhance query performance.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0023",
+    "content": "Question: What types of indexes do you know?\n\nAnswer: Unique index – doesn't allow duplicates in a table column and hence helps maintain data integrity.\n    Clustered index – defines the physical order of records of a database table and performs data searching based on the key values. A table can have only one clustered index.\n    Non-clustered index – keeps the order of the table records that don't match the physical order of the actual data on the disk. It means that the data is stored in one place and a non-clustered index – in another one. A table can have multiple non-clustered indexes.",
+    "question": "What types of indexes do you know?",
+    "answer": "Unique index – doesn't allow duplicates in a table column and hence helps maintain data integrity.\n    Clustered index – defines the physical order of records of a database table and performs data searching based on the key values. A table can have only one clustered index.\n    Non-clustered index – keeps the order of the table records that don't match the physical order of the actual data on the disk. It means that the data is stored in one place and a non-clustered index – in another one. A table can have multiple non-clustered indexes.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0024",
+    "content": "Question: What is a schema?\n\nAnswer: A collection of database structural elements such as tables, stored procedures, indexes, functions, and triggers. It shows the overall database architecture, specifies the relationships between various objects of a database, and defines different access permissions for them. Read our database schema guide for a deeper understanding.",
+    "question": "What is a schema?",
+    "answer": "A collection of database structural elements such as tables, stored procedures, indexes, functions, and triggers. It shows the overall database architecture, specifies the relationships between various objects of a database, and defines different access permissions for them. Read our database schema guide for a deeper understanding.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0025",
+    "content": "Question: What is a SQL operator?\n\nAnswer: A reserved character, a combination of characters, or a keyword used in SQL queries to perform a specific operation. SQL operators are commonly used with the WHERE clause to set a condition (or conditions) for filtering the data.",
+    "question": "What is a SQL operator?",
+    "answer": "A reserved character, a combination of characters, or a keyword used in SQL queries to perform a specific operation. SQL operators are commonly used with the WHERE clause to set a condition (or conditions) for filtering the data.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0026",
+    "content": "Question: What types of SQL operators do you know?\n\nAnswer: Arithmetic (+, -, *, /, etc.)\n\n    Comparison (>, <, =, >=, etc.)\n\n    Compound (+=, -=, *=, /=, etc.)\n\n    Logical (AND, OR, NOT, BETWEEN, etc.)\n\n    String (%, _, +, ^, etc.)\n\n    Set (UNION, UNION ALL, INTERSECT, and MINUS (or EXCEPT))",
+    "question": "What types of SQL operators do you know?",
+    "answer": "Arithmetic (+, -, *, /, etc.)\n\n    Comparison (>, <, =, >=, etc.)\n\n    Compound (+=, -=, *=, /=, etc.)\n\n    Logical (AND, OR, NOT, BETWEEN, etc.)\n\n    String (%, _, +, ^, etc.)\n\n    Set (UNION, UNION ALL, INTERSECT, and MINUS (or EXCEPT))",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0027",
+    "content": "Question: What is a clause?\n\nAnswer: A condition imposed on a SQL query to filter the data to obtain the desired result. Some examples are WHERE, LIMIT, HAVING, LIKE, AND, OR, ORDER BY, etc.",
+    "question": "What is a clause?",
+    "answer": "A condition imposed on a SQL query to filter the data to obtain the desired result. Some examples are WHERE, LIMIT, HAVING, LIKE, AND, OR, ORDER BY, etc.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0028",
+    "content": "Question: What are some common statements used with the SELECT query?\n\nAnswer: The most common ones are FROM, GROUP BY, JOIN, WHERE, ORDER BY, LIMIT, and HAVING.",
+    "question": "What are some common statements used with the SELECT query?",
+    "answer": "The most common ones are FROM, GROUP BY, JOIN, WHERE, ORDER BY, LIMIT, and HAVING.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0029",
+    "content": "Question: How do you create a table in SQL?\n\nAnswer: Using theCREATE TABLE statement. For example, to create a table with three columns of predefined datatypes, we apply the following syntax:\n\n    CREATE TABLE table_name (col_1 datatype,\n    col_2 datatype,\n    col_3 datatype);",
+    "question": "How do you create a table in SQL?",
+    "answer": "Using theCREATE TABLE statement. For example, to create a table with three columns of predefined datatypes, we apply the following syntax:\n\n    CREATE TABLE table_name (col_1 datatype,\n    col_2 datatype,\n    col_3 datatype);",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0030",
+    "content": "Question: How to update a table?\n\nAnswer: Using the UPDATE statement. The syntax is:\n\n    UPDATE table_name\n    SET col_1 = value_1, col_2 = value_2\n    WHERE condition;",
+    "question": "How to update a table?",
+    "answer": "Using the UPDATE statement. The syntax is:\n\n    UPDATE table_name\n    SET col_1 = value_1, col_2 = value_2\n    WHERE condition;",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0031",
+    "content": "Question: How to delete a table from a database?\n\nAnswer: Using the DROP TABLE statement. The syntax is: DROP TABLE table_name;.",
+    "question": "How to delete a table from a database?",
+    "answer": "Using the DROP TABLE statement. The syntax is: DROP TABLE table_name;.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0032",
+    "content": "Question: How to get the count of records in a table?\n\nAnswer: Using the COUNT() aggregate function with the asterisk passed as its argument: SELECT COUNT(*) FROM table_name;.",
+    "question": "How to get the count of records in a table?",
+    "answer": "Using the COUNT() aggregate function with the asterisk passed as its argument: SELECT COUNT(*) FROM table_name;.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0033",
+    "content": "Question: How to sort records in a table?\n\nAnswer: Using the ORDER BY statement:\n\n    SELECT * FROM table_name\n    ORDER BY col_1;",
+    "question": "How to sort records in a table?",
+    "answer": "Using the ORDER BY statement:\n\n    SELECT * FROM table_name\n    ORDER BY col_1;",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0034",
+    "content": "Question: How to select all columns from a table?\n\nAnswer: Using the asterisk * with the SELECT statement. The syntax is: SELECT * FROM table_name;.",
+    "question": "How to select all columns from a table?",
+    "answer": "Using the asterisk * with the SELECT statement. The syntax is: SELECT * FROM table_name;.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0035",
+    "content": "Question: How to select common records from two tables?\n\nAnswer: Using the INTERSECT statement:\n\n    SELECT col1, col2 FROM table_1\n    INTERSECT\n    SELECT col1, col2 FROM table_2;",
+    "question": "How to select common records from two tables?",
+    "answer": "Using the INTERSECT statement:\n\n    SELECT col1, col2 FROM table_1\n    INTERSECT\n    SELECT col1, col2 FROM table_2;",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0036",
+    "content": "Question: What is the DISTINCT statement, and how do you use it?\n\nAnswer: This statement is used with the SELECT statement to filter out duplicates and return only unique values from a column of a table. The syntax is:\n\n    SELECT DISTINCT col_1\n    FROM table_name;",
+    "question": "What is the DISTINCT statement, and how do you use it?",
+    "answer": "This statement is used with the SELECT statement to filter out duplicates and return only unique values from a column of a table. The syntax is:\n\n    SELECT DISTINCT col_1\n    FROM table_name;",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0037",
+    "content": "Question: What are relationships? Give some examples.\n\nAnswer: Relationships are the connections and correlations between entities, basically meaning how two or more tables of a database are related to one another. For example, we can find an ID of the same client in a table on sales data and in a customer table.",
+    "question": "What are relationships? Give some examples.",
+    "answer": "Relationships are the connections and correlations between entities, basically meaning how two or more tables of a database are related to one another. For example, we can find an ID of the same client in a table on sales data and in a customer table.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0038",
+    "content": "Question: What is a NULL value? How is it different from zero or a blank space?\n\nAnswer: A NULL value indicates the absence of data for a certain cell of a table. Instead, zero is a valid numeric value, and an empty string is a legal string of zero length.",
+    "question": "What is a NULL value? How is it different from zero or a blank space?",
+    "answer": "A NULL value indicates the absence of data for a certain cell of a table. Instead, zero is a valid numeric value, and an empty string is a legal string of zero length.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0039",
+    "content": "Question: What is the difference between SQL and NoSQL?\n\nAnswer: SQL databases are relational, structured, and use tables with predefined schemas, while NoSQL databases are non-relational, schema-less, and designed to handle unstructured or semi-structured data.",
+    "question": "What is the difference between SQL and NoSQL?",
+    "answer": "SQL databases are relational, structured, and use tables with predefined schemas, while NoSQL databases are non-relational, schema-less, and designed to handle unstructured or semi-structured data.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0040",
+    "content": "Question: What are some common challenges when working with SQL databases?\n\nAnswer: Challenges include performance tuning for large datasets, managing indexing strategies, ensuring data integrity with constraints, handling concurrent transactions, and optimizing query execution.",
+    "question": "What are some common challenges when working with SQL databases?",
+    "answer": "Challenges include performance tuning for large datasets, managing indexing strategies, ensuring data integrity with constraints, handling concurrent transactions, and optimizing query execution.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0041",
+    "content": "Question: What is a Common Table Expression (CTE)?\n\nAnswer: A Common Table Expression (CTE) is a temporary named result set that you can reference within a SELECT, INSERT, UPDATE, or DELETE statement. CTEs improve query readability and allow you to break complex queries into simpler, reusable parts. The syntax uses the WITH keyword:\n\n    WITH sales_summary AS (\n    SELECT product_id, SUM(amount) AS total_sales\n    FROM sales\n    GROUP BY product_id\n    )\n    SELECT p.product_name, s.total_sales\n    FROM products p\n    JOIN sales_summary s ON p.id = s.product_id\n    WHERE s.total_sales > 10000;",
+    "question": "What is a Common Table Expression (CTE)?",
+    "answer": "A Common Table Expression (CTE) is a temporary named result set that you can reference within a SELECT, INSERT, UPDATE, or DELETE statement. CTEs improve query readability and allow you to break complex queries into simpler, reusable parts. The syntax uses the WITH keyword:\n\n    WITH sales_summary AS (\n    SELECT product_id, SUM(amount) AS total_sales\n    FROM sales\n    GROUP BY product_id\n    )\n    SELECT p.product_name, s.total_sales\n    FROM products p\n    JOIN sales_summary s ON p.id = s.product_id\n    WHERE s.total_sales > 10000;",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0042",
+    "content": "Question: What are window functions, and how do they differ from aggregate functions?\n\nAnswer: Window functions perform calculations across a set of rows related to the current row, without collapsing the result into a single output row like aggregate functions do. They use the OVER() clause to define the window of rows.\n\n    Key window functions include:\n\n    ROW_NUMBER() – assigns a unique sequential number to each row\n    RANK() – assigns a rank with gaps for ties\n    DENSE_RANK() – assigns a rank without gaps for ties\n    LAG() / LEAD() – access data from previous/next rows\n    SUM() OVER(), AVG() OVER() – running or cumulative calculations\n    Example: Calculate running total of sales\n\n    SELECT\n    order_date,\n    amount,\n    SUM(amount) OVER (ORDER BY order_date) AS running_total\n    FROM orders;",
+    "question": "What are window functions, and how do they differ from aggregate functions?",
+    "answer": "Window functions perform calculations across a set of rows related to the current row, without collapsing the result into a single output row like aggregate functions do. They use the OVER() clause to define the window of rows.\n\n    Key window functions include:\n\n    ROW_NUMBER() – assigns a unique sequential number to each row\n    RANK() – assigns a rank with gaps for ties\n    DENSE_RANK() – assigns a rank without gaps for ties\n    LAG() / LEAD() – access data from previous/next rows\n    SUM() OVER(), AVG() OVER() – running or cumulative calculations\n    Example: Calculate running total of sales\n\n    SELECT\n    order_date,\n    amount,\n    SUM(amount) OVER (ORDER BY order_date) AS running_total\n    FROM orders;",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0043",
+    "content": "Question: What is the difference between RANK(), DENSE_RANK(), and ROW_NUMBER()?\n\nAnswer: All three are ranking window functions, but they handle ties differently:\n\n    ROW_NUMBER() – always assigns unique sequential numbers (1, 2, 3, 4...), even for ties\n    RANK() – assigns the same rank to ties, then skips numbers (1, 2, 2, 4...)\n    DENSE_RANK() – assigns the same rank to ties, without skipping (1, 2, 2, 3...)\n    SELECT\n    name,\n    score,\n    ROW_NUMBER() OVER (ORDER BY score DESC) AS row_num,\n    RANK() OVER (ORDER BY score DESC) AS rank,\n    DENSE_RANK() OVER (ORDER BY score DESC) AS dense_rank\n    FROM students;",
+    "question": "What is the difference between RANK(), DENSE_RANK(), and ROW_NUMBER()?",
+    "answer": "All three are ranking window functions, but they handle ties differently:\n\n    ROW_NUMBER() – always assigns unique sequential numbers (1, 2, 3, 4...), even for ties\n    RANK() – assigns the same rank to ties, then skips numbers (1, 2, 2, 4...)\n    DENSE_RANK() – assigns the same rank to ties, without skipping (1, 2, 2, 3...)\n    SELECT\n    name,\n    score,\n    ROW_NUMBER() OVER (ORDER BY score DESC) AS row_num,\n    RANK() OVER (ORDER BY score DESC) AS rank,\n    DENSE_RANK() OVER (ORDER BY score DESC) AS dense_rank\n    FROM students;",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0044",
+    "content": "Question: What is a function in SQL?\n\nAnswer: A database object representing a set of SQL statements frequently used for a certain task. A function takes in some input parameters, performs calculations or other manipulations on them, and returns the result. Functions help improve code readability and avoid repetition of the same code snippets.",
+    "question": "What is a function in SQL?",
+    "answer": "A database object representing a set of SQL statements frequently used for a certain task. A function takes in some input parameters, performs calculations or other manipulations on them, and returns the result. Functions help improve code readability and avoid repetition of the same code snippets.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0045",
+    "content": "Question: What types of SQL functions do you know?\n\nAnswer: Aggregate functions – work on multiple, usually grouped records for the provided columns of a table, and return a single value (usually by group).\n    Scalar functions – work on each individual value and return a single value.\n    On the other hand, SQL functions can be built-in (defined by the system) or user-defined (created by the user for their specific needs).",
+    "question": "What types of SQL functions do you know?",
+    "answer": "Aggregate functions – work on multiple, usually grouped records for the provided columns of a table, and return a single value (usually by group).\n    Scalar functions – work on each individual value and return a single value.\n    On the other hand, SQL functions can be built-in (defined by the system) or user-defined (created by the user for their specific needs).",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0046",
+    "content": "Question: What SQL aggregate functions do you know?\n\nAnswer: AVG() – returns the average value\n\n    SUM() – returns the sum of values\n\n    MIN() – returns the minimum value\n\n    MAX() – returns the maximum value\n\n    COUNT() – returns the number of rows, including those with null values",
+    "question": "What SQL aggregate functions do you know?",
+    "answer": "AVG() – returns the average value\n\n    SUM() – returns the sum of values\n\n    MIN() – returns the minimum value\n\n    MAX() – returns the maximum value\n\n    COUNT() – returns the number of rows, including those with null values",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0047",
+    "content": "Question: What SQL scalar functions do you know?\n\nAnswer: LEN() (in other SQL dialects – LENGTH()) – returns the length of a string, including the blank spaces\n\n    UCASE() (in other SQL dialects – UPPER()) – returns a string converted to the upper case\n\n    LCASE() (in other SQL dialects – LOWER()) – returns a string converted to the lower case\n\n    INITCAP() – returns a string converted to the title case (i.e., each word of the string starts from a capital letter)\n\n    MID() (in other SQL dialects – SUBSTR()) – extracts a substring from a string\n\n    ROUND() – returns the numerical value rounded to a specified number of decimals\n\n    NOW() – returns the current date and time",
+    "question": "What SQL scalar functions do you know?",
+    "answer": "LEN() (in other SQL dialects – LENGTH()) – returns the length of a string, including the blank spaces\n\n    UCASE() (in other SQL dialects – UPPER()) – returns a string converted to the upper case\n\n    LCASE() (in other SQL dialects – LOWER()) – returns a string converted to the lower case\n\n    INITCAP() – returns a string converted to the title case (i.e., each word of the string starts from a capital letter)\n\n    MID() (in other SQL dialects – SUBSTR()) – extracts a substring from a string\n\n    ROUND() – returns the numerical value rounded to a specified number of decimals\n\n    NOW() – returns the current date and time",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0048",
+    "content": "Question: What are case manipulation functions in SQL?\n\nAnswer: Case manipulation functions represent a subset of character functions, and they're used to change the case of the text data. With these functions, we can convert the data into the upper, lower, or title case.\n\n    UCASE() (in other SQL dialects – UPPER()) – returns a string converted to the upper case\n\n    LCASE() (in other SQL dialects – LOWER()) – returns a string converted to the lower case\n\n    INITCAP() – returns a string converted to the title case (i.e., each word of the string starts from a capital letter)",
+    "question": "What are case manipulation functions in SQL?",
+    "answer": "Case manipulation functions represent a subset of character functions, and they're used to change the case of the text data. With these functions, we can convert the data into the upper, lower, or title case.\n\n    UCASE() (in other SQL dialects – UPPER()) – returns a string converted to the upper case\n\n    LCASE() (in other SQL dialects – LOWER()) – returns a string converted to the lower case\n\n    INITCAP() – returns a string converted to the title case (i.e., each word of the string starts from a capital letter)",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0049",
+    "content": "Question: What are character manipulation functions in SQL?\n\nAnswer: Character manipulation functions represent a subset of character functions, and they're used to modify the text data.\n\n    CONCAT() – joins two or more string values appending the second string to the end of the first one\n\n    SUBSTRING()/SUBSTR() – returns a part of a string satisfying the provided start and end points\n\n    LENGTH() (in other SQL dialects – LEN()) – returns the length of a string, including the blank spaces\n\n    REPLACE() – replaces all occurrences of a defined substring in a provided string with another substring\n\n    INSTR() – returns the numeric position of a defined substring in a provided string\n\n    LPAD() and RPAD() – return the padding of the left-side/right-side character for right-justified/left-justified value\n\n    TRIM() – removes all the defined characters, as well as white spaces, from the left, right, or both ends of a provided string",
+    "question": "What are character manipulation functions in SQL?",
+    "answer": "Character manipulation functions represent a subset of character functions, and they're used to modify the text data.\n\n    CONCAT() – joins two or more string values appending the second string to the end of the first one\n\n    SUBSTRING()/SUBSTR() – returns a part of a string satisfying the provided start and end points\n\n    LENGTH() (in other SQL dialects – LEN()) – returns the length of a string, including the blank spaces\n\n    REPLACE() – replaces all occurrences of a defined substring in a provided string with another substring\n\n    INSTR() – returns the numeric position of a defined substring in a provided string\n\n    LPAD() and RPAD() – return the padding of the left-side/right-side character for right-justified/left-justified value\n\n    TRIM() – removes all the defined characters, as well as white spaces, from the left, right, or both ends of a provided string",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0050",
+    "content": "Question: What is the difference between local and global variables?\n\nAnswer: Local variables can be accessed only inside the function in which they were declared. Instead, global variables, being declared outside any function, are stored in fixed memory structures and can be used throughout the entire program.",
+    "question": "What is the difference between local and global variables?",
+    "answer": "Local variables can be accessed only inside the function in which they were declared. Instead, global variables, being declared outside any function, are stored in fixed memory structures and can be used throughout the entire program.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0051",
+    "content": "Question: What is the difference between SQL and PL/SQL?\n\nAnswer: SQL is a standard language for querying and managing relational databases, primarily used for data manipulation and retrieval. PL/SQL (Procedural Language/SQL) is an extension of SQL used in Oracle databases that includes procedural programming constructs like loops, conditions, and exception handling, allowing for complex business logic to be implemented within the database. We have another article on the Top 20 PL/SQL Interview Questions and Answers, which is a good review if you know you will be asked about your knowledge of Oracle.",
+    "question": "What is the difference between SQL and PL/SQL?",
+    "answer": "SQL is a standard language for querying and managing relational databases, primarily used for data manipulation and retrieval. PL/SQL (Procedural Language/SQL) is an extension of SQL used in Oracle databases that includes procedural programming constructs like loops, conditions, and exception handling, allowing for complex business logic to be implemented within the database. We have another article on the Top 20 PL/SQL Interview Questions and Answers, which is a good review if you know you will be asked about your knowledge of Oracle.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0052",
+    "content": "Question: What is the difference between LEFT JOIN and LEFT OUTER JOIN?\n\nAnswer: There is no difference between LEFT JOIN and LEFT OUTER JOIN. They are interchangeable. SQL allows the OUTER keyword to be optional, so LEFT JOIN is simply a shorthand for LEFT OUTER JOIN. Both return all records from the left table and the matching records from the right table.",
+    "question": "What is the difference between LEFT JOIN and LEFT OUTER JOIN?",
+    "answer": "There is no difference between LEFT JOIN and LEFT OUTER JOIN. They are interchangeable. SQL allows the OUTER keyword to be optional, so LEFT JOIN is simply a shorthand for LEFT OUTER JOIN. Both return all records from the left table and the matching records from the right table.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0053",
+    "content": "Question: What is indexing in SQL, and how does it improve performance?\n\nAnswer: Indexing creates a special data structure that speeds up data retrieval by allowing the database to find rows more efficiently. It works like an optimized lookup table, reducing the need for full table scans. However, excessive indexing can slow down insert, update, and delete operations due to the need for index maintenance.",
+    "question": "What is indexing in SQL, and how does it improve performance?",
+    "answer": "Indexing creates a special data structure that speeds up data retrieval by allowing the database to find rows more efficiently. It works like an optimized lookup table, reducing the need for full table scans. However, excessive indexing can slow down insert, update, and delete operations due to the need for index maintenance.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0054",
+    "content": "Question: What is a stored procedure, and how is it different from a function?\n\nAnswer: A stored procedure is a precompiled set of SQL statements executed as a unit to perform a task. Procedures can modify data or schema objects, manage transactions, and return zero or more result sets. Functions, on the other hand, are typically used in SQL expressions, must return a value (scalar or table-valued), and in many databases are restricted from side effects. Exact behavior differs by DB (e.g., T-SQL has scalar and table-valued functions; PostgreSQL distinguishes between functions and procedures).",
+    "question": "What is a stored procedure, and how is it different from a function?",
+    "answer": "A stored procedure is a precompiled set of SQL statements executed as a unit to perform a task. Procedures can modify data or schema objects, manage transactions, and return zero or more result sets. Functions, on the other hand, are typically used in SQL expressions, must return a value (scalar or table-valued), and in many databases are restricted from side effects. Exact behavior differs by DB (e.g., T-SQL has scalar and table-valued functions; PostgreSQL distinguishes between functions and procedures).",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0055",
+    "content": "Question: What is the default data ordering with the ORDER BY statement, and how do you change it?\n\nAnswer: Default is ascending (NULLS FIRST/LAST varies by DB). Use ASC/DESC per column keyword as follows:\n\n    SELECT * FROM table_name\n    ORDER BY col_1 DESC;",
+    "question": "What is the default data ordering with the ORDER BY statement, and how do you change it?",
+    "answer": "Default is ascending (NULLS FIRST/LAST varies by DB). Use ASC/DESC per column keyword as follows:\n\n    SELECT * FROM table_name\n    ORDER BY col_1 DESC;",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0056",
+    "content": "Question: What are SQL set operators?\n\nAnswer: UNION – returns the records obtained by at least one of two queries (excluding duplicates)\n\n    UNION ALL – returns the records obtained by at least one of two queries (including duplicates)\n\n    INTERSECT – returns the records obtained by both queries\n\n    EXCEPT (called MINUS in MySQL and Oracle) – returns only the records obtained by the first query but not the second one",
+    "question": "What are SQL set operators?",
+    "answer": "UNION – returns the records obtained by at least one of two queries (excluding duplicates)\n\n    UNION ALL – returns the records obtained by at least one of two queries (including duplicates)\n\n    INTERSECT – returns the records obtained by both queries\n\n    EXCEPT (called MINUS in MySQL and Oracle) – returns only the records obtained by the first query but not the second one",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0057",
+    "content": "Question: What operator is used in the query for pattern matching?\n\nAnswer: The LIKE operator in combination with the % and _ wildcards. The % wildcard represents any number of characters including zero, while _ – strictly one character.",
+    "question": "What operator is used in the query for pattern matching?",
+    "answer": "The LIKE operator in combination with the % and _ wildcards. The % wildcard represents any number of characters including zero, while _ – strictly one character.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0058",
+    "content": "Question: What is the difference between a primary key and a unique key in SQL?\n\nAnswer: While both types of keys ensure unique values in a column of a table, the first one uniquely identifies each record of the table, and the second one prevents duplicates in that column.",
+    "question": "What is the difference between a primary key and a unique key in SQL?",
+    "answer": "While both types of keys ensure unique values in a column of a table, the first one uniquely identifies each record of the table, and the second one prevents duplicates in that column.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0059",
+    "content": "Question: What is a SQL composite primary key?\n\nAnswer: The primary key of a table, based on multiple columns.",
+    "question": "What is a SQL composite primary key?",
+    "answer": "The primary key of a table, based on multiple columns.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0060",
+    "content": "Question: What is the typical order of SQL clauses in a SELECT statement?\n\nAnswer: SELECT – FROM – JOIN – ON – WHERE – GROUP BY – HAVING – ORDER BY – LIMIT",
+    "question": "What is the typical order of SQL clauses in a SELECT statement?",
+    "answer": "SELECT – FROM – JOIN – ON – WHERE – GROUP BY – HAVING – ORDER BY – LIMIT",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0061",
+    "content": "Question: In which order does the interpreter execute the common statements in the SELECT query?\n\nAnswer: Here is the SQL order of execution:\n\n    FROM → ON → JOIN → WHERE → GROUP BY → HAVING → SELECT → ORDER BY → LIMIT/OFFSET (FETCH)",
+    "question": "In which order does the interpreter execute the common statements in the SELECT query?",
+    "answer": "Here is the SQL order of execution:\n\n    FROM → ON → JOIN → WHERE → GROUP BY → HAVING → SELECT → ORDER BY → LIMIT/OFFSET (FETCH)",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0062",
+    "content": "Question: What is a view in SQL?\n\nAnswer: A virtual table containing a subset of data retrieved from one or more database tables (or other views). Standard views store no data; materialized views do.Views can simplify queries, encapsulate logic, and, combined with privileges, restrict columns/rows. They can join/aggregate data from multiple tables.",
+    "question": "What is a view in SQL?",
+    "answer": "A virtual table containing a subset of data retrieved from one or more database tables (or other views). Standard views store no data; materialized views do.Views can simplify queries, encapsulate logic, and, combined with privileges, restrict columns/rows. They can join/aggregate data from multiple tables.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0063",
+    "content": "Question: Can we create a view based on another view in SQL?\n\nAnswer: Yes. This is also known as nested views. However, we should avoid nesting multiple views since the code becomes difficult to read and debug.",
+    "question": "Can we create a view based on another view in SQL?",
+    "answer": "Yes. This is also known as nested views. However, we should avoid nesting multiple views since the code becomes difficult to read and debug.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0064",
+    "content": "Question: Can we still use a view if the original table is deleted?\n\nAnswer: No. Any views based on that table will become invalid after deleting the base table. If we try to use such a view anyway, we'll receive an error message.",
+    "question": "Can we still use a view if the original table is deleted?",
+    "answer": "No. Any views based on that table will become invalid after deleting the base table. If we try to use such a view anyway, we'll receive an error message.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0065",
+    "content": "Question: What types of SQL relationships do you know?\n\nAnswer: One-to-one – each record in one table corresponds to only one record in another table\n    One-to-many – each record in one table corresponds to several records in another table\n    Many-to-many – each record in both tables corresponds to several records in another table",
+    "question": "What types of SQL relationships do you know?",
+    "answer": "One-to-one – each record in one table corresponds to only one record in another table\n    One-to-many – each record in one table corresponds to several records in another table\n    Many-to-many – each record in both tables corresponds to several records in another table",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0066",
+    "content": "Question: What are the possible values of a BOOLEAN data field?\n\nAnswer: In some SQL dialects, such as PostgreSQL, the BOOLEAN data type exists explicitly and takes values TRUE, FALSE, or NULL. In other dialects, such as Microsoft SQL Server, the BIT datatype is used to store Boolean values as integers 1 (true) or 0 (false).",
+    "question": "What are the possible values of a BOOLEAN data field?",
+    "answer": "In some SQL dialects, such as PostgreSQL, the BOOLEAN data type exists explicitly and takes values TRUE, FALSE, or NULL. In other dialects, such as Microsoft SQL Server, the BIT datatype is used to store Boolean values as integers 1 (true) or 0 (false).",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0067",
+    "content": "Question: What is normalization in SQL?\n\nAnswer: Normalization is a process of database design that includes organizing and restructuring data in a way to reduce data redundancy, dependency, duplication, and inconsistency. This leads to enhanced data integrity, more tables within the database, more efficient data access and security control, and greater query flexibility.",
+    "question": "What is normalization in SQL?",
+    "answer": "Normalization is a process of database design that includes organizing and restructuring data in a way to reduce data redundancy, dependency, duplication, and inconsistency. This leads to enhanced data integrity, more tables within the database, more efficient data access and security control, and greater query flexibility.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0068",
+    "content": "Question: What is denormalization in SQL?\n\nAnswer: Denormalization is the process opposite of normalization: it introduces data redundancy and combines data from multiple tables. Denormalization optimizes the performance of the database infrastructure in situations when read operations are more important than write operations since it helps avoid complex joins and reduces the time of query running.",
+    "question": "What is denormalization in SQL?",
+    "answer": "Denormalization is the process opposite of normalization: it introduces data redundancy and combines data from multiple tables. Denormalization optimizes the performance of the database infrastructure in situations when read operations are more important than write operations since it helps avoid complex joins and reduces the time of query running.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0069",
+    "content": "Question: What is the difference between renaming a column and giving an alias to it?\n\nAnswer: Renaming a column means permanently changing its actual name in the original table. Giving an alias to a column means giving it a temporary name while executing an SQL query, with the purpose to make the code more readable and compact.",
+    "question": "What is the difference between renaming a column and giving an alias to it?",
+    "answer": "Renaming a column means permanently changing its actual name in the original table. Giving an alias to a column means giving it a temporary name while executing an SQL query, with the purpose to make the code more readable and compact.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0070",
+    "content": "Question: What is the difference between nested and correlated subqueries?\n\nAnswer: A correlated subquery is an inner query nested in a bigger (outer) query that refers to the values from the outer query for its execution, meaning that a correlated subquery depends on its outer query.Instead, a non-correlated subquery doesn't rely on the data from the outer query and can be run independently of it.",
+    "question": "What is the difference between nested and correlated subqueries?",
+    "answer": "A correlated subquery is an inner query nested in a bigger (outer) query that refers to the values from the outer query for its execution, meaning that a correlated subquery depends on its outer query.Instead, a non-correlated subquery doesn't rely on the data from the outer query and can be run independently of it.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0071",
+    "content": "Question: What is the difference between clustered and non-clustered indexes?\n\nAnswer: While a clustered index defines the physical order of records of a table and performs data searching based on the key values, a non-clustered index keeps the order of records that do not match the physical order of the actual data on the disk. A table can have only one clustered index but many non-clustered ones.",
+    "question": "What is the difference between clustered and non-clustered indexes?",
+    "answer": "While a clustered index defines the physical order of records of a table and performs data searching based on the key values, a non-clustered index keeps the order of records that do not match the physical order of the actual data on the disk. A table can have only one clustered index but many non-clustered ones.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0072",
+    "content": "Question: What is the CASE() function?\n\nAnswer: The way to implement the if-then-else logic in SQL. This function sequentially checks the provided conditions in the WHEN clauses and returns the value from the corresponding THEN clause when the first condition is satisfied. If none of the conditions is satisfied, the function returns the value from the ELSE clause in case it's provided, otherwise, it returns NULL. The syntax is:\n\n    CASE\n    WHEN condition_1 THEN value_1\n    WHEN condition_2 THEN value_2\n    WHEN condition_3 THEN value_3\n    ...\n    ELSE value\n    END;",
+    "question": "What is the CASE() function?",
+    "answer": "The way to implement the if-then-else logic in SQL. This function sequentially checks the provided conditions in the WHEN clauses and returns the value from the corresponding THEN clause when the first condition is satisfied. If none of the conditions is satisfied, the function returns the value from the ELSE clause in case it's provided, otherwise, it returns NULL. The syntax is:\n\n    CASE\n    WHEN condition_1 THEN value_1\n    WHEN condition_2 THEN value_2\n    WHEN condition_3 THEN value_3\n    ...\n    ELSE value\n    END;",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0073",
+    "content": "Question: What is the difference between the DELETE and TRUNCATE statements?\n\nAnswer: DELETE is a DML (Data Manipulation Language) command used to remove one or more rows from a table based on a condition in the WHERE clause. It is reversible only if wrapped in a transaction (via ROLLBACK).\n\n    TRUNCATE is a DDL (Data Definition Language) command that removes all rows from a table by deallocating pages. It is faster but generally irreversible, and cannot be used on tables that are referenced by a foreign key.",
+    "question": "What is the difference between the DELETE and TRUNCATE statements?",
+    "answer": "DELETE is a DML (Data Manipulation Language) command used to remove one or more rows from a table based on a condition in the WHERE clause. It is reversible only if wrapped in a transaction (via ROLLBACK).\n\n    TRUNCATE is a DDL (Data Definition Language) command that removes all rows from a table by deallocating pages. It is faster but generally irreversible, and cannot be used on tables that are referenced by a foreign key.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0074",
+    "content": "Question: What is the difference between the DROP and TRUNCATE statements?\n\nAnswer: DROP deletes a table from the database completely, including the table structure and all the associated constraints, relationships with other tables, and access privileges. TRUNCATE deletes all rows from a table without affecting the table structure and constraints.  Both are DDL. DROP removes the table and its metadata; TRUNCATE deletes all rows but keeps the table definition. Performance and transactional behavior depend on the DB engine.",
+    "question": "What is the difference between the DROP and TRUNCATE statements?",
+    "answer": "DROP deletes a table from the database completely, including the table structure and all the associated constraints, relationships with other tables, and access privileges. TRUNCATE deletes all rows from a table without affecting the table structure and constraints.  Both are DDL. DROP removes the table and its metadata; TRUNCATE deletes all rows but keeps the table definition. Performance and transactional behavior depend on the DB engine.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0075",
+    "content": "Question: What is the difference between the HAVING and WHERE statements?\n\nAnswer: The first one works on aggregated data after they are grouped, while the second one checks each row individually. If both statements are present in a query, they appear in the following order:WHERE – GROUP BY – HAVING. The SQL engine interprets them also in the same order.",
+    "question": "What is the difference between the HAVING and WHERE statements?",
+    "answer": "The first one works on aggregated data after they are grouped, while the second one checks each row individually. If both statements are present in a query, they appear in the following order:WHERE – GROUP BY – HAVING. The SQL engine interprets them also in the same order.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0076",
+    "content": "Question: How do you add a record to a table?\n\nAnswer: Using the INSERT INTO statement in combination with VALUES. The syntax is:\n\n    INSERT INTO table_name\n    VALUES (value_1, value_2, ...);",
+    "question": "How do you add a record to a table?",
+    "answer": "Using the INSERT INTO statement in combination with VALUES. The syntax is:\n\n    INSERT INTO table_name\n    VALUES (value_1, value_2, ...);",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0077",
+    "content": "Question: How do you delete a record from a table?\n\nAnswer: Using the DELETE statement. The syntax is:\n\n    DELETE FROM table_name\n    WHERE condition;",
+    "question": "How do you delete a record from a table?",
+    "answer": "Using the DELETE statement. The syntax is:\n\n    DELETE FROM table_name\n    WHERE condition;",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0078",
+    "content": "Question: How do you add a column to a table?\n\nAnswer: Using the ALTER TABLE statement in combination with ADD. The syntax is:\n\n    ALTER TABLE table_name\n    ADD column_name datatype;",
+    "question": "How do you add a column to a table?",
+    "answer": "Using the ALTER TABLE statement in combination with ADD. The syntax is:\n\n    ALTER TABLE table_name\n    ADD column_name datatype;",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0079",
+    "content": "Question: How do you rename a column of a table?\n\nAnswer: Using the ALTER TABLE statement in combination with RENAME COLUMN ... TO ... The syntax is:\n\n    ALTER TABLE table_name\n    RENAME COLUMN old_column_name TO new_column_name;",
+    "question": "How do you rename a column of a table?",
+    "answer": "Using the ALTER TABLE statement in combination with RENAME COLUMN ... TO ... The syntax is:\n\n    ALTER TABLE table_name\n    RENAME COLUMN old_column_name TO new_column_name;",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0080",
+    "content": "Question: How do you delete a column from a table?\n\nAnswer: Using the ALTER TABLE statement in combination with DROP COLUMN. The syntax is:\n\n    ALTER TABLE table_name\n    DROP COLUMN column_name;",
+    "question": "How do you delete a column from a table?",
+    "answer": "Using the ALTER TABLE statement in combination with DROP COLUMN. The syntax is:\n\n    ALTER TABLE table_name\n    DROP COLUMN column_name;",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0081",
+    "content": "Question: How do you select all even or all odd records in a table?\n\nAnswer: By checking the remainder of the division by 2. In some SQL versions (e.g., PostgreSQL and MySQL), we use the MOD function, in the others (Microsoft SQL Server and SQLite) – the modulo operator (%). To select all even records using MOD:\n\n    SELECT * FROM table_name\n    WHERE MOD(ID_column, 2) = 0;",
+    "question": "How do you select all even or all odd records in a table?",
+    "answer": "By checking the remainder of the division by 2. In some SQL versions (e.g., PostgreSQL and MySQL), we use the MOD function, in the others (Microsoft SQL Server and SQLite) – the modulo operator (%). To select all even records using MOD:\n\n    SELECT * FROM table_name\n    WHERE MOD(ID_column, 2) = 0;",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0082",
+    "content": "Question: How to prevent duplicate records when making a query?\n\nAnswer: Using the DISTINCT statement in combination with SELECT or creating a unique key for that table.",
+    "question": "How to prevent duplicate records when making a query?",
+    "answer": "Using the DISTINCT statement in combination with SELECT or creating a unique key for that table.",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0083",
+    "content": "Question: How do you insert many rows in a table?\n\nAnswer: Using the INSERT INTO statement in combination with VALUES. The syntax is:\n\n    INSERT INTO table_name\n    VALUES (value_1, value_2, ...),\n    (value_3, value_4, ...),\n    (value_5, value_6, ...),\n    ...;",
+    "question": "How do you insert many rows in a table?",
+    "answer": "Using the INSERT INTO statement in combination with VALUES. The syntax is:\n\n    INSERT INTO table_name\n    VALUES (value_1, value_2, ...),\n    (value_3, value_4, ...),\n    (value_5, value_6, ...),\n    ...;",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0084",
+    "content": "Question: How do you find the nth highest value in a column of a table?\n\nAnswer: Using window functions to handle ties correctly:\n\n    SELECT column_name\n    FROM (\n    SELECT column_name, DENSE_RANK() OVER (ORDER BY column_name DESC) AS rnk\n    FROM table_name\n    ) t\n    WHERE rnk = :n;",
+    "question": "How do you find the nth highest value in a column of a table?",
+    "answer": "Using window functions to handle ties correctly:\n\n    SELECT column_name\n    FROM (\n    SELECT column_name, DENSE_RANK() OVER (ORDER BY column_name DESC) AS rnk\n    FROM table_name\n    ) t\n    WHERE rnk = :n;",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0085",
+    "content": "Question: How do you find the values in a text column of a table that start with a certain letter?\n\nAnswer: Using the LIKE operator in combination with the % and _ wildcards. For example, we need to find all surnames in a table that start with \"A\". The query is:\n\n    SELECT * FROM table_name\n    WHERE surname LIKE 'A_';",
+    "question": "How do you find the values in a text column of a table that start with a certain letter?",
+    "answer": "Using the LIKE operator in combination with the % and _ wildcards. For example, we need to find all surnames in a table that start with \"A\". The query is:\n\n    SELECT * FROM table_name\n    WHERE surname LIKE 'A_';",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0086",
+    "content": "Question: How do you find the last id in a table?\n\nAnswer: The simplest method is to use the aggregate function MAX().\n\n    SELECT MAX(id) AS highest_id\n    FROM table_name;",
+    "question": "How do you find the last id in a table?",
+    "answer": "The simplest method is to use the aggregate function MAX().\n\n    SELECT MAX(id) AS highest_id\n    FROM table_name;",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0087",
+    "content": "Question: How to select random rows from a table?\n\nAnswer: Using the RAND() function in combination with ORDER BY and LIMIT. In some SQL dialects, such as PostgreSQL, it's called RANDOM(). For example, the following code will return five random rows from a table in MySQL:\n\n    SELECT * FROM table_name\n    ORDER BY RAND()\n    LIMIT 5;",
+    "question": "How to select random rows from a table?",
+    "answer": "Using the RAND() function in combination with ORDER BY and LIMIT. In some SQL dialects, such as PostgreSQL, it's called RANDOM(). For example, the following code will return five random rows from a table in MySQL:\n\n    SELECT * FROM table_name\n    ORDER BY RAND()\n    LIMIT 5;",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0088",
+    "content": "Question: How do you find and remove duplicate records from a table?\n\nAnswer: Finding duplicates:\n\n    SELECT email, COUNT(*) AS duplicate_count\n    FROM users\n    GROUP BY email\n    HAVING COUNT(*) > 1;",
+    "question": "How do you find and remove duplicate records from a table?",
+    "answer": "Finding duplicates:\n\n    SELECT email, COUNT(*) AS duplicate_count\n    FROM users\n    GROUP BY email\n    HAVING COUNT(*) > 1;",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0089",
+    "content": "Question: How do you calculate a running total (cumulative sum)?\n\nAnswer: Use the SUM() window function with an ORDER BY clause:\n\n    SELECT\n    transaction_date,\n    amount,\n    SUM(amount) OVER (ORDER BY transaction_date) AS running_total\n    FROM transactions;",
+    "question": "How do you calculate a running total (cumulative sum)?",
+    "answer": "Use the SUM() window function with an ORDER BY clause:\n\n    SELECT\n    transaction_date,\n    amount,\n    SUM(amount) OVER (ORDER BY transaction_date) AS running_total\n    FROM transactions;",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0090",
+    "content": "Question: How do you find employees who earn more than the average salary in their department?\n\nAnswer: This is a classic correlated subquery scenario:\n\n    SELECT e.name, e.department, e.salary\n    FROM employees e\n    WHERE e.salary > (\n    SELECT AVG(salary)\n    FROM employees\n    WHERE department = e.department\n    );",
+    "question": "How do you find employees who earn more than the average salary in their department?",
+    "answer": "This is a classic correlated subquery scenario:\n\n    SELECT e.name, e.department, e.salary\n    FROM employees e\n    WHERE e.salary > (\n    SELECT AVG(salary)\n    FROM employees\n    WHERE department = e.department\n    );",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0091",
+    "content": "Question: How do you find gaps in a sequence of numbers (e.g., missing invoice numbers)?\n\nAnswer: Use LEAD() to compare each value with the next:\n\n    SELECT\n    invoice_number,\n    LEAD(invoice_number) OVER (ORDER BY invoice_number) AS next_invoice,\n    LEAD(invoice_number) OVER (ORDER BY invoice_number) - invoice_number - 1 AS gap_size\n    FROM invoices\n    WHERE LEAD(invoice_number) OVER (ORDER BY invoice_number) - invoice_number > 1;",
+    "question": "How do you find gaps in a sequence of numbers (e.g., missing invoice numbers)?",
+    "answer": "Use LEAD() to compare each value with the next:\n\n    SELECT\n    invoice_number,\n    LEAD(invoice_number) OVER (ORDER BY invoice_number) AS next_invoice,\n    LEAD(invoice_number) OVER (ORDER BY invoice_number) - invoice_number - 1 AS gap_size\n    FROM invoices\n    WHERE LEAD(invoice_number) OVER (ORDER BY invoice_number) - invoice_number > 1;",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0092",
+    "content": "Question: How do you find customers who made purchases in consecutive months?\n\nAnswer: Use LAG() to compare with the previous row:\n\n    WITH monthly_purchases AS (\n    SELECT\n    customer_id,\n    DATE_TRUNC('month', purchase_date) AS purchase_month,\n    LAG(DATE_TRUNC('month', purchase_date)) OVER (\n    PARTITION BY customer_id\n    ORDER BY DATE_TRUNC('month', purchase_date)\n    ) AS prev_month\n    FROM purchases\n    GROUP BY customer_id, DATE_TRUNC('month', purchase_date)\n    )\n    SELECT DISTINCT customer_id\n    FROM monthly_purchases\n    WHERE purchase_month = prev_month + INTERVAL '1 month';",
+    "question": "How do you find customers who made purchases in consecutive months?",
+    "answer": "Use LAG() to compare with the previous row:\n\n    WITH monthly_purchases AS (\n    SELECT\n    customer_id,\n    DATE_TRUNC('month', purchase_date) AS purchase_month,\n    LAG(DATE_TRUNC('month', purchase_date)) OVER (\n    PARTITION BY customer_id\n    ORDER BY DATE_TRUNC('month', purchase_date)\n    ) AS prev_month\n    FROM purchases\n    GROUP BY customer_id, DATE_TRUNC('month', purchase_date)\n    )\n    SELECT DISTINCT customer_id\n    FROM monthly_purchases\n    WHERE purchase_month = prev_month + INTERVAL '1 month';",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0093",
+    "content": "Question: How do you pivot data from rows to columns?\n\nAnswer: Use conditional aggregation with CASE statements:\n\n    SELECT\n    product_name,\n    SUM(CASE WHEN EXTRACT(MONTH FROM sale_date) = 1 THEN amount ELSE 0 END) AS jan_sales,\n    SUM(CASE WHEN EXTRACT(MONTH FROM sale_date) = 2 THEN amount ELSE 0 END) AS feb_sales,\n    SUM(CASE WHEN EXTRACT(MONTH FROM sale_date) = 3 THEN amount ELSE 0 END) AS mar_sales\n    FROM sales\n    GROUP BY product_name;",
+    "question": "How do you pivot data from rows to columns?",
+    "answer": "Use conditional aggregation with CASE statements:\n\n    SELECT\n    product_name,\n    SUM(CASE WHEN EXTRACT(MONTH FROM sale_date) = 1 THEN amount ELSE 0 END) AS jan_sales,\n    SUM(CASE WHEN EXTRACT(MONTH FROM sale_date) = 2 THEN amount ELSE 0 END) AS feb_sales,\n    SUM(CASE WHEN EXTRACT(MONTH FROM sale_date) = 3 THEN amount ELSE 0 END) AS mar_sales\n    FROM sales\n    GROUP BY product_name;",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0094",
+    "content": "Question: How do you find the top 3 products by sales in each category?\n\nAnswer: Use DENSE_RANK() with PARTITION BY:\n\n    WITH ranked_products AS (\n    SELECT\n    category,\n    product_name,\n    SUM(sales_amount) AS total_sales,\n    DENSE_RANK() OVER (\n    PARTITION BY category\n    ORDER BY SUM(sales_amount) DESC\n    ) AS sales_rank\n    FROM sales\n    GROUP BY category, product_name\n    )\n    SELECT category, product_name, total_sales\n    FROM ranked_products\n    WHERE sales_rank <= 3\n    ORDER BY category, sales_rank;",
+    "question": "How do you find the top 3 products by sales in each category?",
+    "answer": "Use DENSE_RANK() with PARTITION BY:\n\n    WITH ranked_products AS (\n    SELECT\n    category,\n    product_name,\n    SUM(sales_amount) AS total_sales,\n    DENSE_RANK() OVER (\n    PARTITION BY category\n    ORDER BY SUM(sales_amount) DESC\n    ) AS sales_rank\n    FROM sales\n    GROUP BY category, product_name\n    )\n    SELECT category, product_name, total_sales\n    FROM ranked_products\n    WHERE sales_rank <= 3\n    ORDER BY category, sales_rank;",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0095",
+    "content": "Question: What are ACID properties in database transactions?\n\nAnswer: ACID is an acronym for the four key properties that guarantee reliable database transactions:\n\n    Atomicity: A transaction is \"all or nothing\" – either all operations complete successfully, or none do\n    Consistency: A transaction brings the database from one valid state to another, maintaining all defined rules and constraints\n    Isolation: Concurrent transactions don't interfere with each other; each transaction sees a consistent snapshot of the data\n    Durability: Once a transaction is committed, the changes persist even if the system crashes\n    Example transaction:\n\n    BEGIN TRANSACTION;\n\n    UPDATE accounts SET balance = balance - 100 WHERE account_id = 1;\n    UPDATE accounts SET balance = balance + 100 WHERE account_id = 2;\n\n    COMMIT;",
+    "question": "What are ACID properties in database transactions?",
+    "answer": "ACID is an acronym for the four key properties that guarantee reliable database transactions:\n\n    Atomicity: A transaction is \"all or nothing\" – either all operations complete successfully, or none do\n    Consistency: A transaction brings the database from one valid state to another, maintaining all defined rules and constraints\n    Isolation: Concurrent transactions don't interfere with each other; each transaction sees a consistent snapshot of the data\n    Durability: Once a transaction is committed, the changes persist even if the system crashes\n    Example transaction:\n\n    BEGIN TRANSACTION;\n\n    UPDATE accounts SET balance = balance - 100 WHERE account_id = 1;\n    UPDATE accounts SET balance = balance + 100 WHERE account_id = 2;\n\n    COMMIT;",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0096",
+    "content": "Question: What is a deadlock, and how do you prevent it?\n\nAnswer: A deadlock occurs when two or more transactions are waiting for each other to release locks, creating a circular dependency where neither can proceed.\n\n    Example scenario: Transaction A locks Table X and waits for Table Y, while Transaction B locks Table Y and waits for Table X.\n\n    Prevention strategies:\n\n    Consistent lock ordering: Always acquire locks in the same order across all transactions\n    Keep transactions short: Commit or rollback as quickly as possible\n    Use appropriate isolation levels: Lower isolation levels reduce lock contention\n    Access only required data: Avoid locking unnecessary rows\n    Handle deadlock retries: Most databases automatically detect and resolve deadlocks by rolling back one transaction",
+    "question": "What is a deadlock, and how do you prevent it?",
+    "answer": "A deadlock occurs when two or more transactions are waiting for each other to release locks, creating a circular dependency where neither can proceed.\n\n    Example scenario: Transaction A locks Table X and waits for Table Y, while Transaction B locks Table Y and waits for Table X.\n\n    Prevention strategies:\n\n    Consistent lock ordering: Always acquire locks in the same order across all transactions\n    Keep transactions short: Commit or rollback as quickly as possible\n    Use appropriate isolation levels: Lower isolation levels reduce lock contention\n    Access only required data: Avoid locking unnecessary rows\n    Handle deadlock retries: Most databases automatically detect and resolve deadlocks by rolling back one transaction",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0097",
+    "content": "Question: How do you optimize a slow-running SQL query?\n\nAnswer: Key optimization strategies:\n\n    Add appropriate indexes: Create indexes on columns used in WHERE, JOIN, and ORDER BY clauses\n\n    Analyze execution plans: Use EXPLAIN (PostgreSQL/MySQL) or EXPLAIN PLAN (Oracle) to identify bottlenecks\n\n    Avoid SELECT *: Only retrieve the columns you need\n\n    Use JOINs instead of subqueries: JOINs are often more efficient than correlated subqueries\n\n    Limit result sets: Use LIMIT/TOP when you don't need all rows\n\n    Avoid functions on indexed columns: WHERE YEAR(date_col) = 2026 can't use an index; use WHERE date_col >= '2026-01-01' instead\n\n    Consider partitioning: For very large tables, partition by date or category",
+    "question": "How do you optimize a slow-running SQL query?",
+    "answer": "Key optimization strategies:\n\n    Add appropriate indexes: Create indexes on columns used in WHERE, JOIN, and ORDER BY clauses\n\n    Analyze execution plans: Use EXPLAIN (PostgreSQL/MySQL) or EXPLAIN PLAN (Oracle) to identify bottlenecks\n\n    Avoid SELECT *: Only retrieve the columns you need\n\n    Use JOINs instead of subqueries: JOINs are often more efficient than correlated subqueries\n\n    Limit result sets: Use LIMIT/TOP when you don't need all rows\n\n    Avoid functions on indexed columns: WHERE YEAR(date_col) = 2026 can't use an index; use WHERE date_col >= '2026-01-01' instead\n\n    Consider partitioning: For very large tables, partition by date or category",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0098",
+    "content": "Question: How do you handle NULL values in calculations and comparisons?\n\nAnswer: NULL represents missing or unknown data and requires special handling:\n\n    Comparisons: Use IS NULL or IS NOT NULL instead of = NULL\n\n    COALESCE(): Returns the first non-NULL value: COALESCE(column, 'default')\n\n    NULLIF(): Returns NULL if two values are equal: NULLIF(a, b)\n\n    ISNULL() / NVL(): Database-specific functions to replace NULL values\n\n    SELECT\n    name,\n    COALESCE(phone, email, 'No contact') AS contact_info,\n    CASE WHEN status IS NULL THEN 'Unknown' ELSE status END AS status\n    FROM customers;",
+    "question": "How do you handle NULL values in calculations and comparisons?",
+    "answer": "NULL represents missing or unknown data and requires special handling:\n\n    Comparisons: Use IS NULL or IS NOT NULL instead of = NULL\n\n    COALESCE(): Returns the first non-NULL value: COALESCE(column, 'default')\n\n    NULLIF(): Returns NULL if two values are equal: NULLIF(a, b)\n\n    ISNULL() / NVL(): Database-specific functions to replace NULL values\n\n    SELECT\n    name,\n    COALESCE(phone, email, 'No contact') AS contact_info,\n    CASE WHEN status IS NULL THEN 'Unknown' ELSE status END AS status\n    FROM customers;",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "sql_interview_question-0099",
+    "content": "Question: How do you find the longest streak of consecutive login days for a user?\n\nAnswer: This is an advanced \"islands and gaps\" problem:\n\n    WITH login_groups AS (\n    SELECT\n    user_id,\n    login_date,\n    login_date - ROW_NUMBER() OVER (\n    PARTITION BY user_id\n    ORDER BY login_date\n    ) * INTERVAL '1 day' AS group_id\n    FROM user_logins\n    )\n    SELECT\n    user_id,\n    MIN(login_date) AS streak_start,\n    MAX(login_date) AS streak_end,\n    COUNT(*) AS streak_length\n    FROM login_groups\n    GROUP BY user_id, group_id\n    ORDER BY streak_length DESC\n    LIMIT 1;",
+    "question": "How do you find the longest streak of consecutive login days for a user?",
+    "answer": "This is an advanced \"islands and gaps\" problem:\n\n    WITH login_groups AS (\n    SELECT\n    user_id,\n    login_date,\n    login_date - ROW_NUMBER() OVER (\n    PARTITION BY user_id\n    ORDER BY login_date\n    ) * INTERVAL '1 day' AS group_id\n    FROM user_logins\n    )\n    SELECT\n    user_id,\n    MIN(login_date) AS streak_start,\n    MAX(login_date) AS streak_end,\n    COUNT(*) AS streak_length\n    FROM login_groups\n    GROUP BY user_id, group_id\n    ORDER BY streak_length DESC\n    LIMIT 1;",
+    "metadata": {
+      "topic": "SQL",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "sql_interview_question.md",
+      "answer_status": "available"
+    }
+  }
+]

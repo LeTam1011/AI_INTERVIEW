@@ -1,0 +1,1302 @@
+[
+  {
+    "id": "nodejs_interview_question-0001",
+    "content": "Question: What is Node.js?\n\nAnswer: Node.js is an open-source, cross-platform runtime environment that allows the execution of JavaScript code outside a browser. It is built on Chrome’s V8 JavaScript engine and is primarily used for developing server-side and networking applications.",
+    "question": "What is Node.js?",
+    "answer": "Node.js is an open-source, cross-platform runtime environment that allows the execution of JavaScript code outside a browser. It is built on Chrome’s V8 JavaScript engine and is primarily used for developing server-side and networking applications.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0002",
+    "content": "Question: Why is Node.js Single-Threaded?\n\nAnswer: Node.js operates on a single-threaded event loop model, enabling it to handle multiple client requests efficiently without creating multiple threads. This design is particularly effective for I/O-bound applications.",
+    "question": "Why is Node.js Single-Threaded?",
+    "answer": "Node.js operates on a single-threaded event loop model, enabling it to handle multiple client requests efficiently without creating multiple threads. This design is particularly effective for I/O-bound applications.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0003",
+    "content": "Question: What is the use of the Event Loop in Node.js?\n\nAnswer: The Event Loop handles asynchronous callbacks in Node.js. It allows non-blocking I/O operations by delegating tasks to the system kernel whenever possible and executing callbacks after tasks are complete.",
+    "question": "What is the use of the Event Loop in Node.js?",
+    "answer": "The Event Loop handles asynchronous callbacks in Node.js. It allows non-blocking I/O operations by delegating tasks to the system kernel whenever possible and executing callbacks after tasks are complete.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0004",
+    "content": "Question: What are the major advantages of using Node.js?\n\nAnswer: Asynchronous and Event-Driven architecture\n    Fast Execution with Chrome’s V8 engine\n    Unified JavaScript Development (both frontend and backend)\n    Extensive ecosystem with npm modules",
+    "question": "What are the major advantages of using Node.js?",
+    "answer": "Asynchronous and Event-Driven architecture\n    Fast Execution with Chrome’s V8 engine\n    Unified JavaScript Development (both frontend and backend)\n    Extensive ecosystem with npm modules",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0005",
+    "content": "Question: What is npm?\n\nAnswer: npm stands for Node Package Manager. It is the largest software registry that provides access to reusable packages and tools for dependency management in Node.js applications.",
+    "question": "What is npm?",
+    "answer": "npm stands for Node Package Manager. It is the largest software registry that provides access to reusable packages and tools for dependency management in Node.js applications.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0006",
+    "content": "Question: What is the difference between Node.js and JavaScript?\n\nAnswer: JavaScript: A client-side scripting language mainly used inside browsers.\n    Node.js: A server-side runtime environment for executing JavaScript outside the browser.",
+    "question": "What is the difference between Node.js and JavaScript?",
+    "answer": "JavaScript: A client-side scripting language mainly used inside browsers.\n    Node.js: A server-side runtime environment for executing JavaScript outside the browser.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0007",
+    "content": "Question: Explain the concept of Non-blocking I/O in Node.js.\n\nAnswer: Non-blocking I/O means that Node.js can initiate multiple operations without waiting for any to finish. It uses events and callbacks to handle completed tasks asynchronously, resulting in higher efficiency for I/O-bound applications.",
+    "question": "Explain the concept of Non-blocking I/O in Node.js.",
+    "answer": "Non-blocking I/O means that Node.js can initiate multiple operations without waiting for any to finish. It uses events and callbacks to handle completed tasks asynchronously, resulting in higher efficiency for I/O-bound applications.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0008",
+    "content": "Question: What are Streams in Node.js?\n\nAnswer: Streams are objects that enable reading or writing data continuously. Instead of loading entire files into memory, streams handle data in chunks. Types include:\n    Readable\n    Writable\n    Duplex (both readable and writable)\n    Transform (modify data while reading or writing)",
+    "question": "What are Streams in Node.js?",
+    "answer": "Streams are objects that enable reading or writing data continuously. Instead of loading entire files into memory, streams handle data in chunks. Types include:\n    Readable\n    Writable\n    Duplex (both readable and writable)\n    Transform (modify data while reading or writing)",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0009",
+    "content": "Question: What is the difference between process.nextTick() and setImmediate()?\n\nAnswer: process.nextTick(): Executes the callback before any I/O events, immediately after the current operation completes.\n    setImmediate(): Executes the callback on the next iteration of the event loop, after I/O events are processed.",
+    "question": "What is the difference between process.nextTick() and setImmediate()?",
+    "answer": "process.nextTick(): Executes the callback before any I/O events, immediately after the current operation completes.\n    setImmediate(): Executes the callback on the next iteration of the event loop, after I/O events are processed.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0010",
+    "content": "Question: How does Node.js handle child processes?\n\nAnswer: Node.js uses the child_process module to spawn new system processes. These child processes can communicate with the parent via standard input/output streams and can be used for parallel execution to improve performance.",
+    "question": "How does Node.js handle child processes?",
+    "answer": "Node.js uses the child_process module to spawn new system processes. These child processes can communicate with the parent via standard input/output streams and can be used for parallel execution to improve performance.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0011",
+    "content": "Question: What is the REPL in Node.js?\n\nAnswer: REPL stands for Read, Eval, Print, and Loop. It is an interactive shell provided by Node.js that processes user input, evaluates it, outputs the result, and loops again. It is useful for testing simple snippets and debugging.",
+    "question": "What is the REPL in Node.js?",
+    "answer": "REPL stands for Read, Eval, Print, and Loop. It is an interactive shell provided by Node.js that processes user input, evaluates it, outputs the result, and loops again. It is useful for testing simple snippets and debugging.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0012",
+    "content": "Question: What are Global Objects in Node.js?\n\nAnswer: Global objects are available throughout a Node.js application without the need to import modules. Common examples include:\n    __dirname – Directory name of the current module\n    __filename – Filename of the current module\n    global – Global namespace object\n    process – Information and control about the current Node.js process",
+    "question": "What are Global Objects in Node.js?",
+    "answer": "Global objects are available throughout a Node.js application without the need to import modules. Common examples include:\n    __dirname – Directory name of the current module\n    __filename – Filename of the current module\n    global – Global namespace object\n    process – Information and control about the current Node.js process",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0013",
+    "content": "Question: What is a Callback function in Node.js?\n\nAnswer: A callback function is a function passed as an argument to another function, to be called once the parent function completes. Callbacks are essential for handling asynchronous operations in Node.js.",
+    "question": "What is a Callback function in Node.js?",
+    "answer": "A callback function is a function passed as an argument to another function, to be called once the parent function completes. Callbacks are essential for handling asynchronous operations in Node.js.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0014",
+    "content": "Question: What are Promises in Node.js?\n\nAnswer: A Promise represents a value that may be available now, later, or never. It simplifies chaining asynchronous operations and avoids callback hell by providing then and catch methods.",
+    "question": "What are Promises in Node.js?",
+    "answer": "A Promise represents a value that may be available now, later, or never. It simplifies chaining asynchronous operations and avoids callback hell by providing then and catch methods.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0015",
+    "content": "Question: How can you avoid callback hell in Node.js?\n\nAnswer: Use Promises instead of nested callbacks\n    Use async/await syntax for cleaner, more synchronous-looking code\n    Split complex logic into smaller reusable functions\n    Leverage control flow libraries like async.js",
+    "question": "How can you avoid callback hell in Node.js?",
+    "answer": "Use Promises instead of nested callbacks\n    Use async/await syntax for cleaner, more synchronous-looking code\n    Split complex logic into smaller reusable functions\n    Leverage control flow libraries like async.js",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0016",
+    "content": "Question: What is the EventEmitter class in Node.js?\n\nAnswer: EventEmitter is a core module that facilitates the implementation of event-driven architecture. It allows emitting and handling events through listener functions using on and emit methods.",
+    "question": "What is the EventEmitter class in Node.js?",
+    "answer": "EventEmitter is a core module that facilitates the implementation of event-driven architecture. It allows emitting and handling events through listener functions using on and emit methods.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0017",
+    "content": "Question: How do you create a simple server in Node.js?\n\nAnswer: Using Node.js's built-in http module:\n\n```js\nconst http = require('http');\nconst server = http.createServer((req, res) => {\n  res.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' });\n  res.end('Hello, world!');\n});\nserver.listen(3000, () => console.log('Server running on port 3000'));\n```\n\nThe request handler receives the request and response objects. It sends an HTTP 200 response with a text body, and the server listens for incoming connections on port 3000.",
+    "question": "How do you create a simple server in Node.js?",
+    "answer": "Using Node.js's built-in http module:\n\n```js\nconst http = require('http');\nconst server = http.createServer((req, res) => {\n  res.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' });\n  res.end('Hello, world!');\n});\nserver.listen(3000, () => console.log('Server running on port 3000'));\n```\n\nThe request handler receives the request and response objects. It sends an HTTP 200 response with a text body, and the server listens for incoming connections on port 3000.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0018",
+    "content": "Question: What is the use of streams over buffers?\n\nAnswer: Streams are more memory-efficient because they process large data chunk-by-chunk rather than loading it all into memory at once, making them ideal for working with large files and real-time data processing.",
+    "question": "What is the use of streams over buffers?",
+    "answer": "Streams are more memory-efficient because they process large data chunk-by-chunk rather than loading it all into memory at once, making them ideal for working with large files and real-time data processing.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0019",
+    "content": "Question: What is the purpose of Buffers in Node.js?\n\nAnswer: Buffers are used to represent a fixed-size chunk of memory allocated outside the V8 engine. They are primarily used for binary data manipulation, such as when reading from a file or receiving packets over a network.",
+    "question": "What is the purpose of Buffers in Node.js?",
+    "answer": "Buffers are used to represent a fixed-size chunk of memory allocated outside the V8 engine. They are primarily used for binary data manipulation, such as when reading from a file or receiving packets over a network.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0020",
+    "content": "Question: What is the use of process.env in Node.js?\n\nAnswer: process.env allows you to access environment variables in a Node.js application, commonly used for sensitive configurations like API keys, database URIs, and environment settings.",
+    "question": "What is the use of process.env in Node.js?",
+    "answer": "process.env allows you to access environment variables in a Node.js application, commonly used for sensitive configurations like API keys, database URIs, and environment settings.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0021",
+    "content": "Question: What is middleware in Express.js?\n\nAnswer: Middleware are functions that execute during the lifecycle of a request to the server. Each middleware function can modify the request and response objects or end the request-response cycle or call the next middleware in the stack.",
+    "question": "What is middleware in Express.js?",
+    "answer": "Middleware are functions that execute during the lifecycle of a request to the server. Each middleware function can modify the request and response objects or end the request-response cycle or call the next middleware in the stack.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0022",
+    "content": "Question: How do you handle exceptions in Node.js?\n\nAnswer: Use try-catch blocks for synchronous code.\n    Use .catch() or async/await with try-catch for asynchronous code.\n    Use process.on('uncaughtException') and process.on('unhandledRejection') events for global error handling.",
+    "question": "How do you handle exceptions in Node.js?",
+    "answer": "Use try-catch blocks for synchronous code.\n    Use .catch() or async/await with try-catch for asynchronous code.\n    Use process.on('uncaughtException') and process.on('unhandledRejection') events for global error handling.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0023",
+    "content": "Question: How can you improve Node.js application performance?\n\nAnswer: Use asynchronous APIs wherever possible\n    Implement caching strategies\n    Optimize database queries\n    Use load balancers and clustering\n    Minimize dependencies\n    Monitor and optimize the event loop lag",
+    "question": "How can you improve Node.js application performance?",
+    "answer": "Use asynchronous APIs wherever possible\n    Implement caching strategies\n    Optimize database queries\n    Use load balancers and clustering\n    Minimize dependencies\n    Monitor and optimize the event loop lag",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0024",
+    "content": "Question: What are template engines in Node.js?\n\nAnswer: Template engines generate dynamic HTML pages on the server side. Popular Node.js template engines include:\n    EJS (Embedded JavaScript Templates)\n    Pug (formerly Jade)\n    Handlebars",
+    "question": "What are template engines in Node.js?",
+    "answer": "Template engines generate dynamic HTML pages on the server side. Popular Node.js template engines include:\n    EJS (Embedded JavaScript Templates)\n    Pug (formerly Jade)\n    Handlebars",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0025",
+    "content": "Question: What is the role of package.json in Node.js?\n\nAnswer: package.json is the metadata file for any Node.js project. It defines project dependencies, scripts, versions, licensing information, and helps manage project configurations easily through npm.",
+    "question": "What is the role of package.json in Node.js?",
+    "answer": "package.json is the metadata file for any Node.js project. It defines project dependencies, scripts, versions, licensing information, and helps manage project configurations easily through npm.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0026",
+    "content": "Question: What are CommonJS Modules in Node.js?\n\nAnswer: CommonJS is the module system used by Node.js by default. Modules are loaded using require() and exported using module.exports. Each module in Node.js has its own scope.",
+    "question": "What are CommonJS Modules in Node.js?",
+    "answer": "CommonJS is the module system used by Node.js by default. Modules are loaded using require() and exported using module.exports. Each module in Node.js has its own scope.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0027",
+    "content": "Question: What is the difference between exports and module.exports?\n\nAnswer: exports is a shorthand reference to module.exports. If you assign a new object to exports, it will not affect module.exports unless you explicitly reassign it. Always use module.exports for consistency.",
+    "question": "What is the difference between exports and module.exports?",
+    "answer": "exports is a shorthand reference to module.exports. If you assign a new object to exports, it will not affect module.exports unless you explicitly reassign it. Always use module.exports for consistency.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0028",
+    "content": "Question: What are the phases of the Event Loop in Node.js?\n\nAnswer: The phases are:\n    Timers\n    Pending callbacks\n    Idle, prepare\n    Poll\n    Check\n    Close callbacks\n    Each phase has a FIFO queue of callbacks to execute.",
+    "question": "What are the phases of the Event Loop in Node.js?",
+    "answer": "The phases are:\n    Timers\n    Pending callbacks\n    Idle, prepare\n    Poll\n    Check\n    Close callbacks\n    Each phase has a FIFO queue of callbacks to execute.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0029",
+    "content": "Question: How is the ‘this’ keyword handled in Node.js modules?\n\nAnswer: Inside a Node.js module, this refers to module.exports, not the global object. However, inside a function declared within the module, this refers to the global object.",
+    "question": "How is the ‘this’ keyword handled in Node.js modules?",
+    "answer": "Inside a Node.js module, this refers to module.exports, not the global object. However, inside a function declared within the module, this refers to the global object.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0030",
+    "content": "Question: What is middleware chaining in Express.js?\n\nAnswer: Middleware chaining happens when multiple middleware functions are executed sequentially. After one middleware completes, it calls next() to pass control to the next middleware in the stack.",
+    "question": "What is middleware chaining in Express.js?",
+    "answer": "Middleware chaining happens when multiple middleware functions are executed sequentially. After one middleware completes, it calls next() to pass control to the next middleware in the stack.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0031",
+    "content": "Question: What is the purpose of process.env.NODE_ENV?\n\nAnswer: process.env.NODE_ENV is used to distinguish between environments like development, testing, and production. This enables loading environment-specific configurations.",
+    "question": "What is the purpose of process.env.NODE_ENV?",
+    "answer": "process.env.NODE_ENV is used to distinguish between environments like development, testing, and production. This enables loading environment-specific configurations.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0032",
+    "content": "Question: How can you share data between Node.js modules?\n\nAnswer: You can export variables, objects, or functions using module.exports and then require them in other files where needed.",
+    "question": "How can you share data between Node.js modules?",
+    "answer": "You can export variables, objects, or functions using module.exports and then require them in other files where needed.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0033",
+    "content": "Question: What are the differences between spawn and fork methods in Node.js?\n\nAnswer: spawn() launches a new process with a given command. Used for non-Node.js processes.\n    fork() creates a new Node.js process specifically designed for IPC (Inter-Process Communication) with the parent process.",
+    "question": "What are the differences between spawn and fork methods in Node.js?",
+    "answer": "spawn() launches a new process with a given command. Used for non-Node.js processes.\n    fork() creates a new Node.js process specifically designed for IPC (Inter-Process Communication) with the parent process.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0034",
+    "content": "Question: What is clustering in Node.js?\n\nAnswer: Clustering allows Node.js to create multiple child processes (workers) sharing the same server port, leveraging multi-core systems for better scalability and performance.",
+    "question": "What is clustering in Node.js?",
+    "answer": "Clustering allows Node.js to create multiple child processes (workers) sharing the same server port, leveraging multi-core systems for better scalability and performance.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0035",
+    "content": "Question: How can you secure a Node.js application?\n\nAnswer: Security best practices:\n    Use HTTPS\n    Sanitize user input\n    Store secrets securely (environment variables, vaults)\n    Keep dependencies updated\n    Use security middleware like Helmet in Express.js",
+    "question": "How can you secure a Node.js application?",
+    "answer": "Security best practices:\n    Use HTTPS\n    Sanitize user input\n    Store secrets securely (environment variables, vaults)\n    Keep dependencies updated\n    Use security middleware like Helmet in Express.js",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0036",
+    "content": "Question: What is the difference between process.exit() and process.kill()?\n\nAnswer: process.exit() terminates the Node.js process immediately with an optional exit code.\n    process.kill() sends a signal to another process to terminate it.",
+    "question": "What is the difference between process.exit() and process.kill()?",
+    "answer": "process.exit() terminates the Node.js process immediately with an optional exit code.\n    process.kill() sends a signal to another process to terminate it.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0037",
+    "content": "Question: What are the advantages of using streams instead of buffers?\n\nAnswer: Streams are memory-efficient and allow processing data piece-by-piece. They are particularly useful for handling large amounts of data, such as reading files or streaming video.",
+    "question": "What are the advantages of using streams instead of buffers?",
+    "answer": "Streams are memory-efficient and allow processing data piece-by-piece. They are particularly useful for handling large amounts of data, such as reading files or streaming video.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0038",
+    "content": "Question: Explain module caching in Node.js.\n\nAnswer: When a module is required for the first time, Node.js caches it. Any subsequent require() call returns the same cached instance, improving performance and reducing I/O.",
+    "question": "Explain module caching in Node.js.",
+    "answer": "When a module is required for the first time, Node.js caches it. Any subsequent require() call returns the same cached instance, improving performance and reducing I/O.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0039",
+    "content": "Question: What is API rate limiting and how is it implemented in Node.js?\n\nAnswer: API rate limiting restricts the number of requests a client can make to an API within a time frame. Libraries like express-rate-limit are commonly used to implement this in Express apps.",
+    "question": "What is API rate limiting and how is it implemented in Node.js?",
+    "answer": "API rate limiting restricts the number of requests a client can make to an API within a time frame. Libraries like express-rate-limit are commonly used to implement this in Express apps.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0040",
+    "content": "Question: What is the purpose of async/await in Node.js?\n\nAnswer: async/await is syntactic sugar over Promises. It allows writing asynchronous code in a synchronous-looking manner, making it easier to read and maintain.",
+    "question": "What is the purpose of async/await in Node.js?",
+    "answer": "async/await is syntactic sugar over Promises. It allows writing asynchronous code in a synchronous-looking manner, making it easier to read and maintain.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0041",
+    "content": "Question: How can you handle file uploads in Node.js?\n\nAnswer: Libraries like multer are used in Node.js to handle multipart/form-data, which is primarily used for uploading files.",
+    "question": "How can you handle file uploads in Node.js?",
+    "answer": "Libraries like multer are used in Node.js to handle multipart/form-data, which is primarily used for uploading files.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0042",
+    "content": "Question: What is CORS and how do you manage it in Node.js?\n\nAnswer: CORS (Cross-Origin Resource Sharing) is a security feature that restricts resource sharing between different origins. In Express.js, it can be managed easily using the cors middleware.",
+    "question": "What is CORS and how do you manage it in Node.js?",
+    "answer": "CORS (Cross-Origin Resource Sharing) is a security feature that restricts resource sharing between different origins. In Express.js, it can be managed easily using the cors middleware.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0043",
+    "content": "Question: What are the differences between PUT and PATCH methods in REST APIs?\n\nAnswer: PUT: Replaces an entire resource.\n    PATCH: Partially updates a resource.",
+    "question": "What are the differences between PUT and PATCH methods in REST APIs?",
+    "answer": "PUT: Replaces an entire resource.\n    PATCH: Partially updates a resource.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0044",
+    "content": "Question: How do you implement session management in Node.js?\n\nAnswer: Session management is implemented using libraries like express-session. Sessions can be stored in-memory, in databases like Redis, or using secure cookies.",
+    "question": "How do you implement session management in Node.js?",
+    "answer": "Session management is implemented using libraries like express-session. Sessions can be stored in-memory, in databases like Redis, or using secure cookies.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0045",
+    "content": "Question: How would you monitor a Node.js application in production?\n\nAnswer: Tools like PM2, New Relic, or Datadog are used to monitor Node.js applications. They help track performance metrics, memory usage, error rates, and uptime.",
+    "question": "How would you monitor a Node.js application in production?",
+    "answer": "Tools like PM2, New Relic, or Datadog are used to monitor Node.js applications. They help track performance metrics, memory usage, error rates, and uptime.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0046",
+    "content": "Question: What is Helmet in Node.js?\n\nAnswer: Helmet is a middleware package for Express.js that sets various HTTP headers to secure your app from common vulnerabilities like cross-site scripting and clickjacking.",
+    "question": "What is Helmet in Node.js?",
+    "answer": "Helmet is a middleware package for Express.js that sets various HTTP headers to secure your app from common vulnerabilities like cross-site scripting and clickjacking.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0047",
+    "content": "Question: What is Cross-Site Scripting (XSS) and how can you prevent it in Node.js?\n\nAnswer: XSS is an attack where malicious scripts are injected into trusted websites. Prevention involves sanitizing user input, escaping output, and using security libraries like Helmet and DOMPurify.",
+    "question": "What is Cross-Site Scripting (XSS) and how can you prevent it in Node.js?",
+    "answer": "XSS is an attack where malicious scripts are injected into trusted websites. Prevention involves sanitizing user input, escaping output, and using security libraries like Helmet and DOMPurify.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0048",
+    "content": "Question: How would you handle asynchronous errors in Express.js routes?\n\nAnswer: Wrap async route handlers inside try-catch blocks, or use libraries like express-async-errors to automatically catch async errors and pass them to Express’s error handling middleware.",
+    "question": "How would you handle asynchronous errors in Express.js routes?",
+    "answer": "Wrap async route handlers inside try-catch blocks, or use libraries like express-async-errors to automatically catch async errors and pass them to Express’s error handling middleware.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0049",
+    "content": "Question: What is the advantage of using Redis with Node.js?\n\nAnswer: Redis provides a fast, in-memory key-value store, making it ideal for caching, session management, real-time analytics, and message brokering with Node.js.",
+    "question": "What is the advantage of using Redis with Node.js?",
+    "answer": "Redis provides a fast, in-memory key-value store, making it ideal for caching, session management, real-time analytics, and message brokering with Node.js.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0050",
+    "content": "Question: What is the process of deploying a Node.js application?\n\nAnswer: Prepare production build\n    Set environment variables\n    Use process managers like PM2\n    Reverse proxy with Nginx or Apache\n    Deploy to servers like AWS EC2, DigitalOcean, or Heroku",
+    "question": "What is the process of deploying a Node.js application?",
+    "answer": "Prepare production build\n    Set environment variables\n    Use process managers like PM2\n    Reverse proxy with Nginx or Apache\n    Deploy to servers like AWS EC2, DigitalOcean, or Heroku",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0051",
+    "content": "Question: What is the difference between synchronous and asynchronous code in Node.js?\n\nAnswer: Synchronous: Blocks the execution until the current operation finishes.\n    Asynchronous: Executes without blocking; uses callbacks, promises, or async/await to handle results later.",
+    "question": "What is the difference between synchronous and asynchronous code in Node.js?",
+    "answer": "Synchronous: Blocks the execution until the current operation finishes.\n    Asynchronous: Executes without blocking; uses callbacks, promises, or async/await to handle results later.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0052",
+    "content": "Question: What is the use of process.nextTick()?\n\nAnswer: process.nextTick() defers the execution of a function until after the current operation completes but before any I/O operations. It is used to prioritize certain tasks.",
+    "question": "What is the use of process.nextTick()?",
+    "answer": "process.nextTick() defers the execution of a function until after the current operation completes but before any I/O operations. It is used to prioritize certain tasks.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0053",
+    "content": "Question: What are Worker Threads in Node.js?\n\nAnswer: Worker Threads allow running JavaScript in parallel on multiple threads. Useful for CPU-intensive tasks without blocking the main event loop.",
+    "question": "What are Worker Threads in Node.js?",
+    "answer": "Worker Threads allow running JavaScript in parallel on multiple threads. Useful for CPU-intensive tasks without blocking the main event loop.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0054",
+    "content": "Question: How does load balancing work in Node.js applications?\n\nAnswer: Load balancing can be achieved by clustering multiple Node.js instances across CPU cores, and externally through load balancers like Nginx or AWS Elastic Load Balancing.",
+    "question": "How does load balancing work in Node.js applications?",
+    "answer": "Load balancing can be achieved by clustering multiple Node.js instances across CPU cores, and externally through load balancers like Nginx or AWS Elastic Load Balancing.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0055",
+    "content": "Question: What is the difference between global and local installation of npm packages?\n\nAnswer: Global installation (-g): Makes the package available system-wide, usually for CLI tools.\n    Local installation: Installs the package inside node_modules of the project for project-specific usage.",
+    "question": "What is the difference between global and local installation of npm packages?",
+    "answer": "Global installation (-g): Makes the package available system-wide, usually for CLI tools.\n    Local installation: Installs the package inside node_modules of the project for project-specific usage.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0056",
+    "content": "Question: What is the HTTP2 module in Node.js?\n\nAnswer: The HTTP2 module allows Node.js to support HTTP/2 protocol, enabling faster communication through multiplexing, header compression, and server push.",
+    "question": "What is the HTTP2 module in Node.js?",
+    "answer": "The HTTP2 module allows Node.js to support HTTP/2 protocol, enabling faster communication through multiplexing, header compression, and server push.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0057",
+    "content": "Question: What is middleware error handling in Express.js?\n\nAnswer: Error-handling middleware functions have four arguments (err, req, res, next) and handle errors by sending appropriate responses or delegating them further.",
+    "question": "What is middleware error handling in Express.js?",
+    "answer": "Error-handling middleware functions have four arguments (err, req, res, next) and handle errors by sending appropriate responses or delegating them further.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0058",
+    "content": "Question: How can you create your own EventEmitter in Node.js?\n\nAnswer: const EventEmitter = require('events');\n    const emitter = new EventEmitter();\n    emitter.on('event', () => console.log('An event occurred!'));\n    emitter.emit('event');",
+    "question": "How can you create your own EventEmitter in Node.js?",
+    "answer": "const EventEmitter = require('events');\n    const emitter = new EventEmitter();\n    emitter.on('event', () => console.log('An event occurred!'));\n    emitter.emit('event');",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0059",
+    "content": "Question: What is the difference between readFile and createReadStream in Node.js?\n\nAnswer: readFile: Reads the entire file into memory before processing it.\n    createReadStream: Reads the file chunk-by-chunk using streams, making it memory-efficient for large files.",
+    "question": "What is the difference between readFile and createReadStream in Node.js?",
+    "answer": "readFile: Reads the entire file into memory before processing it.\n    createReadStream: Reads the file chunk-by-chunk using streams, making it memory-efficient for large files.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0060",
+    "content": "Question: What is the role of libuv in Node.js?\n\nAnswer: libuv is a multi-platform C library that Node.js uses to handle asynchronous I/O operations through its event-driven architecture. It abstracts non-blocking I/O across platforms.",
+    "question": "What is the role of libuv in Node.js?",
+    "answer": "libuv is a multi-platform C library that Node.js uses to handle asynchronous I/O operations through its event-driven architecture. It abstracts non-blocking I/O across platforms.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0061",
+    "content": "Question: What is process.on(‘exit’) in Node.js?\n\nAnswer: process.on('exit', callback) registers a callback that executes when the Node.js process is about to exit, allowing cleanup tasks before shutdown.",
+    "question": "What is process.on(‘exit’) in Node.js?",
+    "answer": "process.on('exit', callback) registers a callback that executes when the Node.js process is about to exit, allowing cleanup tasks before shutdown.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0062",
+    "content": "Question: What are Signals in Node.js?\n\nAnswer: Signals are a limited form of inter-process communication used to notify a process that a specific event occurred. Example: SIGINT for Ctrl+C termination.",
+    "question": "What are Signals in Node.js?",
+    "answer": "Signals are a limited form of inter-process communication used to notify a process that a specific event occurred. Example: SIGINT for Ctrl+C termination.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0063",
+    "content": "Question: What is a Zombie Process? Can it occur in Node.js?\n\nAnswer: A zombie process is a process that has completed execution but still has an entry in the process table. While rare in Node.js, improper child process handling could theoretically lead to zombies.",
+    "question": "What is a Zombie Process? Can it occur in Node.js?",
+    "answer": "A zombie process is a process that has completed execution but still has an entry in the process table. While rare in Node.js, improper child process handling could theoretically lead to zombies.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0064",
+    "content": "Question: What is Server Push in HTTP/2?\n\nAnswer: Server Push allows servers to send resources to clients proactively without waiting for explicit requests, improving page load times by preloading resources.",
+    "question": "What is Server Push in HTTP/2?",
+    "answer": "Server Push allows servers to send resources to clients proactively without waiting for explicit requests, improving page load times by preloading resources.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0065",
+    "content": "Question: What is TLS/SSL in Node.js?\n\nAnswer: TLS/SSL encrypts data between the server and the client to ensure secure transmission. Node.js has a built-in tls module to implement secure sockets.",
+    "question": "What is TLS/SSL in Node.js?",
+    "answer": "TLS/SSL encrypts data between the server and the client to ensure secure transmission. Node.js has a built-in tls module to implement secure sockets.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0066",
+    "content": "Question: How does garbage collection work in Node.js?\n\nAnswer: Node.js relies on V8’s garbage collector to automatically reclaim memory occupied by objects no longer in use, helping prevent memory leaks.",
+    "question": "How does garbage collection work in Node.js?",
+    "answer": "Node.js relies on V8’s garbage collector to automatically reclaim memory occupied by objects no longer in use, helping prevent memory leaks.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0067",
+    "content": "Question: What is the async_hooks module?\n\nAnswer: The async_hooks module provides an API to track asynchronous resources in Node.js, useful for performance monitoring and debugging.",
+    "question": "What is the async_hooks module?",
+    "answer": "The async_hooks module provides an API to track asynchronous resources in Node.js, useful for performance monitoring and debugging.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0068",
+    "content": "Question: What is DNS module in Node.js?\n\nAnswer: The dns module provides functions to perform DNS lookup and name resolution functions, like resolving domain names to IP addresses asynchronously.",
+    "question": "What is DNS module in Node.js?",
+    "answer": "The dns module provides functions to perform DNS lookup and name resolution functions, like resolving domain names to IP addresses asynchronously.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0069",
+    "content": "Question: What is the cluster module in Node.js?\n\nAnswer: The cluster module enables creation of child processes (workers) that all share the same server port, allowing full CPU core utilization in Node.js applications.",
+    "question": "What is the cluster module in Node.js?",
+    "answer": "The cluster module enables creation of child processes (workers) that all share the same server port, allowing full CPU core utilization in Node.js applications.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0070",
+    "content": "Question: What is the difference between fork() and spawn() methods?\n\nAnswer: spawn(): Launches a new process with a given command.\n    fork(): Specifically spawns a Node.js process and sets up IPC communication channel with the parent.",
+    "question": "What is the difference between fork() and spawn() methods?",
+    "answer": "spawn(): Launches a new process with a given command.\n    fork(): Specifically spawns a Node.js process and sets up IPC communication channel with the parent.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0071",
+    "content": "Question: What are sticky sessions in Node.js clustering?\n\nAnswer: Sticky sessions ensure that the same user is always routed to the same server worker based on their session ID, which is essential for maintaining session persistence in load-balanced applications.",
+    "question": "What are sticky sessions in Node.js clustering?",
+    "answer": "Sticky sessions ensure that the same user is always routed to the same server worker based on their session ID, which is essential for maintaining session persistence in load-balanced applications.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0072",
+    "content": "Question: How can you debug a Node.js application?\n\nAnswer: Using built-in --inspect flag with Chrome DevTools\n    Using IDE debuggers (like VSCode)\n    Logging strategically with libraries like Winston",
+    "question": "How can you debug a Node.js application?",
+    "answer": "Using built-in --inspect flag with Chrome DevTools\n    Using IDE debuggers (like VSCode)\n    Logging strategically with libraries like Winston",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0073",
+    "content": "Question: What is npm audit?\n\nAnswer: npm audit is a command that performs a security audit of project dependencies and highlights known vulnerabilities that should be addressed.",
+    "question": "What is npm audit?",
+    "answer": "npm audit is a command that performs a security audit of project dependencies and highlights known vulnerabilities that should be addressed.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0074",
+    "content": "Question: What are peer dependencies in npm?\n\nAnswer: Peer dependencies specify that a package expects another package to be installed alongside it, but does not install it automatically. Useful in plugin systems.",
+    "question": "What are peer dependencies in npm?",
+    "answer": "Peer dependencies specify that a package expects another package to be installed alongside it, but does not install it automatically. Useful in plugin systems.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0075",
+    "content": "Question: What are cyclic dependencies in Node.js and how to avoid them?\n\nAnswer: Cyclic dependencies occur when two or more modules depend on each other circularly. They can cause unpredictable behavior. To avoid them, refactor shared logic into a separate module.\n\n## Node.js Scenario-Based and Practical Questions",
+    "question": "What are cyclic dependencies in Node.js and how to avoid them?",
+    "answer": "Cyclic dependencies occur when two or more modules depend on each other circularly. They can cause unpredictable behavior. To avoid them, refactor shared logic into a separate module.\n\n## Node.js Scenario-Based and Practical Questions",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0076",
+    "content": "Question: How would you handle a sudden spike in traffic in a Node.js application?\n\nAnswer: Scale horizontally using clustering and load balancers, implement caching strategies with Redis, optimize database queries, and use CDNs for static content delivery.",
+    "question": "How would you handle a sudden spike in traffic in a Node.js application?",
+    "answer": "Scale horizontally using clustering and load balancers, implement caching strategies with Redis, optimize database queries, and use CDNs for static content delivery.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0077",
+    "content": "Question: How would you implement logging in a Node.js app?\n\nAnswer: Use libraries like Winston, Morgan, or Bunyan. Log critical information with timestamps, and separate logs by severity levels (info, warn, error).",
+    "question": "How would you implement logging in a Node.js app?",
+    "answer": "Use libraries like Winston, Morgan, or Bunyan. Log critical information with timestamps, and separate logs by severity levels (info, warn, error).",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0078",
+    "content": "Question: How would you secure sensitive data like API keys in a Node.js project?\n\nAnswer: Store sensitive data in environment variables using dotenv files (.env), and never hardcode credentials in the source code.",
+    "question": "How would you secure sensitive data like API keys in a Node.js project?",
+    "answer": "Store sensitive data in environment variables using dotenv files (.env), and never hardcode credentials in the source code.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0079",
+    "content": "Question: How would you design a RESTful API using Node.js?\n\nAnswer: Use Express.js to define routes, separate controllers, services, and models, follow HTTP methods appropriately (GET, POST, PUT, DELETE), and structure resources logically.",
+    "question": "How would you design a RESTful API using Node.js?",
+    "answer": "Use Express.js to define routes, separate controllers, services, and models, follow HTTP methods appropriately (GET, POST, PUT, DELETE), and structure resources logically.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0080",
+    "content": "Question: How would you handle file uploads securely in Node.js?\n\nAnswer: Use multer for handling uploads, validate file types, limit file sizes, store uploads in secure directories, and scan files for malware if needed.",
+    "question": "How would you handle file uploads securely in Node.js?",
+    "answer": "Use multer for handling uploads, validate file types, limit file sizes, store uploads in secure directories, and scan files for malware if needed.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0081",
+    "content": "Question: How can you schedule background tasks in Node.js?\n\nAnswer: Use libraries like node-cron or Agenda.js to schedule recurring or time-based tasks like email notifications, report generation, or database cleanups.",
+    "question": "How can you schedule background tasks in Node.js?",
+    "answer": "Use libraries like node-cron or Agenda.js to schedule recurring or time-based tasks like email notifications, report generation, or database cleanups.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0082",
+    "content": "Question: How would you implement WebSocket communication in Node.js?\n\nAnswer: Use the ws library or frameworks like Socket.IO for real-time, bi-directional communication between the client and server.",
+    "question": "How would you implement WebSocket communication in Node.js?",
+    "answer": "Use the ws library or frameworks like Socket.IO for real-time, bi-directional communication between the client and server.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0083",
+    "content": "Question: How would you design a chat server using Node.js?\n\nAnswer: Use Socket.IO to manage rooms, broadcast messages, store chat history in a database like MongoDB, and implement authentication for users.",
+    "question": "How would you design a chat server using Node.js?",
+    "answer": "Use Socket.IO to manage rooms, broadcast messages, store chat history in a database like MongoDB, and implement authentication for users.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0084",
+    "content": "Question: How would you implement API versioning in Node.js?\n\nAnswer: Organize routes based on versions (e.g., /api/v1/, /api/v2/) and separate controllers for each version to avoid breaking existing API clients.",
+    "question": "How would you implement API versioning in Node.js?",
+    "answer": "Organize routes based on versions (e.g., /api/v1/, /api/v2/) and separate controllers for each version to avoid breaking existing API clients.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0085",
+    "content": "Question: How would you optimize a Node.js app for performance?\n\nAnswer: Use asynchronous code\n    Implement caching (Redis, CDN)\n    Use clustering\n    Optimize database queries\n    Compress HTTP responses (gzip)\n    Use monitoring tools to detect bottlenecks",
+    "question": "How would you optimize a Node.js app for performance?",
+    "answer": "Use asynchronous code\n    Implement caching (Redis, CDN)\n    Use clustering\n    Optimize database queries\n    Compress HTTP responses (gzip)\n    Use monitoring tools to detect bottlenecks",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0086",
+    "content": "Question: What are the key features of Node.js?\n\nAnswer: Event-driven, asynchronous, single-threaded, scalable, and built on the V8 JavaScript engine.",
+    "question": "What are the key features of Node.js?",
+    "answer": "Event-driven, asynchronous, single-threaded, scalable, and built on the V8 JavaScript engine.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0087",
+    "content": "Question: What is the role of package-lock.json?\n\nAnswer: package-lock.json locks the dependency tree, ensuring consistent installations across different environments.",
+    "question": "What is the role of package-lock.json?",
+    "answer": "package-lock.json locks the dependency tree, ensuring consistent installations across different environments.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0088",
+    "content": "Question: What is an HTTP module in Node.js?\n\nAnswer: The HTTP module allows Node.js to create HTTP servers and handle client requests and responses natively.",
+    "question": "What is an HTTP module in Node.js?",
+    "answer": "The HTTP module allows Node.js to create HTTP servers and handle client requests and responses natively.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0089",
+    "content": "Question: What is the use of util module in Node.js?\n\nAnswer: The util module provides helpful utility functions like promisify() for converting callback-based functions into promises.",
+    "question": "What is the use of util module in Node.js?",
+    "answer": "The util module provides helpful utility functions like promisify() for converting callback-based functions into promises.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0090",
+    "content": "Question: How does require() work in Node.js?\n\nAnswer: require() reads and executes a JavaScript file and returns the exports object, making it available for use in other modules.",
+    "question": "How does require() work in Node.js?",
+    "answer": "require() reads and executes a JavaScript file and returns the exports object, making it available for use in other modules.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0091",
+    "content": "Question: How would you implement rate limiting in a Node.js API?\n\nAnswer: Use express-rate-limit middleware to set limits based on IP addresses and define time windows for API usage.",
+    "question": "How would you implement rate limiting in a Node.js API?",
+    "answer": "Use express-rate-limit middleware to set limits based on IP addresses and define time windows for API usage.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0092",
+    "content": "Question: How would you manage environment variables securely in production?\n\nAnswer: Use encrypted environment variable management services like AWS Secrets Manager, Vault by HashiCorp, or environment-specific .env files.",
+    "question": "How would you manage environment variables securely in production?",
+    "answer": "Use encrypted environment variable management services like AWS Secrets Manager, Vault by HashiCorp, or environment-specific .env files.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0093",
+    "content": "Question: How would you use Redis in a Node.js project?\n\nAnswer: Redis can be used for caching, session storage, message queues, and real-time analytics in a Node.js application.",
+    "question": "How would you use Redis in a Node.js project?",
+    "answer": "Redis can be used for caching, session storage, message queues, and real-time analytics in a Node.js application.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0094",
+    "content": "Question: How would you protect an Express API from brute-force attacks?\n\nAnswer: Implement rate-limiting middleware, IP blacklisting, CAPTCHA challenges, and account lockout mechanisms after repeated failed attempts.",
+    "question": "How would you protect an Express API from brute-force attacks?",
+    "answer": "Implement rate-limiting middleware, IP blacklisting, CAPTCHA challenges, and account lockout mechanisms after repeated failed attempts.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0095",
+    "content": "Question: How would you implement global error handling in Node.js?\n\nAnswer: Create a centralized error-handling middleware, handle unhandled promise rejections with process.on('unhandledRejection'), and manage uncaught exceptions with process.on('uncaughtException').",
+    "question": "How would you implement global error handling in Node.js?",
+    "answer": "Create a centralized error-handling middleware, handle unhandled promise rejections with process.on('unhandledRejection'), and manage uncaught exceptions with process.on('uncaughtException').",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0096",
+    "content": "Question: How would you implement JWT authentication in Node.js?\n\nAnswer: Use libraries like jsonwebtoken to sign tokens on login and verify them on protected routes in the Express middleware.",
+    "question": "How would you implement JWT authentication in Node.js?",
+    "answer": "Use libraries like jsonwebtoken to sign tokens on login and verify them on protected routes in the Express middleware.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0097",
+    "content": "Question: How do you perform load testing on a Node.js application?\n\nAnswer: Use tools like Artillery, k6, or Apache JMeter to simulate high traffic and evaluate the application’s performance under load.",
+    "question": "How do you perform load testing on a Node.js application?",
+    "answer": "Use tools like Artillery, k6, or Apache JMeter to simulate high traffic and evaluate the application’s performance under load.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0098",
+    "content": "Question: How do you handle race conditions in Node.js?\n\nAnswer: Handle shared resources carefully, use database-level locks or optimistic concurrency control strategies, and design code flow predictably.",
+    "question": "How do you handle race conditions in Node.js?",
+    "answer": "Handle shared resources carefully, use database-level locks or optimistic concurrency control strategies, and design code flow predictably.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0099",
+    "content": "Question: What is Event Loop Starvation in Node.js?\n\nAnswer: Event loop starvation happens when heavy synchronous operations block the event loop, preventing the processing of pending events, leading to application slowdowns or freezes.",
+    "question": "What is Event Loop Starvation in Node.js?",
+    "answer": "Event loop starvation happens when heavy synchronous operations block the event loop, preventing the processing of pending events, leading to application slowdowns or freezes.",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  },
+  {
+    "id": "nodejs_interview_question-0100",
+    "content": "Question: How would you optimize memory usage in a Node.js application?\n\nAnswer: Use streams for large data\n    Release unused references\n    Profile and analyze memory leaks with Chrome DevTools\n    Apply batching or throttling techniques for heavy processing",
+    "question": "How would you optimize memory usage in a Node.js application?",
+    "answer": "Use streams for large data\n    Release unused references\n    Profile and analyze memory leaks with Chrome DevTools\n    Apply batching or throttling techniques for heavy processing",
+    "metadata": {
+      "topic": "Node.js",
+      "difficulty": "Unknown",
+      "type": "technical",
+      "source": "nodejs_interview_question.md",
+      "answer_status": "available"
+    }
+  }
+]

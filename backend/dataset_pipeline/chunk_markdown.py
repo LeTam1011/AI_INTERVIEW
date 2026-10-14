@@ -196,12 +196,23 @@ def split_question_sections(markdown: str) -> list[str]:
     return sections
 
 
+ANSWER_NOISE_HEADING = re.compile(
+    r"^\s*(?:#{1,6}\s*)?(?:"
+    r"powered\s+by\b"
+    r"|python\s+interview\s+coding\s+questions\b"
+    r"|interview\s+questions?\b"
+    r"|[\w.-]+(?:\s+[\w.-]+){0,5}\s+"
+    r"(?:technical\s+|intermediate\s+|scenario[- ]based\s+)?"
+    r"interview\s+questions?\b"
+    r")",
+    re.IGNORECASE,
+)
+
+
 def extract_answer(section: str) -> str:
     lines = section.splitlines()
 
-    # Bỏ tiêu đề câu hỏi đầu tiên.
     heading_index = None
-
     for i, line in enumerate(lines):
         if is_question_heading(line):
             heading_index = i
@@ -210,20 +221,24 @@ def extract_answer(section: str) -> str:
     if heading_index is None:
         return ""
 
-    text = "\n".join(lines[heading_index + 1:]).strip()
+    answer_lines = lines[heading_index + 1:]
 
-    # Bỏ nhãn Answer: nếu có.
-    text = re.sub(
-        r"^\s*(?:\*\*)?Answer(?:\*\*)?\s*:?\s*",
-        "",
-        text,
-        count=1,
-        flags=re.IGNORECASE,
-    )
+    if answer_lines:
+        answer_lines[0] = re.sub(
+            r"^\s*(?:\*\*)?Answer(?:\*\*)?\s*:?\s*",
+            "",
+            answer_lines[0],
+            count=1,
+            flags=re.IGNORECASE,
+        )
 
-    return text.strip()
+    cleaned_lines = []
+    for line in answer_lines:
+        if ANSWER_NOISE_HEADING.match(line):
+            break
+        cleaned_lines.append(line)
 
-
+    return "\n".join(cleaned_lines).strip()
 
 
 def process_file(path: Path) -> list[dict]:
@@ -343,7 +358,10 @@ def process_file(path: Path) -> list[dict]:
 
 def main():
     CHUNK_DIR.mkdir(parents=True, exist_ok=True)
-    files = sorted(RAW_DIR.glob("*.md"))
+    files = sorted(
+        path for path in RAW_DIR.glob("*.md")
+        if ".cleaned_test" not in path.stem.lower()
+    )
 
     if not files:
         print(f"No Markdown files found in: {RAW_DIR}")

@@ -8,10 +8,11 @@
 
 2. ### What is the Difference between JDK and JRE ?
 
-    The Java Runtime Environment (JRE) is basically the Java Virtual Machine (JVM) where your Java programs are being executed.
-    It also includes browser plugins for applet execution. The Java Development Kit (JDK) is the full featured Software Development
-    Kit for Java, including the JRE, the compilers and tools (like JavaDoc, and Java Debugger), in order for a user to develop, compile
-    and execute Java applications.
+    **JRE (Java Runtime Environment):** Provides the environment required to run Java applications. It includes the Java Virtual Machine (JVM) and supporting libraries.
+
+    **JDK (Java Development Kit):** Provides the tools required to develop Java applications, including the Java compiler (`javac`) and other development tools, along with the runtime components needed to run Java programs.
+
+    **Key difference:** The JRE focuses on running Java applications, while the JDK supports both developing and running them. In modern Java versions, a separate JRE is not always distributed.
 
 3. ### What does the “static” keyword mean ? Can you override private or static method in Java ?
 
@@ -273,11 +274,7 @@
 
 34. ### What is the difference between HashSet and TreeSet ?
 
-    The HashSet is Implemented using a hash table and thus, its elements are not ordered. The add, remove, and contains methods of
-    a HashSet have constant time complexity O(1). On the other hand, a TreeSet is implemented using a tree structure. The elements
-    in a TreeSet are sorted, and thus, the add, remove, and contains methods have time complexity of O(logn).
-    Chapter 5
-    Garbage Collectors
+    The HashSet is implemented using a hash table and thus, its elements are not ordered. The add, remove, and contains methods of a HashSet have average constant-time complexity O(1). On the other hand, a TreeSet is implemented using a tree structure. Its elements are sorted, and the add, remove, and contains methods have time complexity O(log n).
 
 35. ### What is the purpose of garbage collection in Java, and when is it used ?
 
@@ -352,7 +349,7 @@
 
 47. ### What will happen to the Exception object after exception handling ?
 
-    The Exception object will be garbage collected in the next garbage collection.
+    After exception handling finishes, the exception object can become eligible for garbage collection if no reachable references to it remain. However, garbage collection is not guaranteed to happen immediately or during the next garbage collection cycle. Its timing is determined by the JVM.
 
 48. ### How does finally block differ from finalize() method ?
 
@@ -654,9 +651,10 @@
     initialized. Then, the Servlet object handles all subsequent requests coming from that client, by invoking the service method for
     each request separately. Finally, the servlet is removed by calling the server’s destroy method.
 
-97. ### What is the difference between doGet() and doPost() ? doGET: The GET method appends the name-value pairs on the request’s URL. Thus, there is a limit on the number of characters and subsequently on the number of values that can be used in a client’s request. Furthermore, the values of the request are made visible and thus, sensitive information must not be passed in that way. doPOST: The POST method overcomes the limit imposed by the GET request, by sending the values of the request inside its body. Also, there is no limitations on the number of values to be sent across. Finally, the sensitive information passed through a
+97. ### What is the difference between doGet() and doPost() ?
 
-    POST request is not visible to an external client.
+    doGet(): The GET method typically sends request parameters in the URL query string. These parameters may be visible in browser history, server logs, and other places. GET requests are generally used to retrieve data and should not be used to transmit sensitive information in the URL.
+    doPost(): The POST method typically sends request data in the request body rather than in the URL query string. It is commonly used to submit data or perform operations that change server state. POST does not inherently provide confidentiality; HTTPS is required to protect data in transit.
 
 98. ### What is meant by a Web Application ?
 

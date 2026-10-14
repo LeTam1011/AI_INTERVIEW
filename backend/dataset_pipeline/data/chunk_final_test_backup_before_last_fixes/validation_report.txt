@@ -1,0 +1,35 @@
+Files: 13
+Records: 1783
+Duplicate IDs: 0
+Empty question/answer: 0
+Changed/truncated lines: 24
+
+EMPTY:
+
+DUPLICATE IDS:
+
+EDITS:
+('chunked_da_interview_question.json', 'da_interview_question-0038', '39. ### There are two arrays, â€˜aâ€™ and â€˜bâ€™. Stack the arrays a and b horizontally using the N')
+('chunked_da_interview_question.json', 'da_interview_question-0040', '42. ### Plot a sine graph using NumPy and Matplotlib library in Python.')
+('chunked_git_interview_question.json', 'git_interview_question-0022', '23. ### Open those files in an editor and locate the conflict markers (<<<<<<<, =======, >>>>>>>).')
+('chunked_git_interview_question.json', 'git_interview_question-0022', 'Sua danh sach buoc Merge Conflict')
+('chunked_java_interview_question.json', 'java_interview_question-0010', 'Chapter 3')
+('chunked_java_interview_question.json', 'java_interview_question-0017', 'Chapter 4')
+('chunked_java_interview_question.json', 'java_interview_question-0034', 'Chapter 5')
+('chunked_java_interview_question.json', 'java_interview_question-0042', 'Chapter 6')
+('chunked_java_interview_question.json', 'java_interview_question-0048', 'Chapter 7')
+('chunked_java_interview_question.json', 'java_interview_question-0057', 'Chapter 8')
+('chunked_java_interview_question.json', 'java_interview_question-0072', 'Chapter 9')
+('chunked_java_interview_question.json', 'java_interview_question-0078', 'Chapter 10')
+('chunked_java_interview_question.json', 'java_interview_question-0091', 'Chapter 11')
+('chunked_java_interview_question.json', 'java_interview_question-0107', 'Chapter 12')
+('chunked_javascript_interview_question.json', 'javascript_interview_question-0299', '300. ### Benefits')
+('chunked_ml_interview_question.json', 'ml_interview_question-0067', '68. ### Plot validation score and training score with data set size on the x-axis and another plot w')
+('chunked_nodejs_interview_question.json', 'nodejs_interview_question-0005', 'curent_year')
+('chunked_nodejs_interview_question.json', 'nodejs_interview_question-0034', 'curent_year')
+('chunked_oop_interview_question.json', 'oop_interview_question-0018', '19. ### Provide a quick comparison matrix between Overloading and Overriding.')
+('chunked_oop_interview_question.json', 'oop_interview_question-0023', '25. ### Provide a detailed comparison between an Abstract Class and an Interface.')
+('chunked_sd_interview_question.json', 'sd_interview_question-0002', '3. ### Design a global chat service.')
+('chunked_sd_interview_question.json', 'sd_interview_question-0004', '6. ### Design a URL shortening service.')
+('chunked_sd_interview_question.json', 'sd_interview_question-0005', '8. ### Design an API Rate Limiter.')
+('chunked_sd_interview_question.json', 'sd_interview_question-0006', '11. ### Design Quora.')

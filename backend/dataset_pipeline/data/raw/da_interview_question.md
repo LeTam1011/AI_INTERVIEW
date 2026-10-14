@@ -80,8 +80,17 @@
 
 21. ### How would you handle missing data in a dataset?
 
-    (Duplicate entry - See methods: Imputation, Deletion, and Predictive modeling mentioned above).
+    Missing data can be handled using several methods:
 
+    - **Deletion:** Remove rows or columns with too many missing values when doing so will not introduce significant bias.
+
+    - **Imputation:** Replace missing values using the mean, median, mode, or a suitable domain-specific value.
+
+    - **Predictive imputation:** Estimate missing values using a model when appropriate.
+
+    - **Missingness analysis:** Investigate why the data is missing and whether the missingness may introduce bias.
+
+    The best method depends on the amount of missing data, the data type, and the reason values are missing.
 22. ### Explain the concept of outlier detection and how you would identify outliers in a dataset.
 
     Outlier detection finds data points that differ significantly from others. Identification methods include Z-score, IQR (Interquartile Range) method, and visual tools like Box plots and Scatter plots.
