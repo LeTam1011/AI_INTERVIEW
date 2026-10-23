@@ -7,19 +7,22 @@ from sentence_transformers import SentenceTransformer
 
 
 BACKEND_DIR = Path(__file__).resolve().parents[1]
-CHUNK_DIR = BACKEND_DIR / "dataset_pipeline" / "data" / "chunk"
-CHROMA_DIR = BACKEND_DIR / "data" / "chroma_db"
 
-COLLECTION_NAME = "software_interview_questions"
-NEW_COLLECTION_NAME = f"{COLLECTION_NAME}_new"
-OLD_COLLECTION_NAME = f"{COLLECTION_NAME}_old"
+CHUNK_DIR = BACKEND_DIR / "dataset_pipeline" / "data" / "chunk"
+
+# Chỉ dùng để tạo và kiểm tra collection thử nghiệm.
+TEST_CHROMA_DIR = (
+    BACKEND_DIR / "dataset_pipeline" / "data" / "chroma_db"
+)
+
+TEST_COLLECTION_NAME = "software_interview_questions_final_test"
 
 EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 BATCH_SIZE = 64
 
 
 def load_chunks() -> list[dict]:
-    """Đọc và kiểm tra dữ liệu chunks từ các file JSON."""
+    """Đọc chunks, giữ nguyên nội dung nguồn và không loại câu trả lời ngắn."""
     chunks = []
 
     for path in sorted(CHUNK_DIR.glob("chunked_*.json")):
@@ -31,18 +34,17 @@ def load_chunks() -> list[dict]:
             )
 
         for chunk in data:
-            question = str(chunk.get("question", "")).strip()
-            answer = str(chunk.get("answer", "")).strip()
-            content = str(chunk.get("content", "")).strip()
+            question = str(chunk.get("question", ""))
+            answer = str(chunk.get("answer", ""))
+            content = str(chunk.get("content", ""))
+            chunk_id = str(chunk.get("id", "")).strip()
             metadata = chunk.get("metadata") or {}
 
-            if not question or not content:
+            if not question.strip() or not content.strip():
                 raise ValueError(
                     f"Invalid chunk in {path.name}: "
                     f"{chunk.get('id', 'unknown')}"
                 )
-
-            chunk_id = str(chunk.get("id", "")).strip()
 
             if not chunk_id:
                 raise ValueError(
@@ -51,28 +53,22 @@ def load_chunks() -> list[dict]:
 
             chunk_metadata = {
                 "question": question,
-                "topic": str(
-                    metadata.get("topic", "General")
-                ),
+                "topic": str(metadata.get("topic", "General")),
                 "difficulty": str(
                     metadata.get("difficulty", "Unknown")
                 ),
-                "type": str(
-                    metadata.get("type", "technical")
-                ),
-                "source": str(
-                    metadata.get("source", path.name)
-                ),
+                "type": str(metadata.get("type", "technical")),
+                "source": str(metadata.get("source", path.name)),
                 "answer_status": str(
                     metadata.get(
                         "answer_status",
-                        "available" if answer else "pending",
+                        "available" if answer.strip() else "pending",
                     )
                 ),
             }
 
-            # Chỉ lưu answer khi có nội dung.
-            if answer:
+            # Giữ nguyên answer, không yêu cầu độ dài tối thiểu.
+            if answer.strip():
                 chunk_metadata["answer"] = answer
 
             chunks.append({
@@ -82,71 +78,77 @@ def load_chunks() -> list[dict]:
             })
 
     if not chunks:
-        raise RuntimeError(
-            f"No chunks found in {CHUNK_DIR}"
-        )
+        raise RuntimeError(f"No chunks found in {CHUNK_DIR}")
 
     ids = [chunk["id"] for chunk in chunks]
 
     if len(ids) != len(set(ids)):
-        raise ValueError(
-            "Duplicate chunk IDs detected"
-        )
+        raise ValueError("Duplicate chunk IDs detected")
 
     return chunks
 
 
-def create_new_collection(client, chunks, model):
-    """Tạo collection mới và nạp toàn bộ dữ liệu."""
-    # Xóa collection _new còn sót lại từ lần chạy trước.
-    try:
-        client.delete_collection(NEW_COLLECTION_NAME)
-    except Exception:
-        pass
+def create_test_collection(client, chunks, model):
+    """Tạo collection thử nghiệm mới, không ghi đè collection cũ."""
+
+    existing_names = {
+        item.name for item in client.list_collections()
+    }
+
+    if TEST_COLLECTION_NAME in existing_names:
+        raise RuntimeError(
+            f"Collection {TEST_COLLECTION_NAME} already exists. "
+            "No data was changed. Inspect it before retrying."
+        )
 
     collection = client.create_collection(
-        name=NEW_COLLECTION_NAME,
+        name=TEST_COLLECTION_NAME,
         metadata={"hnsw:space": "cosine"},
     )
 
-    for start in range(0, len(chunks), BATCH_SIZE):
-        batch = chunks[start:start + BATCH_SIZE]
+    try:
+        for start in range(0, len(chunks), BATCH_SIZE):
+            batch = chunks[start:start + BATCH_SIZE]
 
-        documents = [
-            item["document"] for item in batch
-        ]
+            documents = [item["document"] for item in batch]
+            embeddings = model.encode(
+                documents,
+                normalize_embeddings=True,
+                show_progress_bar=False,
+            ).tolist()
 
-        embeddings = model.encode(
-            documents,
-            normalize_embeddings=True,
-            show_progress_bar=False,
-        ).tolist()
+            collection.add(
+                ids=[item["id"] for item in batch],
+                documents=documents,
+                metadatas=[item["metadata"] for item in batch],
+                embeddings=embeddings,
+            )
 
-        collection.add(
-            ids=[item["id"] for item in batch],
-            documents=documents,
-            metadatas=[
-                item["metadata"] for item in batch
-            ],
-            embeddings=embeddings,
+            print(
+                f"Indexed {min(start + len(batch), len(chunks))}"
+                f"/{len(chunks)}"
+            )
+
+        if collection.count() != len(chunks):
+            raise RuntimeError(
+                f"Expected {len(chunks)} records, "
+                f"got {collection.count()}"
+            )
+
+        print(
+            f"Test collection created: {collection.name}, "
+            f"{collection.count()} records."
         )
+        return collection
 
-        indexed = min(
-            start + len(batch),
-            len(chunks),
+    except Exception:
+        # Không tự xóa collection lỗi để tránh mất dữ liệu
+        # và giúp kiểm tra nguyên nhân trước khi xử lý tiếp.
+        print(
+            "Collection creation failed. "
+            "Inspect the test collection before retrying."
         )
-
-        print(f"Indexed {indexed}/{len(chunks)}")
-
-    actual_count = collection.count()
-
-    if actual_count != len(chunks):
-        raise RuntimeError(
-            f"Expected {len(chunks)} records, "
-            f"got {actual_count}"
-        )
-
-    return collection
+        raise
 
 
 def replace_collection(client):
@@ -237,48 +239,21 @@ def replace_collection(client):
 
 def main():
     chunks = load_chunks()
-
     print(f"Loaded {len(chunks)} chunks.")
 
-    # Mặc định chỉ kiểm tra, không sửa database.
-    if "--apply" not in sys.argv:
-        print("DRY RUN: database has not been changed.")
-        print(
-            "Review the data, then run with --apply "
-            "to replace it."
-        )
+    # Mặc định chỉ kiểm tra dữ liệu nguồn.
+    if "--build-test" not in sys.argv:
+        print("DRY RUN: no database was modified.")
+        print("Use --build-test to create a separate test collection.")
         return
 
     client = chromadb.PersistentClient(
-        path=str(CHROMA_DIR)
+        path=str(TEST_CHROMA_DIR)
     )
 
-    try:
-        model = SentenceTransformer(
-            EMBEDDING_MODEL
-        )
+    model = SentenceTransformer(EMBEDDING_MODEL)
 
-        new_collection = create_new_collection(
-            client,
-            chunks,
-            model,
-        )
-
-        print(
-            f"Validated new collection: "
-            f"{new_collection.count()} records."
-        )
-
-        replace_collection(client)
-
-    except Exception:
-        print(
-            "Import failed. Inspect the collection names "
-            "before retrying. The old collection is retained "
-            "when the replacement process has reached its "
-            "backup step."
-        )
-        raise
+    create_test_collection(client, chunks, model)
 
 
 if __name__ == "__main__":

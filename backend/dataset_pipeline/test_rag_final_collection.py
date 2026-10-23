@@ -1,4 +1,4 @@
-
+﻿
 from pathlib import Path
 
 import chromadb
@@ -13,7 +13,7 @@ PRODUCTION_CHROMA_DIR = BACKEND_DIR / "data" / "chroma_db"
 TEST_CHROMA_DIR = BACKEND_DIR / "dataset_pipeline" / "data" / "chroma_db"
 
 PRODUCTION_COLLECTION = "software_interview_questions"
-TEST_COLLECTION = "software_interview_questions_final_test"
+TEST_COLLECTION = "software_interview_questions_source_check"
 
 MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 TOP_K = 5
@@ -236,9 +236,8 @@ def evaluate_retrieval_quality(collection, model, top_k=5):
             "topic": "SQL",
             "query": "Explain the difference between INNER JOIN and LEFT JOIN.",
             "relevant_ids": {
-                "sql_interview_question-0018",
-                "sql_interview_question-0007",
-            },
+            "sql_interview_question-0018",
+        },
         },
         {
             "topic": "Docker",
@@ -494,3 +493,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
