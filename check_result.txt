@@ -1,0 +1,114 @@
+============================================================
+BAO CAO KIEM TRA CHROMADB - DU LIEU HIEN TAI
+============================================================
+
+Du an: interview-main
+Collection: interview_questions
+Duong dan: .\chroma_db
+Nguon du lieu: data_pipeline\dataset
+
+THONG TIN TONG QUAN
+------------------------------------------------------------
+[OK] Collection ton tai
+[OK] Tong so vectors hien tai: 1805
+[OK] So file dataset da nap: 13
+
+PHAN BO THEO CHU DE / INSTRUCTION
+------------------------------------------------------------
+  JavaScript                         415
+  React                              320
+  Python                             269
+  Machine Learning                   164
+  Java                               116
+  NodeJS                             100
+  SQL                                 99
+  Data Analysis                      78
+  Spring                              76
+  Git                                 50
+  OOP                                 50
+  Docker                              40
+  System Design                       28
+
+PHAN BO THEO FILE NGUON
+------------------------------------------------------------
+  javascript_interview_question.md  415
+  react_interview_question.md       320
+  python_interview_question.md      269
+  ml_interview_question.md          164
+  java_interview_question.md        116
+  nodejs_interview_question.md      100
+  sql_interview_question.md          99
+  da_interview_question.md           78
+  spring_interview_question.md       76
+  git_interview_question.md          50
+  oop_interview_question.md          50
+  docker_interview.question.md       40
+  sd_interview_question.md           28
+
+KIEM TRA METADATA
+------------------------------------------------------------
+[CAN LUU Y] 1805/1805 vectors dang co metadata level rong.
+            Hien tai khong co phan bo Intern/Junior/Middle/Senior
+            trong ChromaDB de thong ke.
+
+Metadata mau:
+  instruction: Data Analysis
+  level:       (rong)
+  source_file: da_interview_question.md
+  chunk_id:    data_analysis_0_chunk_0
+
+KIEM TRA TRUY VAN
+------------------------------------------------------------
+Query mau: "What is overfitting in machine learning?"
+Phuong thuc: dung vector da luu cua cau hoi mau de kiem tra
+truy hoi ChromaDB cuc bo, khong phu thuoc API embedding ben ngoai.
+
+Vector mau:
+  source_file: da_interview_question.md
+
+Top 5 ket qua sau khi bo ket qua tu than:
+  [#1] distance=0.094746 | Machine Learning | ml_interview_question.md
+       What are overfitting and underfitting? Why does the decision tree
+       algorithm suffer often with overfitting problems?
+  [#2] distance=0.132168 | Machine Learning | ml_interview_question.md
+       If we have a high bias error what does it mean? How to treat it?
+  [#3] distance=0.140965 | Machine Learning | ml_interview_question.md
+       What is Bias Variance and what do you mean by Bias-Variance Tradeoff?
+  [#4] distance=0.143126 | Data Analysis | da_interview_question.md
+       Explain the Type I and Type II errors in Statistics?
+  [#5] distance=0.148543 | Data Analysis | da_interview_question.md
+       Mention the differences between Data Mining and Data Profiling?
+
+Nhan xet:
+  - Ket qua gan nhat la Machine Learning, phu hop voi query.
+  - Trong top 5 co 3/5 ket qua thuoc Machine Learning/Data Analysis
+    va deu lien quan den hoc may/thong ke.
+  - Distance cang thap thi ket qua cang gan ve mat vector.
+  - Day la kiem tra truy hoi ChromaDB; khong phai danh gia do dung
+    cua cau tra loi Gemini.
+
+KET LUAN
+------------------------------------------------------------
+[OK] ChromaDB dang ton tai va co 1805 vectors.
+[OK] Du lieu gom 13 chu de phuc vu RAG/interview.
+[CAN XU LY] Neu can loc cau hoi theo cap do, can bo sung gia tri
+            level khi parse dataset hoac khi nap lai embeddings.
+
+DO LUONG DO CHINH XAC TRUY HOI
+------------------------------------------------------------
+Phuong phap:
+  - Lay mau ngau nhien co seed 42 gom 100 vectors hien co.
+  - Dung moi vector lam query va loai bo ket qua tu than.
+  - Kiem tra chu de instruction cua cac ket qua gan nhat.
+
+  Precision@1: 99.0%
+  Precision@5: 97.4%
+
+Giai thich:
+  - Precision@1: ty le query co ket qua gan nhat cung chu de.
+  - Precision@5: ty le trung binh ket qua top 5 cung chu de.
+  - Day la do chinh xac truy hoi embedding theo chu de, khong phai
+    do chinh xac cua cau tra loi do Gemini sinh ra.
+  - Muon do chinh xac cau tra loi AI can bo test co dap an chuan va
+    cham theo cac tieu chi: dung kien thuc, day du, phu hop cap do.
+
