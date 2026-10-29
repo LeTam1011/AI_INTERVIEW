@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { api } from '../../services/api';
 import {
   Users, Mic, Trophy, Target, TrendingUp, BarChart3,
@@ -31,16 +31,21 @@ function StatCard({ icon, label, value, sub, color }) {
 /* ─── Chart Bar ──────────────────────────────────────────────── */
 function ChartBar({ date, total, completed, avgScore, maxTotal }) {
   const pct = maxTotal > 0 ? (total / maxTotal) * 100 : 0;
-  const completedPct = total > 0 ? (completed / total) * 100 : 0;
+  const completedPct = maxTotal > 0 ? (completed / maxTotal) * 100 : 0;
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px', flex: 1, minWidth: 0 }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px', flex: 1, minWidth: '32px' }}>
       <div style={{ fontSize: '10px', color: 'var(--primary)', fontWeight: 700 }}>
         {avgScore != null ? avgScore : ''}
       </div>
-      <div style={{ width: '100%', height: '80px', display: 'flex', alignItems: 'flex-end', gap: '2px' }}>
-        <div style={{ flex: 1, height: `${pct}%`, minHeight: total > 0 ? '4px' : 0, background: 'oklch(83.3% 0.145 321.434 / 0.3)', borderRadius: '4px 4px 0 0', position: 'relative', overflow: 'hidden' }}>
-          <div style={{ position: 'absolute', bottom: 0, width: '100%', height: `${completedPct}%`, background: 'var(--gradient-primary)', borderRadius: '4px 4px 0 0' }} />
-        </div>
+      <div style={{ width: '100%', height: '80px', display: 'flex', alignItems: 'flex-end', justifyContent: 'center', gap: '3px' }}>
+        <div
+          title={`Tổng: ${total}`}
+          style={{ width: 'calc(50% - 2px)', height: `${pct}%`, minHeight: total > 0 ? '4px' : 0, background: 'oklch(83.3% 0.145 321.434 / 0.3)', borderRadius: '4px 4px 0 0' }}
+        />
+        <div
+          title={`Hoàn thành: ${completed}`}
+          style={{ width: 'calc(50% - 2px)', height: `${completedPct}%`, minHeight: completed > 0 ? '4px' : 0, background: 'var(--gradient-primary)', borderRadius: '4px 4px 0 0' }}
+        />
       </div>
       <div style={{ fontSize: '9px', color: 'var(--text-muted)', textAlign: 'center', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', width: '100%' }}>
         {date ? date.slice(5) : ''}
@@ -130,7 +135,7 @@ export default function AdminStats() {
   const [topLimit, setTopLimit] = useState(10);
   const [candidatesLoading, setCandidatesLoading] = useState(true);
 
-  const loadStats = async () => {
+  const loadStats = useCallback(async () => {
     setLoading(true);
     try {
       const [s, c] = await Promise.all([
@@ -144,9 +149,9 @@ export default function AdminStats() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [chartDays]);
 
-  const loadCandidates = async () => {
+  const loadCandidates = useCallback(async () => {
     setCandidatesLoading(true);
     try {
       const data = await api.adminGetTopCandidates(topLimit);
@@ -156,10 +161,10 @@ export default function AdminStats() {
     } finally {
       setCandidatesLoading(false);
     }
-  };
+  }, [topLimit]);
 
-  useEffect(() => { loadStats(); }, [chartDays]);
-  useEffect(() => { loadCandidates(); }, [topLimit]);
+  useEffect(() => { loadStats(); }, [loadStats]);
+  useEffect(() => { loadCandidates(); }, [loadCandidates]);
 
   if (loading) return (
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '80px', gap: '12px', color: 'var(--text-muted)' }}>
@@ -221,10 +226,12 @@ export default function AdminStats() {
           <div style={{ textAlign: 'center', color: 'var(--text-muted)', padding: '40px', fontSize: '14px' }}>Chưa có dữ liệu biểu đồ.</div>
         ) : (
           <>
-            <div style={{ display: 'flex', alignItems: 'flex-end', gap: '6px', height: '120px', padding: '0 4px' }}>
-              {chart.slice(-chartDays).map((d, i) => (
-                <ChartBar key={i} date={d.date} total={d.total || 0} completed={d.completed || 0} avgScore={d.avg_score} maxTotal={maxTotal} />
-              ))}
+            <div style={{ overflowX: 'auto', padding: '0 4px 4px' }}>
+              <div style={{ display: 'flex', alignItems: 'flex-end', gap: '5px', height: '140px', minWidth: `${Math.max(chart.length, 1) * 28}px` }}>
+                {chart.slice(-chartDays).map((d, i) => (
+                  <ChartBar key={i} date={d.date} total={d.total || 0} completed={d.completed || 0} avgScore={d.avg_score} maxTotal={maxTotal} />
+                ))}
+              </div>
             </div>
             <div style={{ display: 'flex', gap: '20px', marginTop: '16px', flexWrap: 'wrap' }}>
               <span style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '12px', color: 'var(--text-muted)' }}>

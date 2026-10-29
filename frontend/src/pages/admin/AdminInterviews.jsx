@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { api } from '../../services/api';
-import { Clock, CheckCircle, XCircle, RefreshCw, ChevronLeft, ChevronRight, Eye, X } from 'lucide-react';
+import { useModal } from '../../context/ModalContext';
+import { Clock, CheckCircle, XCircle, RefreshCw, ChevronLeft, ChevronRight, Eye, Trash2, X } from 'lucide-react';
 
 function StatusBadge({ status }) {
   if (status === 'completed')
@@ -87,6 +88,7 @@ export default function AdminInterviews() {
   const [statusFilter, setStatusFilter] = useState('');
   const [page, setPage] = useState(0);
   const [selected, setSelected] = useState(null);
+  const { showConfirm, showAlert } = useModal();
 
   const totalPages = Math.ceil(total / PAGE_SIZE);
 
@@ -106,6 +108,24 @@ export default function AdminInterviews() {
   useEffect(() => { loadData(); }, [loadData]);
 
   const handleStatusChange = (val) => { setStatusFilter(val); setPage(0); };
+
+  const handleDelete = async (interview) => {
+    const confirmed = await showConfirm(
+      `Xóa phiên phỏng vấn "${interview.topic}" của ${interview.username}? Dữ liệu câu hỏi và câu trả lời liên quan cũng sẽ bị xóa.`,
+      'Xác nhận xóa phiên phỏng vấn',
+      { confirmText: 'Xóa phiên', cancelText: 'Hủy', danger: true },
+    );
+    if (!confirmed) return;
+
+    try {
+      await api.adminDeleteInterview(interview.id);
+      setSelected(current => current?.id === interview.id ? null : current);
+      setInterviews(current => current.filter(item => item.id !== interview.id));
+      setTotal(current => Math.max(0, current - 1));
+    } catch (err) {
+      showAlert(err.message || 'Không thể xóa phiên phỏng vấn.', 'Xóa thất bại');
+    }
+  };
 
   return (
     <div>
@@ -182,13 +202,22 @@ export default function AdminInterviews() {
                 </td>
                 <td style={{ padding: '14px 16px' }}><ScoreCell score={iv.overall_score} /></td>
                 <td style={{ padding: '14px 16px' }}>
-                  <button
-                    onClick={() => setSelected(iv)}
-                    title="Xem chi tiết"
-                    style={{ padding: '7px 10px', borderRadius: '8px', border: '1px solid var(--border)', background: 'transparent', cursor: 'pointer', color: 'var(--primary)', display: 'flex', alignItems: 'center', gap: '4px', fontSize: '12px', fontWeight: 600 }}
-                  >
-                    <Eye size={14} /> Xem
-                  </button>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                    <button
+                      onClick={() => setSelected(iv)}
+                      title="Xem chi tiết"
+                      style={{ width: '68px', justifyContent: 'center', padding: '7px 8px', borderRadius: '8px', border: '1px solid var(--border)', background: 'transparent', cursor: 'pointer', color: 'var(--primary)', display: 'flex', alignItems: 'center', gap: '4px', fontSize: '12px', fontWeight: 600 }}
+                    >
+                      <Eye size={14} /> Xem
+                    </button>
+                    <button
+                      onClick={() => handleDelete(iv)}
+                      title="Xóa phiên phỏng vấn"
+                      style={{ width: '68px', justifyContent: 'center', padding: '7px 8px', borderRadius: '8px', border: '1px solid oklch(65% 0.22 25 / 0.35)', background: 'transparent', cursor: 'pointer', color: 'oklch(65% 0.22 25)', display: 'flex', alignItems: 'center', gap: '4px', fontSize: '12px', fontWeight: 600 }}
+                    >
+                      <Trash2 size={14} /> Xóa
+                    </button>
+                  </div>
                 </td>
               </tr>
             ))}

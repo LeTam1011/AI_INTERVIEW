@@ -62,10 +62,11 @@ export default function InterviewPage() {
   }, []);
 
   useEffect(() => {
+    const activeAudio = activeAudioRef.current;
     window.addEventListener("beforeunload", handleBeforeUnload);
     return () => {
       window.removeEventListener("beforeunload", handleBeforeUnload);
-      if (activeAudioRef.current) activeAudioRef.current.pause();
+      if (activeAudio) activeAudio.pause();
       stopRecordingHard();
       if (isInterviewingRef.current && interviewIdRef.current) {
         api.abandonInterview(interviewIdRef.current);

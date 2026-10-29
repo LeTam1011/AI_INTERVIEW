@@ -2,6 +2,7 @@ import React from 'react';
 import {
   ThumbsUp, MessageSquare, Bookmark, ChevronRight, BookOpen
 } from 'lucide-react';
+import PostComments from './PostComments';
 
 const CATEGORY_COLOR = {
   'Kinh nghiệm': { bg: 'oklch(75% 0.17 150 / 0.12)', color: 'oklch(68% 0.2 145)', border: 'oklch(75% 0.17 150 / 0.3)' },
@@ -32,6 +33,13 @@ export function StatusBadge({ status }) {
 
 export default function PostCard({ post, onLike, onSave, showStatus }) {
   const cat = CATEGORY_COLOR[post.category] || {};
+  const [commentsOpen, setCommentsOpen] = React.useState(false);
+  const [contentExpanded, setContentExpanded] = React.useState(false);
+  const [commentsCount, setCommentsCount] = React.useState(post.comments_count || 0);
+
+  const updateCommentsCount = (delta) => {
+    setCommentsCount(count => Math.max(0, count + delta));
+  };
   return (
     <div className="glass-card" style={{ padding: '22px', transition: 'all 0.25s', cursor: 'pointer' }}
       onMouseEnter={e => { e.currentTarget.style.borderColor = 'oklch(83.3% 0.145 321.434 / 0.4)'; }}
@@ -56,7 +64,9 @@ export default function PostCard({ post, onLike, onSave, showStatus }) {
 
       <h3 style={{ fontWeight: 700, fontSize: '15px', marginBottom: '8px', lineHeight: 1.4 }}>{post.title}</h3>
       <p style={{ color: 'var(--text-secondary)', fontSize: '13px', lineHeight: 1.65, marginBottom: '14px' }}>
-        {post.content.length > 300 ? post.content.substring(0, 300) + '...' : post.content}
+        {contentExpanded || post.content.length <= 300
+          ? post.content
+          : `${post.content.substring(0, 300)}...`}
       </p>
 
       {post.image_url && (
@@ -81,18 +91,22 @@ export default function PostCard({ post, onLike, onSave, showStatus }) {
             <ThumbsUp size={14} /> {post.likes_count}
           </button>
         )}
-        <button style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: '13px', color: 'var(--text-muted)', background: 'none', border: 'none', cursor: 'pointer', fontWeight: 500 }}>
-          <MessageSquare size={14} /> {post.comments_count}
+        <button onClick={() => setCommentsOpen(open => !open)} style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: '13px', color: commentsOpen ? 'var(--primary)' : 'var(--text-muted)', background: 'none', border: 'none', cursor: 'pointer', fontWeight: 500 }}>
+          <MessageSquare size={14} /> {commentsCount}
         </button>
         {onSave && (
           <button onClick={() => onSave(post.id)} style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: '13px', color: post.is_saved ? 'oklch(80% 0.18 80)' : 'var(--text-muted)', background: 'none', border: 'none', cursor: 'pointer', marginLeft: 'auto', fontWeight: 500 }}>
             <Bookmark size={14} fill={post.is_saved ? 'oklch(80% 0.18 80)' : 'none'} /> {post.is_saved ? 'Đã lưu' : 'Lưu'}
           </button>
         )}
-        <button style={{ display: 'flex', alignItems: 'center', gap: '4px', fontSize: '13px', color: 'var(--primary)', background: 'none', border: 'none', cursor: 'pointer', fontWeight: 600, marginLeft: onSave ? '0' : 'auto' }}>
+        {post.content.length > 300 && (
+        <button type="button" onClick={() => setContentExpanded(expanded => !expanded)} style={{ display: 'flex', alignItems: 'center', gap: '4px', fontSize: '13px', color: 'var(--primary)', background: 'none', border: 'none', cursor: 'pointer', fontWeight: 600, marginLeft: onSave ? '0' : 'auto' }}>
           Đọc thêm <ChevronRight size={13} />
         </button>
+        )}
       </div>
+
+      {commentsOpen && <PostComments postId={post.id} onCountChange={updateCommentsCount} />}
     </div>
   );
 }

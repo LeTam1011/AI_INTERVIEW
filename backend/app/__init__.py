@@ -1,1 +1,1 @@
-"""AI Interview Trainer backend."""
+# App package

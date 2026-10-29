@@ -1,7 +1,0 @@
-{
-  "model_type": "TF-IDF + Ridge Regression",
-  "training_samples": 10,
-  "cross_validation": "LeaveOneOut",
-  "cross_validation_mae": 38.472,
-  "warning": "Chỉ có ít dữ liệu minh họa; MAE chưa phản ánh khả năng tổng quát hóa trên dữ liệu thực tế."
-}

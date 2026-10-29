@@ -287,6 +287,17 @@ export const api = {
     if (!res.ok) return { interviews: [], total: 0 };
     return res.json();
   },
+  adminDeleteInterview: async (interviewId) => {
+    const res = await fetch(`${API_BASE}/admin/interviews/${interviewId}`, {
+      method: "DELETE",
+      credentials: "include",
+    });
+    if (!res.ok) {
+      const data = await res.json().catch(() => ({}));
+      throw new Error(data?.detail || "Không thể xóa phiên phỏng vấn.");
+    }
+    return true;
+  },
   adminGetTopCandidates: async (limit = 10) => {
     const res = await fetch(`${API_BASE}/admin/top-candidates?limit=${limit}`, { credentials: "include" });
     if (!res.ok) return [];
@@ -357,6 +368,35 @@ export const api = {
       credentials: "include"
     });
     return res.json();
+  },
+  getPostComments: async (postId) => {
+    const res = await fetch(`${API_BASE}/community/posts/${postId}/comments`, {
+      credentials: "include",
+    });
+    if (!res.ok) return { comments: [] };
+    return res.json();
+  },
+  addPostComment: async (postId, content) => {
+    const res = await fetch(`${API_BASE}/community/posts/${postId}/comments`, {
+      method: "POST",
+      credentials: "include",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ content }),
+    });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(data?.detail || "Không thể thêm bình luận.");
+    return data;
+  },
+  deletePostComment: async (commentId) => {
+    const res = await fetch(`${API_BASE}/community/comments/${commentId}`, {
+      method: "DELETE",
+      credentials: "include",
+    });
+    if (!res.ok) {
+      const data = await res.json().catch(() => ({}));
+      throw new Error(data?.detail || "Không thể xóa bình luận.");
+    }
+    return true;
   },
   getPopularTags: async (limit = 10) => {
     const res = await fetch(`${API_BASE}/community/tags?limit=${limit}`, { credentials: "include" });

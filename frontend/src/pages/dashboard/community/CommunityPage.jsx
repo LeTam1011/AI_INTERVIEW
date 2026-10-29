@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { TrendingUp, BookOpen, Bell, CheckCircle } from 'lucide-react';
 import { api } from '../../../services/api';
-import { useAuth } from '../../../context/AuthContext';
 import { useModal } from '../../../context/ModalContext';
 
 import CommunityFeed from './CommunityFeed';
@@ -10,7 +9,6 @@ import CommunityNotifications from './CommunityNotifications';
 import CommunitySidebar from './CommunitySidebar';
 
 export default function CommunityPage() {
-  const { user } = useAuth();
   const { showAlert, showConfirm } = useModal();
   const [activeTab, setActiveTab] = useState('feed'); // 'feed' | 'my-posts' | 'notifications'
 
@@ -32,7 +30,7 @@ export default function CommunityPage() {
   const [uploadingImage, setUploadingImage] = useState(false);
   const [successMsg, setSuccessMsg] = useState('');
 
-  const loadFeed = async () => {
+  const loadFeed = useCallback(async () => {
     setLoading(true);
     try {
       const [postsData, tagsData] = await Promise.all([
@@ -46,18 +44,18 @@ export default function CommunityPage() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [search]);
 
-  const loadMyPosts = async () => {
+  const loadMyPosts = useCallback(async () => {
     setLoading(true);
     try {
       const data = await api.getMyPosts(20, 0);
       setMyPosts(data.posts || []);
     } catch (err) { console.error(err); }
     finally { setLoading(false); }
-  };
+  }, []);
 
-  const loadNotifications = async () => {
+  const loadNotifications = useCallback(async () => {
     setLoading(true);
     try {
       const data = await api.getNotifications(20);
@@ -65,7 +63,7 @@ export default function CommunityPage() {
       setUnreadCount(data.unread_count || 0);
     } catch (err) { console.error(err); }
     finally { setLoading(false); }
-  };
+  }, []);
 
   // Đếm notifications khi mount
   useEffect(() => {
@@ -77,12 +75,12 @@ export default function CommunityPage() {
       const t = setTimeout(loadFeed, 400);
       return () => clearTimeout(t);
     }
-  }, [search, activeTab]);
+  }, [loadFeed, activeTab]);
 
   useEffect(() => {
     if (activeTab === 'my-posts') loadMyPosts();
     else if (activeTab === 'notifications') loadNotifications();
-  }, [activeTab]);
+  }, [activeTab, loadMyPosts, loadNotifications]);
 
   const toggleSave = async (id) => {
     try {
@@ -127,7 +125,7 @@ export default function CommunityPage() {
     }
     const tagsArray = newTags.split(',').map(t => t.trim()).filter(t => t);
     try {
-      const res = await api.createCommunityPost(newTitle, newContent, newCategory, tagsArray, newImageUrl || null);
+      await api.createCommunityPost(newTitle, newContent, newCategory, tagsArray, newImageUrl || null);
       setShowCreate(false);
       setNewTitle(''); setNewContent(''); setNewTags(''); setNewImageUrl('');
       setSuccessMsg('🎉 Bài viết đã được gửi! Bài sẽ hiển thị sau khi admin kiểm duyệt.');

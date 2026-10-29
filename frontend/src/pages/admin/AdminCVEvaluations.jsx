@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import {
   Search, Trash2, FileText, Star, ChevronLeft, ChevronRight,
   RefreshCw, ExternalLink, User, Calendar, HardDrive
@@ -47,7 +47,7 @@ export default function AdminCVEvaluations() {
     setTimeout(() => setToast(null), 3500);
   };
 
-  const loadEvaluations = async () => {
+  const loadEvaluations = useCallback(async () => {
     setLoading(true);
     try {
       const data = await api.adminGetCVEvaluations(PAGE_SIZE, page * PAGE_SIZE, search);
@@ -58,9 +58,9 @@ export default function AdminCVEvaluations() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [page, search]);
 
-  useEffect(() => { loadEvaluations(); }, [page, search]);
+  useEffect(() => { loadEvaluations(); }, [loadEvaluations]);
 
   const handleSearch = (e) => {
     e.preventDefault();

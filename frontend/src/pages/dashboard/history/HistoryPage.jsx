@@ -42,7 +42,7 @@ export default function HistoryPage() {
       try {
         const detail = await api.getInterviewDetail(id);
         if (detail) setExpandedData(prev => ({ ...prev, [id]: detail }));
-      } catch (_) {}
+      } catch {}
       setLoadingDetail(null);
     }
   };

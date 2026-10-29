@@ -28,6 +28,7 @@ export function ThemeProvider({ children }) {
 }
 
 /** Hook sử dụng ThemeContext */
+// eslint-disable-next-line react-refresh/only-export-components
 export function useTheme() {
   const ctx = useContext(ThemeContext);
   if (!ctx) throw new Error('useTheme phải được dùng bên trong <ThemeProvider>');

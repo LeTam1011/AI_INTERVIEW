@@ -1,7 +1,18 @@
-fastapi==0.141.1
-uvicorn[standard]
-SQLAlchemy>=2.0,<2.1
-psycopg2-binary
-pydantic-settings
-python-jose[cryptography]
+fastapi
+uvicorn
+chromadb
+# The application currently uses the google.generativeai API.
+google-generativeai
+pydantic[email]
+python-multipart
+pypdf
+python-dotenv
+# Auth & Database
+asyncpg
 bcrypt
+python-jose[cryptography]
+# Google OAuth
+google-auth
+httpx
+cloudinary
+gTTS

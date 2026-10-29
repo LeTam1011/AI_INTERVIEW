@@ -24,7 +24,7 @@ export default function CVEvaluationPage() {
     try {
       const data = await api.getCvEvaluationCount();
       setSavedCount(data.count || 0);
-    } catch (_) {}
+    } catch {}
   }, []);
 
   useEffect(() => {

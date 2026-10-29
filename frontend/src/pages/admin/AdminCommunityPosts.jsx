@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import {
   Search, CheckCircle, XCircle, Trash2, Clock, Eye,
   Filter, RefreshCw, MessageSquare, ThumbsUp, ChevronLeft, ChevronRight
@@ -34,7 +34,7 @@ export default function AdminCommunityPosts() {
     setTimeout(() => setToast(null), 3500);
   };
 
-  const loadPosts = async () => {
+  const loadPosts = useCallback(async () => {
     setLoading(true);
     try {
       const data = await api.adminGetCommunityPosts(PAGE_SIZE, page * PAGE_SIZE, statusFilter, search);
@@ -45,9 +45,9 @@ export default function AdminCommunityPosts() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [page, search, statusFilter]);
 
-  useEffect(() => { loadPosts(); }, [statusFilter, page, search]);
+  useEffect(() => { loadPosts(); }, [loadPosts]);
 
   const handleSearch = (e) => {
     e.preventDefault();
