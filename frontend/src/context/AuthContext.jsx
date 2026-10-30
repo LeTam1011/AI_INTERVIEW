@@ -13,11 +13,35 @@ export function AuthProvider({ children }) {
 
   // Kiểm tra session hiện tại khi load app (cookie tự gửi cùng request)
   useEffect(() => {
-    authService
-      .me()
-      .then((data) => setUser(data))
-      .catch(() => setUser(null))
-      .finally(() => setLoading(false));
+    let cancelled = false;
+    let retryTimer;
+
+    const restoreSession = async (attempt = 0) => {
+      try {
+        const data = await authService.me();
+        if (cancelled) return;
+        setUser(data);
+        setLoading(false);
+      } catch (err) {
+        if (cancelled) return;
+
+        // Backend có thể mất vài giây khi đang reload/restart.
+        // Retry để không làm mất role admin chỉ vì lỗi kết nối tạm thời.
+        if (attempt < 20) {
+          retryTimer = window.setTimeout(() => restoreSession(attempt + 1), 500);
+          return;
+        }
+
+        setUser(null);
+        setLoading(false);
+      }
+    };
+
+    restoreSession();
+    return () => {
+      cancelled = true;
+      if (retryTimer) window.clearTimeout(retryTimer);
+    };
   }, []);
 
   /** Đăng nhập → cập nhật user state */
