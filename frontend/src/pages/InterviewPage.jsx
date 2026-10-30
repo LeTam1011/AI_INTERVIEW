@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { api } from '../services/api';
 import { useAuth } from '../context/AuthContext';
 import { useAudioRecorder } from '../hooks/useAudioRecorder';
@@ -10,6 +10,8 @@ import LoadingScreen from '../components/common/LoadingScreen';
 import InterviewPanel from '../components/interview/InterviewPanel';
 import EvaluationResult from '../components/interview/EvaluationResult';
 import FinalResult from '../components/interview/FinalResult';
+
+const ACTIVE_INTERVIEW_KEY_PREFIX = 'ai-interview-active-';
 
 export default function InterviewPage() {
   const { user } = useAuth();
@@ -49,32 +51,104 @@ export default function InterviewPage() {
   const activeAudioRef = useRef(null);
   const { isRecording, isTranscribing, toggleRecording, stopRecordingHard } = useAudioRecorder(setUserAnswer);
   const isInterviewingRef = useRef(false);
+  const restoreAttemptedRef = useRef(false);
+  const activeInterviewStorageKey = user?.id
+    ? `${ACTIVE_INTERVIEW_KEY_PREFIX}${user.id}`
+    : null;
 
   // ── Helpers ───────────────────────────────────────────────────────────────
   const speak = (text) => api.tts(text, language, activeAudioRef);
   const buildTopicLabel = () => jd ? `${level} – ${jd.slice(0, 50)}` : `${level} – General`;
 
   // ── beforeunload ──────────────────────────────────────────────────────────
-  const handleBeforeUnload = useCallback(() => {
-    if (isInterviewingRef.current && interviewIdRef.current) {
-      api.abandonInterview(interviewIdRef.current);
+  useEffect(() => {
+    if (!user?.id || restoreAttemptedRef.current) return;
+    restoreAttemptedRef.current = true;
+
+    const storageKey = `${ACTIVE_INTERVIEW_KEY_PREFIX}${user.id}`;
+    const raw = localStorage.getItem(storageKey);
+    if (!raw) return;
+
+    try {
+      const saved = JSON.parse(raw);
+      if (!saved.interviewId || !Array.isArray(saved.questions) || saved.questions.length === 0) {
+        localStorage.removeItem(storageKey);
+        return;
+      }
+
+      interviewIdRef.current = saved.interviewId;
+      questionDbIdsRef.current = saved.questionDbIds || {};
+      scoresRef.current = Array.isArray(saved.scores) ? saved.scores : [];
+      isInterviewingRef.current = true;
+
+      setJd(saved.jd || '');
+      setLevel(saved.level || LEVELS[1]);
+      setLanguage(saved.language || 'vi');
+      setQuestions(saved.questions);
+      setCurrentIdx(Math.max(0, Math.min(saved.currentIdx || 0, saved.questions.length - 1)));
+      setUserAnswer(saved.userAnswer || '');
+      setEvalResult(saved.evalResult || null);
+      setFinalScores(Array.isArray(saved.finalScores) ? saved.finalScores : []);
+      setAppState(saved.appState === 'SHOW_EVAL' && saved.evalResult ? 'SHOW_EVAL' : 'INTERVIEWING');
+
+      api.getInterviewDetail(saved.interviewId).then(detail => {
+        if (!detail || detail.status === 'cancelled' || detail.status === 'completed') {
+          localStorage.removeItem(storageKey);
+          return;
+        }
+
+        const dbIds = { ...questionDbIdsRef.current };
+        (detail.questions || []).forEach(q => {
+          dbIds[q.question_order] = q.id;
+        });
+        questionDbIdsRef.current = dbIds;
+      }).catch(err => {
+        console.warn('[InterviewPage] Không đồng bộ được phiên đang diễn ra:', err);
+      });
+    } catch (err) {
+      console.warn('[InterviewPage] Không khôi phục được phiên đang diễn ra:', err);
+      localStorage.removeItem(storageKey);
     }
-  }, []);
+  }, [user?.id]);
+
+  useEffect(() => {
+    if (!activeInterviewStorageKey || !interviewIdRef.current || questions.length === 0) return;
+    if (!['INTERVIEWING', 'EVALUATING', 'SHOW_EVAL'].includes(appState)) return;
+
+    const snapshot = {
+      interviewId: interviewIdRef.current,
+      jd,
+      level,
+      language,
+      questions,
+      currentIdx,
+      userAnswer,
+      evalResult,
+      finalScores,
+      scores: scoresRef.current,
+      questionDbIds: questionDbIdsRef.current,
+      appState: appState === 'EVALUATING' ? 'INTERVIEWING' : appState,
+    };
+    localStorage.setItem(activeInterviewStorageKey, JSON.stringify(snapshot));
+  }, [
+    activeInterviewStorageKey, appState, currentIdx, evalResult, finalScores,
+    jd, language, level, questions, userAnswer,
+  ]);
+
+  useEffect(() => {
+    if (appState === 'FINISHED' && activeInterviewStorageKey) {
+      localStorage.removeItem(activeInterviewStorageKey);
+    }
+  }, [activeInterviewStorageKey, appState]);
 
   useEffect(() => {
     const activeAudio = activeAudioRef.current;
-    window.addEventListener("beforeunload", handleBeforeUnload);
     return () => {
-      window.removeEventListener("beforeunload", handleBeforeUnload);
       if (activeAudio) activeAudio.pause();
       stopRecordingHard();
-      if (isInterviewingRef.current && interviewIdRef.current) {
-        api.abandonInterview(interviewIdRef.current);
-        isInterviewingRef.current = false;
-      }
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [handleBeforeUnload]);
+  }, []);
 
   // ── Lưu câu hỏi vào DB ────────────────────────────────────────────────────
   const saveQuestionToDB = async (questionText, order) => {
@@ -235,6 +309,9 @@ export default function InterviewPage() {
 
     if (isInterviewingRef.current && interviewIdRef.current) {
       api.abandonInterview(interviewIdRef.current).catch(console.warn);
+    }
+    if (activeInterviewStorageKey) {
+      localStorage.removeItem(activeInterviewStorageKey);
     }
 
     isInterviewingRef.current = false;
