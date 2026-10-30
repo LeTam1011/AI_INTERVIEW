@@ -2,7 +2,7 @@
 BAO CAO KIEM TRA CHROMADB - DU LIEU HIEN TAI
 ============================================================
 
-Du an: interview-main
+Du an: AI-Interview
 Collection: interview_questions
 Duong dan: .\chroma_db
 Nguon du lieu: data_pipeline\dataset
