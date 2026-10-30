@@ -42,7 +42,8 @@ async def get_current_user(
         pool = await get_pool()
         async with pool.acquire() as conn:
             user = await conn.fetchrow(
-                "SELECT id::text, username, email, role::text, avatar_url, phone_number "
+                "SELECT id::text, username, email, role::text, avatar_url, phone_number, "
+                "fullname, bio, level, language, notifications "
                 "FROM users WHERE id = $1",
                 user_id,
             )
