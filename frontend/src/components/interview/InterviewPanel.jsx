@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Send, Mic, Square, Edit3, Bot, Volume2 } from 'lucide-react';
+import { Send, Mic, Square, Edit3, Bot, Volume2, XCircle } from 'lucide-react';
 
 export default function InterviewPanel({ 
   q, currentIdx, totalQuestions, 
   userAnswer, setUserAnswer, 
   isRecording, isTranscribing, toggleRecording,
-  onSubmit, onSpeak
+  onSubmit, onSpeak, onCancel
 }) {
   const [isEditing, setIsEditing] = useState(false);
 
@@ -30,6 +30,24 @@ export default function InterviewPanel({
           }}>
             Câu hỏi {currentIdx + 1} / {totalQuestions}
           </div>
+        </div>
+
+        <div style={{ display: 'none', justifyContent: 'flex-end', marginTop: '-18px' }}>
+          <button
+            type="button"
+            onClick={onCancel}
+            style={{
+              display: 'flex', alignItems: 'center', gap: '6px',
+              padding: '7px 12px', borderRadius: '9px',
+              border: '1px solid oklch(65% 0.22 25 / 0.45)',
+              background: 'oklch(65% 0.22 25 / 0.08)',
+              color: 'oklch(72% 0.18 25)', cursor: 'pointer',
+              fontSize: '12px', fontWeight: 700,
+            }}
+            title="Hủy buổi phỏng vấn"
+          >
+            <XCircle size={14} /> Hủy phỏng vấn
+          </button>
         </div>
 
         {/* AI Question Box */}
@@ -138,10 +156,24 @@ export default function InterviewPanel({
             )}
           </div>
 
-          <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-end', marginTop: '32px', paddingTop: '24px', borderTop: '1px solid var(--border)' }}>
+          <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '12px', marginTop: '32px', paddingTop: '24px', borderTop: '1px solid var(--border)' }}>
+            <button
+              type="button"
+              onClick={onCancel}
+              style={{
+                minWidth: '190px', padding: '14px 20px', borderRadius: '12px',
+                fontSize: '15px', fontWeight: 700, display: 'flex',
+                alignItems: 'center', justifyContent: 'center', gap: '8px',
+                border: '1px solid oklch(65% 0.22 25 / 0.45)',
+                background: 'oklch(65% 0.22 25 / 0.08)',
+                color: 'oklch(72% 0.18 25)', cursor: 'pointer',
+              }}
+            >
+              <XCircle size={18} /> Hủy phỏng vấn
+            </button>
             <button onClick={onSubmit} disabled={!userAnswer.trim() || isRecording || isTranscribing}
               style={{
-                padding: '14px 28px', borderRadius: '12px', fontSize: '15px', fontWeight: 700, 
+                minWidth: '190px', padding: '14px 20px', borderRadius: '12px', fontSize: '15px', fontWeight: 700,
                 display: 'flex', alignItems: 'center', gap: '8px', transition: 'all 0.25s', border: 'none',
                 cursor: !userAnswer.trim() || isRecording || isTranscribing ? 'not-allowed' : 'pointer',
                 background: !userAnswer.trim() || isRecording || isTranscribing ? 'var(--bg-elevated)' : 'white',

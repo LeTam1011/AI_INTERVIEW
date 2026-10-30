@@ -15,7 +15,7 @@ const ACTIVE_INTERVIEW_KEY_PREFIX = 'ai-interview-active-';
 
 export default function InterviewPage() {
   const { user } = useAuth();
-  const { showAlert } = useModal();
+  const { showAlert, showConfirm } = useModal();
 
   // ── Cài đặt phỏng vấn ─────────────────────────────────────────────────────
   const [appState, setAppState] = useState("SETUP");
@@ -303,6 +303,23 @@ export default function InterviewPage() {
   };
 
   // ── Bắt đầu lại ──────────────────────────────────────────────────────────
+  const cancelInterview = async () => {
+    const confirmed = await showConfirm(
+      'Bạn có chắc muốn hủy buổi phỏng vấn này? Tiến độ hiện tại sẽ được lưu vào lịch sử với trạng thái đã hủy.',
+      'Hủy buổi phỏng vấn',
+      { confirmText: 'Hủy buổi phỏng vấn', cancelText: 'Tiếp tục phỏng vấn', danger: true },
+    );
+    if (!confirmed) return;
+
+    if (activeAudioRef.current) activeAudioRef.current.pause();
+    stopRecordingHard();
+    if (interviewIdRef.current) {
+      await api.abandonInterview(interviewIdRef.current);
+    }
+    isInterviewingRef.current = false;
+    restart();
+  };
+
   const restart = () => {
     if (activeAudioRef.current) activeAudioRef.current.pause();
     stopRecordingHard();
@@ -376,7 +393,7 @@ export default function InterviewPage() {
         q={questions[currentIdx]} currentIdx={currentIdx} totalQuestions={questions.length}
         userAnswer={userAnswer} setUserAnswer={setUserAnswer}
         isRecording={isRecording} isTranscribing={isTranscribing} toggleRecording={toggleRecording}
-        onSubmit={submitAnswer} onSpeak={() => speak(questions[currentIdx].question)}
+        onSubmit={submitAnswer} onSpeak={() => speak(questions[currentIdx].question)} onCancel={cancelInterview}
       />
     );
 
