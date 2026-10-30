@@ -287,6 +287,16 @@ export const api = {
     if (!res.ok) return { interviews: [], total: 0 };
     return res.json();
   },
+  adminGetInterviewDetail: async (interviewId) => {
+    const res = await fetch(`${API_BASE}/admin/interviews/${interviewId}`, {
+      credentials: "include",
+    });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) {
+      throw new Error(data?.detail || "Không thể tải chi tiết phiên phỏng vấn.");
+    }
+    return data.interview;
+  },
   adminDeleteInterview: async (interviewId) => {
     const res = await fetch(`${API_BASE}/admin/interviews/${interviewId}`, {
       method: "DELETE",

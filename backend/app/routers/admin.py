@@ -111,6 +111,18 @@ async def list_all_interviews(
     return await admin_controller.handle_list_all_interviews(limit, offset, status_filter)
 
 
+@router.get("/interviews/{interview_id}")
+async def get_interview_detail(
+    interview_id: str,
+    admin: dict = Depends(get_admin_user),
+):
+    """Lấy chi tiết phiên phỏng vấn, gồm câu hỏi, câu trả lời và đánh giá AI."""
+    result = await admin_controller.handle_get_interview_detail(interview_id)
+    if not result:
+        raise HTTPException(status_code=404, detail="Không tìm thấy phiên phỏng vấn.")
+    return {"status": "success", "interview": result}
+
+
 @router.delete("/interviews/{interview_id}", status_code=status.HTTP_204_NO_CONTENT)
 async def delete_interview(
     interview_id: str,

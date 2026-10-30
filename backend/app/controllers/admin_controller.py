@@ -61,6 +61,10 @@ async def handle_list_all_interviews(
     return {"status": "success", "total": total, "interviews": interviews}
 
 
+async def handle_get_interview_detail(interview_id: str) -> dict | None:
+    return await admin_service.get_interview_detail(interview_id)
+
+
 async def handle_delete_interview(interview_id: str) -> bool:
     return await admin_service.delete_interview(interview_id)
 

@@ -230,6 +230,44 @@ async def list_all_interviews(
     return total, [serialize_record(r) for r in rows]
 
 
+async def get_interview_detail(interview_id: str) -> Optional[dict]:
+    """Lấy chi tiết một phiên phỏng vấn cho admin, kèm câu hỏi và đánh giá."""
+    pool = await get_pool()
+    async with pool.acquire() as conn:
+        interview = await conn.fetchrow(
+            """
+            SELECT i.id::text, i.topic, i.level, i.language, i.status,
+                   i.overall_score, i.overall_feedback, i.started_at, i.completed_at,
+                   u.username, u.email
+            FROM interviews i
+            JOIN users u ON u.id = i.user_id
+            WHERE i.id = $1
+            """,
+            interview_id,
+        )
+        if not interview:
+            return None
+
+        questions = await conn.fetch(
+            """
+            SELECT id::text, question_text, user_answer, ai_evaluation, score,
+                   question_order, asked_at, answered_at
+            FROM interview_questions
+            WHERE interview_id = $1
+            ORDER BY question_order ASC
+            """,
+            interview_id,
+        )
+
+    result = serialize_record(interview)
+    result["questions"] = [serialize_record(q) for q in questions]
+    result["total_questions"] = len(questions)
+    result["answered_questions"] = sum(
+        1 for q in questions if q["user_answer"] is not None and q["user_answer"] != ""
+    )
+    return result
+
+
 async def delete_interview(interview_id: str) -> bool:
     """Xóa một phiên phỏng vấn; câu hỏi liên quan được xóa theo FK cascade."""
     pool = await get_pool()

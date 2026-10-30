@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { api } from '../../services/api';
 import { useModal } from '../../context/ModalContext';
+import HistoryDetailExpand from '../dashboard/history/HistoryDetailExpand';
 import { Clock, CheckCircle, XCircle, RefreshCw, ChevronLeft, ChevronRight, Eye, Trash2, X } from 'lucide-react';
 
 function StatusBadge({ status }) {
@@ -22,7 +23,7 @@ function ScoreCell({ score }) {
 }
 
 // Modal xem chi tiết phỏng vấn (câu hỏi + câu trả lời)
-function InterviewDetailModal({ interview, onClose }) {
+function InterviewDetailModal({ interview, loading, onClose }) {
   if (!interview) return null;
   return (
     <div
@@ -73,6 +74,14 @@ function InterviewDetailModal({ interview, onClose }) {
               }} />
             </div>
           </div>
+          {loading ? (
+            <div style={{ padding: '24px', textAlign: 'center', color: 'var(--text-muted)', fontSize: '13px' }}>
+              <RefreshCw size={18} style={{ animation: 'spin 1s linear infinite', display: 'inline-block', marginBottom: '8px' }} /><br />
+              Đang tải câu hỏi và đánh giá...
+            </div>
+          ) : (
+            <HistoryDetailExpand detail={interview} />
+          )}
         </div>
       </div>
     </div>
@@ -88,6 +97,7 @@ export default function AdminInterviews() {
   const [statusFilter, setStatusFilter] = useState('');
   const [page, setPage] = useState(0);
   const [selected, setSelected] = useState(null);
+  const [detailLoading, setDetailLoading] = useState(false);
   const { showConfirm, showAlert } = useModal();
 
   const totalPages = Math.ceil(total / PAGE_SIZE);
@@ -109,6 +119,20 @@ export default function AdminInterviews() {
 
   const handleStatusChange = (val) => { setStatusFilter(val); setPage(0); };
 
+  const handleView = async (interview) => {
+    setSelected(interview);
+    setDetailLoading(true);
+    try {
+      const detail = await api.adminGetInterviewDetail(interview.id);
+      setSelected(detail);
+    } catch (err) {
+      setSelected(null);
+      showAlert(err.message || 'Không thể tải chi tiết phiên phỏng vấn.', 'Tải chi tiết thất bại');
+    } finally {
+      setDetailLoading(false);
+    }
+  };
+
   const handleDelete = async (interview) => {
     const confirmed = await showConfirm(
       `Xóa phiên phỏng vấn "${interview.topic}" của ${interview.username}? Dữ liệu câu hỏi và câu trả lời liên quan cũng sẽ bị xóa.`,
@@ -129,7 +153,7 @@ export default function AdminInterviews() {
 
   return (
     <div>
-      {selected && <InterviewDetailModal interview={selected} onClose={() => setSelected(null)} />}
+      {selected && <InterviewDetailModal interview={selected} loading={detailLoading} onClose={() => setSelected(null)} />}
 
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px', flexWrap: 'wrap', gap: '12px' }}>
         <h2 style={{ fontSize: '24px', fontWeight: 800, letterSpacing: '-0.02em' }}>
@@ -204,7 +228,7 @@ export default function AdminInterviews() {
                 <td style={{ padding: '14px 16px' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                     <button
-                      onClick={() => setSelected(iv)}
+                      onClick={() => handleView(iv)}
                       title="Xem chi tiết"
                       style={{ width: '68px', justifyContent: 'center', padding: '7px 8px', borderRadius: '8px', border: '1px solid var(--border)', background: 'transparent', cursor: 'pointer', color: 'var(--primary)', display: 'flex', alignItems: 'center', gap: '4px', fontSize: '12px', fontWeight: 600 }}
                     >
